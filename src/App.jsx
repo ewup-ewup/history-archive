@@ -17,21 +17,53 @@ import Fork from "./components/Fork.jsx";
    History Archive — 앱 루트
    라우팅(view 상태)과 갈림길 상태 관리만 담당.
    화면별 UI는 components/, 데이터는 data/ 참고.
+
+   영속화: localStorage `ha-fork-state-v1` (picks·score·dayOffset·prismCount·lang)
+           `ha-popup-seen-date` 로 오늘의 갈림길 팝업을 하루 1회로 제한.
    ========================================================= */
 
+const STORAGE_KEY = "ha-fork-state-v1";
+const POPUP_SEEN_KEY = "ha-popup-seen-date";
+
+function loadPersisted() {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === "object" ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+function todayKey() {
+  return new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+}
+
 export default function App() {
+  const persisted = loadPersisted();
+
   const [view, setView] = useState("timeline"); // 홈 = 타임라인
-  const [lang, setLang] = useState("ko");
+  const [lang, setLang] = useState(persisted?.lang ?? "ko");
   const [openIdx, setOpenIdx] = useState(null); // 타임라인에서 펼칠 시대
   const [focusEvent, setFocusEvent] = useState(null); // 타임라인에서 강조·스크롤할 사건
   const [detailId, setDetailId] = useState(null); // 상세 페이지로 볼 사건
-  const [showPopup, setShowPopup] = useState(true); // 로그인 팝업 (데모: 진입 시 1회)
+  // 팝업: 오늘 처음 방문일 때만 노출 (데일리 컨셉)
+  const [showPopup, setShowPopup] = useState(() => {
+    if (typeof window === "undefined") return true;
+    try {
+      return window.localStorage.getItem(POPUP_SEEN_KEY) !== todayKey();
+    } catch {
+      return true;
+    }
+  });
 
   // 갈림길 상태 (App에서 관리 → Fork/마이/팝업이 공유)
-  const [picks, setPicks] = useState({});
-  const [score, setScore] = useState({ R: 0, C: 0, P: 0, A: 0 });
-  const [dayOffset, setDayOffset] = useState(0);
-  const [prismCount, setPrismCount] = useState(0);
+  const [picks, setPicks] = useState(persisted?.picks ?? {});
+  const [score, setScore] = useState(persisted?.score ?? { R: 0, C: 0, P: 0, A: 0 });
+  const [dayOffset, setDayOffset] = useState(persisted?.dayOffset ?? 0);
+  const [prismCount, setPrismCount] = useState(persisted?.prismCount ?? 0);
   const forkState = { picks, score, dayOffset, prismCount };
   const todayEvent = EVENTS[2]; // 데모: 2000(gold)을 오늘로
   const tt = L[lang];
@@ -47,9 +79,25 @@ export default function App() {
   }
   function reset() {
     setPicks({}); setScore({ R: 0, C: 0, P: 0, A: 0 }); setPrismCount(0); setDayOffset(0);
+    try { window.localStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
   }
   function gotoEra(idx, eventId) { setOpenIdx(idx); setFocusEvent(eventId || null); setView("timeline"); }
   function gotoDetail(eventId) { setDetailId(eventId); setView("detail"); }
+
+  function dismissPopup() {
+    setShowPopup(false);
+    try { window.localStorage.setItem(POPUP_SEEN_KEY, todayKey()); } catch { /* ignore */ }
+  }
+
+  // 갈림길 상태·언어 영속화: 변경마다 localStorage에 저장
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify({ picks, score, dayOffset, prismCount, lang })
+      );
+    } catch { /* ignore quota / private mode */ }
+  }, [picks, score, dayOffset, prismCount, lang]);
 
   // Pretendard 폰트 런타임 주입
   useEffect(() => {
@@ -82,8 +130,8 @@ export default function App() {
       <AnimatePresence>
         {showPopup && (
           <ForkPopup lang={lang} todayEvent={todayEvent}
-            onEnter={() => { setShowPopup(false); setDayOffset(0); setView("fork"); }}
-            onClose={() => setShowPopup(false)} />
+            onEnter={() => { dismissPopup(); setDayOffset(0); setView("fork"); }}
+            onClose={dismissPopup} />
         )}
       </AnimatePresence>
 

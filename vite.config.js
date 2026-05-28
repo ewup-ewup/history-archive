@@ -10,5 +10,16 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: false,
+    // 콘텐츠가 21사건으로 늘면서 단일 번들이 500kB를 넘었음.
+    // vendor를 분리해 첫 로드 속도·캐싱 효율을 개선.
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "react-vendor": ["react", "react-dom"],
+          "motion-vendor": ["framer-motion"],
+          "icons-vendor": ["lucide-react"],
+        },
+      },
+    },
   },
 });
