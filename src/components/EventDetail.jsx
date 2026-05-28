@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, BookOpen, Brain, ChevronLeft, Flame, TrendingUp } from "lucide-react";
+import { ArrowRight, BookOpen, Brain, ChevronLeft, Flame, Landmark, Layers, TrendingUp } from "lucide-react";
 import { L } from "../data/i18n";
 import { FONT, T } from "../data/theme";
 import { ERAS, ERA_EVENTS, ERA_ICON, EVENT_DETAIL } from "../data/timeline";
@@ -84,6 +84,20 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, openMarke
         )}
       </motion.div>
 
+      {/* mechanism — structural how-it-worked */}
+      {detail && detail.mechanism && (
+        <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} style={{ margin: "10px 0 18px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
+            <Layers size={14} style={{ color: era.color }} />
+            <span style={{ fontSize: 13, fontWeight: 700, color: era.color, letterSpacing: 1, textTransform: "uppercase" }}>{tl.mechanism}</span>
+            <div style={{ flex: 1, height: 1, background: T.bgSoft }} />
+          </div>
+          {detail.mechanism[lang].map((para, i) => (
+            <p key={i} style={{ fontSize: 16, color: T.textPrimary, lineHeight: 1.95, margin: "0 0 18px" }}>{para}</p>
+          ))}
+        </motion.div>
+      )}
+
       {/* psychology */}
       <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
         style={{ background: "#FFF5F4", borderRadius: 16, padding: "22px 24px", borderLeft: `3px solid ${T.error}`, margin: "8px 0 18px" }}>
@@ -97,6 +111,17 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, openMarke
           style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: 16, padding: "24px 26px", marginBottom: 18 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: T.primary, marginBottom: 10, letterSpacing: 0.5, textTransform: "uppercase" }}><BookOpen size={14} /> {tl.lesson}</div>
           <p style={{ fontSize: 15.5, color: T.strong, lineHeight: 1.85, margin: 0, fontWeight: 500 }}>{detail.lesson[lang]}</p>
+        </motion.div>
+      )}
+
+      {/* aftermath — what changed after */}
+      {detail && detail.aftermath && (
+        <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
+          style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: 16, padding: "24px 26px", marginBottom: 18, borderLeft: `3px solid ${era.color}` }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: era.color, marginBottom: 12, letterSpacing: 0.5, textTransform: "uppercase" }}><Landmark size={14} /> {tl.aftermath}</div>
+          {detail.aftermath[lang].map((para, i) => (
+            <p key={i} style={{ fontSize: 15.5, color: T.textPrimary, lineHeight: 1.85, margin: "0 0 14px" }}>{para}</p>
+          ))}
         </motion.div>
       )}
 
