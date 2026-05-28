@@ -8,10 +8,17 @@ import { EVENT_DETAIL } from "../data/timeline";
 import AdSlot from "./AdSlot.jsx";
 import QuoteChart from "./QuoteChart.jsx";
 
+// 파일럿 라이브 종목: 사이트 화면 sym → /api/quote symbol 매핑
+const LIVE_SYMBOLS = {
+  "S&P 500": "SPX",
+  BTC: "BTC",
+};
+
 export default function MarketDemo({ lang, setView, gotoEra, gotoDetail }) {
   const [cat, setCat] = useState("stocks");
   const [tick, setTick] = useState(0);
   const [openSym, setOpenSym] = useState(null);
+  const [liveData, setLiveData] = useState({}); // { "S&P 500": {base, chg, ranges}, "BTC": {...} }
   const t = I18N[lang];
   const ec = ECHOES[cat];
   const echoT = L[lang].echo;
@@ -20,6 +27,47 @@ export default function MarketDemo({ lang, setView, gotoEra, gotoDetail }) {
     const id = setInterval(() => setTick((x) => x + 1), 2500);
     return () => clearInterval(id);
   }, []);
+
+  // 파일럿 종목 실측 시세 fetch (마운트 시 1회).
+  // 실패하거나 키 미설정이면 기존 데모 데이터 그대로 사용 — 사이트는 절대 깨지지 않음.
+  useEffect(() => {
+    let alive = true;
+    Object.entries(LIVE_SYMBOLS).forEach(async ([displaySym, apiSym]) => {
+      try {
+        const r = await fetch(`/api/quote?symbol=${encodeURIComponent(apiSym)}&range=all`);
+        if (!r.ok) return;
+        const data = await r.json();
+        if (!alive || data?.fallback) return;
+        // 유효성 검사: base 또는 ranges 중 하나라도 있어야 사용
+        if (data?.base === undefined && !data?.ranges) return;
+        setLiveData((d) => ({ ...d, [displaySym]: data }));
+      } catch {
+        /* 조용히 데모 폴백 */
+      }
+    });
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  // QUOTES + liveData 머지: 라이브 데이터가 있는 종목은 base/chg/ranges(1D/1M/1Y)만 교체.
+  // ALL(장기 차트)과 issues(역사 마커)는 큐레이션 자산이라 절대 덮어쓰지 않음.
+  const mergedQuotes = QUOTES[cat].map((q) => {
+    const live = liveData[q.sym];
+    if (!live) return q;
+    return {
+      ...q,
+      base: live.base !== undefined ? live.base : q.base,
+      chg: live.chg !== undefined ? live.chg : q.chg,
+      ranges: {
+        ...q.ranges,
+        ...(live.ranges?.["1D"]?.length ? { "1D": live.ranges["1D"] } : {}),
+        ...(live.ranges?.["1M"]?.length ? { "1M": live.ranges["1M"] } : {}),
+        ...(live.ranges?.["1Y"]?.length ? { "1Y": live.ranges["1Y"] } : {}),
+      },
+      _live: true,
+    };
+  });
 
   const jitter = (base, i) => {
     const w = Math.sin(tick * 0.7 + i * 1.3) * (base * 0.0008);
@@ -66,12 +114,12 @@ export default function MarketDemo({ lang, setView, gotoEra, gotoDetail }) {
               </span>
             </div>
             <div>
-              {QUOTES[cat].map((q, i) => {
+              {mergedQuotes.map((q, i) => {
                 const price = jitter(q.base, i);
                 const up = q.chg >= 0;
                 const isOpen = openSym === q.sym;
                 return (
-                  <div key={q.sym} style={{ borderBottom: i < QUOTES[cat].length - 1 ? `1px solid ${T.bgSoft}` : "none" }}>
+                  <div key={q.sym} style={{ borderBottom: i < mergedQuotes.length - 1 ? `1px solid ${T.bgSoft}` : "none" }}>
                     <div onClick={() => setOpenSym(isOpen ? null : q.sym)}
                       style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "14px 22px", cursor: "pointer", background: isOpen ? T.bg : "transparent" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
@@ -79,7 +127,15 @@ export default function MarketDemo({ lang, setView, gotoEra, gotoDetail }) {
                           <ChevronRight size={15} color={T.textTertiary} />
                         </motion.div>
                         <div>
-                          <div style={{ fontWeight: 700, fontSize: 14.5, color: T.strong }}>{q.sym}</div>
+                          <div style={{ fontWeight: 700, fontSize: 14.5, color: T.strong, display: "inline-flex", alignItems: "center", gap: 6 }}>
+                            {q.sym}
+                            {q._live && (
+                              <span title="실측 시세 (Twelve Data, 약 15분 지연)"
+                                style={{ fontSize: 9.5, fontWeight: 800, color: T.success, background: "#E7F9ED", padding: "1px 6px", borderRadius: 4, letterSpacing: 0.4 }}>
+                                LIVE
+                              </span>
+                            )}
+                          </div>
                           <div style={{ fontSize: 12, color: T.textTertiary, marginTop: 1 }}>{q.name}</div>
                         </div>
                       </div>
