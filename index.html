@@ -2,24 +2,71 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#3182F6" />
+    <meta name="color-scheme" content="light" />
+
+    <!-- Primary SEO -->
     <title>History Archive — 역사로 읽는 오늘의 시장</title>
     <meta
       name="description"
-      content="역사라는 데이터로 오늘의 시장을 비춰보는 학습·참고용 플랫폼. 돈의 역사 타임라인, 사건별 심층 아카이브, 시장 연계 차트. 투자 자문이 아닌 관점을 제시합니다."
+      content="역사라는 데이터로 오늘의 시장을 비춰보는 학습·참고용 플랫폼. 돈의 역사 21사건(튤립부터 비트코인·AI까지), 사건별 심층 아카이브, 시장 연계 차트. 투자 자문이 아닌 관점을 제시합니다."
     />
-    <meta name="theme-color" content="#3182F6" />
+    <meta name="keywords" content="돈의 역사, 금융사, 버블, 화폐사, 대공황, 닷컴버블, 리먼 사태, 비트코인, AI, 투자 학습, History Archive" />
+    <meta name="author" content="History Archive" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://history-archive.pages.dev/" />
 
-    <!-- Open Graph (SNS 공유 미리보기) -->
+    <!-- Favicon & PWA -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Open Graph (Facebook · LinkedIn · Slack · Discord · KakaoTalk) -->
+    <meta property="og:site_name" content="History Archive" />
     <meta property="og:title" content="History Archive — 역사로 읽는 오늘의 시장" />
     <meta
       property="og:description"
-      content="과거의 결정적 순간 옆에 지금의 시세를 나란히. 예언이 아닌 관점으로 비교합니다."
+      content="과거의 결정적 순간 옆에 지금의 시세를 나란히. 21사건으로 보는 돈의 역사 — 예언이 아닌 관점으로 비교합니다."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://history-archive.pages.dev/" />
+    <meta property="og:image" content="https://history-archive.pages.dev/og-image.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="History Archive — 역사로 읽는 오늘의 시장 (브랜드 그라데이션 위 텍스트 로고)" />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="ja_JP" />
+
+    <!-- Twitter / X (PNG 권장 — 추후 og-image.svg를 PNG로 변환 시 교체하면 X에서도 완전 호환) -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="History Archive — 역사로 읽는 오늘의 시장" />
+    <meta
+      name="twitter:description"
+      content="조개껍데기에서 비트코인·AI까지, 돈의 역사 21사건. 학습·참고용."
+    />
+    <meta name="twitter:image" content="https://history-archive.pages.dev/og-image.svg" />
+    <meta name="twitter:image:alt" content="History Archive 브랜드 카드" />
+
+    <!-- 구조화 데이터 (Google에 사이트 정체성 명확히 전달) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "History Archive",
+        "url": "https://history-archive.pages.dev/",
+        "description": "역사라는 데이터로 오늘의 시장을 비춰보는 학습·참고용 플랫폼. 돈의 역사 21사건, 사건별 심층 아카이브, 시장 연계 차트.",
+        "inLanguage": ["ko-KR", "en-US", "ja-JP"],
+        "isAccessibleForFree": true,
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "general public, students, lifelong learners"
+        },
+        "disclaimer": "본 콘텐츠는 역사적 사실에 기반한 학습·참고용 자료이며, 투자 자문이나 권유가 아닙니다."
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

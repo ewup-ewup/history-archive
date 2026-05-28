@@ -110,6 +110,13 @@ export default function App() {
     }
   }, []);
 
+  // 언어 선택과 <html lang> 동기화 (접근성·SEO)
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = lang;
+    }
+  }, [lang]);
+
   return (
     <div style={{ background: T.bg, minHeight: "100vh", fontFamily: FONT, color: T.textPrimary }}>
       <style>{`

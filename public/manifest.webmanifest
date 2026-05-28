@@ -1,0 +1,20 @@
+{
+  "name": "History Archive — 역사로 읽는 오늘의 시장",
+  "short_name": "History Archive",
+  "description": "역사라는 데이터로 오늘의 시장을 비춰보는 학습·참고용 플랫폼. 돈의 역사 21사건, 사건별 심층 아카이브, 시장 연계 차트.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F9FAFB",
+  "theme_color": "#3182F6",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

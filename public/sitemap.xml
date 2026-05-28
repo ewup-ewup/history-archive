@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!--
+    History Archive — SPA이지만 메인 진입 URL은 1개.
+    각 사건은 클라이언트 상태로 라우팅되므로 별도 URL이 없음.
+    추후 정식 URL 라우팅을 도입하면 사건별 URL을 여기에 추가.
+  -->
+  <url>
+    <loc>https://history-archive.pages.dev/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://history-archive.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://history-archive.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://history-archive.pages.dev/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://history-archive.pages.dev/"/>
+  </url>
+</urlset>

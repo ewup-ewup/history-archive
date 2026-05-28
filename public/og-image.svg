@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3182F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.06)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- bg -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- subtle decoration: faint history-curve dots -->
+  <g opacity="0.25" fill="#fff">
+    <circle cx="980" cy="120" r="6"/>
+    <circle cx="1040" cy="160" r="4"/>
+    <circle cx="1100" cy="100" r="5"/>
+    <circle cx="1070" cy="220" r="3"/>
+    <circle cx="940" cy="180" r="4"/>
+  </g>
+
+  <!-- logo badge (gradient bg + clock-history icon) -->
+  <g transform="translate(80 100)">
+    <rect width="64" height="64" rx="14" fill="rgba(255,255,255,0.22)"/>
+    <g fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round" transform="translate(14 14) scale(1.5)">
+      <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+      <path d="M3 3v5h5"/>
+      <path d="M12 7v5l4 2"/>
+    </g>
+  </g>
+
+  <!-- brand wordmark -->
+  <text x="170" y="146" font-family="Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif" font-size="34" font-weight="800" fill="#fff" letter-spacing="-0.6">History Archive</text>
+
+  <!-- pill tag -->
+  <g transform="translate(80 220)">
+    <rect width="280" height="40" rx="20" fill="rgba(255,255,255,0.18)"/>
+    <text x="140" y="27" font-family="Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">세계사 타임라인 · 돈의 역사</text>
+  </g>
+
+  <!-- main headline -->
+  <text x="80" y="340" font-family="Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif" font-size="68" font-weight="800" fill="#fff" letter-spacing="-1.8">역사로 읽는</text>
+  <text x="80" y="420" font-family="Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif" font-size="68" font-weight="800" fill="#fff" letter-spacing="-1.8">오늘의 시장</text>
+
+  <!-- description -->
+  <text x="80" y="490" font-family="Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif" font-size="26" font-weight="500" fill="rgba(255,255,255,0.92)">조개껍데기에서 비트코인까지 · 돈의 역사 21사건</text>
+
+  <!-- footer disclaimer -->
+  <text x="80" y="565" font-family="Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif" font-size="16" font-weight="600" fill="rgba(255,255,255,0.7)">학습·참고용 자료 · 투자 자문이 아닙니다</text>
+  <text x="80" y="590" font-family="Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif" font-size="14" font-weight="400" fill="rgba(255,255,255,0.55)">history-archive.pages.dev</text>
+</svg>
