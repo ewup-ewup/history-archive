@@ -6,6 +6,7 @@ export default function Header({ view, setView, lang, setLang, forkPending }) {
   const tt = L[lang];
   const nav = [
     { id: "timeline", label: tt.nav.home },
+    { id: "events", label: tt.nav.events },
     { id: "market", label: tt.nav.market },
     { id: "my", label: tt.nav.my, dot: forkPending },
   ];
