@@ -8,6 +8,7 @@ import { EVENTS } from "./data/events";
 import Header from "./components/Header.jsx";
 import ForkPopup from "./components/ForkPopup.jsx";
 import Timeline from "./components/Timeline.jsx";
+import EventsIndex from "./components/EventsIndex.jsx";
 import EventDetail from "./components/EventDetail.jsx";
 import MarketDemo from "./components/MarketDemo.jsx";
 import MyPage from "./components/MyPage.jsx";
@@ -146,7 +147,8 @@ export default function App() {
       <AnimatePresence mode="wait">
         <motion.div key={view + lang} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
           {view === "timeline" && <Timeline setView={setView} lang={lang} openIdx={openIdx} focusEvent={focusEvent} gotoDetail={gotoDetail} />}
-          {view === "detail" && <EventDetail lang={lang} eventId={detailId} setView={setView} gotoEra={gotoEra} openMarket={() => setView("market")} />}
+          {view === "events" && <EventsIndex lang={lang} gotoDetail={gotoDetail} gotoEra={gotoEra} />}
+          {view === "detail" && <EventDetail lang={lang} eventId={detailId} setView={setView} gotoEra={gotoEra} gotoDetail={gotoDetail} openMarket={() => setView("market")} />}
           {view === "market" && <MarketDemo lang={lang} setView={setView} gotoEra={gotoEra} gotoDetail={gotoDetail} />}
           {view === "my" && <MyPage lang={lang} forkState={forkState} openFork={() => { setDayOffset(0); setView("fork"); }} />}
           {view === "fork" && <Fork lang={lang} forkState={forkState} choose={choose} reset={reset} setDayOffset={setDayOffset} />}
