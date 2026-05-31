@@ -5,6 +5,7 @@ import { L } from "../data/i18n";
 import { FONT, T } from "../data/theme";
 import { ERAS, ERA_EVENTS, ERA_ICON, EVENT_DETAIL } from "../data/timeline";
 import { COMPARE } from "../data/compare";
+import { buildLinkIndex, linkifyText } from "./linkify.jsx";
 import Disclaimer from "./Disclaimer.jsx";
 import EventChart from "./EventChart.jsx";
 
@@ -59,6 +60,10 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, gotoDetai
   const prevEv = orderIdx > 0 ? ORDER[orderIdx - 1] : null;
   const nextEv = orderIdx >= 0 && orderIdx < ORDER.length - 1 ? ORDER[orderIdx + 1] : null;
 
+  // 자동 cross-link: 본문에 다른 사건명 나오면 클릭 가능화
+  const linkIndex = useMemo(() => buildLinkIndex(lang, eventId), [lang, eventId]);
+  const linkify = (text) => (gotoDetail ? linkifyText(text, linkIndex, gotoDetail) : text);
+
   // TOC sections — detail 유무에 따라 조건부
   const compareList = COMPARE[eventId] || [];
   const sections = useMemo(() => {
@@ -90,6 +95,7 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, gotoDetai
       <style>{`
         @media (max-width: 1139px) { .event-toc { display: none !important; } }
         .event-toc a:hover { background: ${T.bgSoft}; color: ${era.color}; }
+        .event-xlink:hover { color: var(--xlink-hover, ${T.primary}) !important; text-decoration-thickness: 2px !important; }
       `}</style>
 
       {/* 진행 막대 — 화면 상단(헤더 60px 아래) 고정 */}
@@ -161,10 +167,10 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, gotoDetai
         </div>
         {detail ? (
           detail.body[lang].map((para, i) => (
-            <p key={i} style={{ fontSize: 16, color: T.textPrimary, lineHeight: 1.95, margin: "0 0 18px" }}>{para}</p>
+            <p key={i} style={{ fontSize: 16, color: T.textPrimary, lineHeight: 1.95, margin: "0 0 18px" }}>{linkify(para)}</p>
           ))
         ) : (
-          <p style={{ fontSize: 16, color: T.textPrimary, lineHeight: 1.95, margin: "0 0 18px" }}>{sub.impact[lang]}</p>
+          <p style={{ fontSize: 16, color: T.textPrimary, lineHeight: 1.95, margin: "0 0 18px" }}>{linkify(sub.impact[lang])}</p>
         )}
       </motion.div>
 
@@ -177,7 +183,7 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, gotoDetai
             <div style={{ flex: 1, height: 1, background: T.bgSoft }} />
           </div>
           {detail.mechanism[lang].map((para, i) => (
-            <p key={i} style={{ fontSize: 16, color: T.textPrimary, lineHeight: 1.95, margin: "0 0 18px" }}>{para}</p>
+            <p key={i} style={{ fontSize: 16, color: T.textPrimary, lineHeight: 1.95, margin: "0 0 18px" }}>{linkify(para)}</p>
           ))}
         </motion.div>
       )}
@@ -194,7 +200,7 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, gotoDetai
         <motion.div id="lesson" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
           style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: 16, padding: "24px 26px", marginBottom: 18, scrollMarginTop: 80 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: T.primary, marginBottom: 10, letterSpacing: 0.5, textTransform: "uppercase" }}><BookOpen size={14} /> {tl.lesson}</div>
-          <p style={{ fontSize: 15.5, color: T.strong, lineHeight: 1.85, margin: 0, fontWeight: 500 }}>{detail.lesson[lang]}</p>
+          <p style={{ fontSize: 15.5, color: T.strong, lineHeight: 1.85, margin: 0, fontWeight: 500 }}>{linkify(detail.lesson[lang])}</p>
         </motion.div>
       )}
 
@@ -204,7 +210,7 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, gotoDetai
           style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: 16, padding: "24px 26px", marginBottom: 18, borderLeft: `3px solid ${era.color}`, scrollMarginTop: 80 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: era.color, marginBottom: 12, letterSpacing: 0.5, textTransform: "uppercase" }}><Landmark size={14} /> {tl.aftermath}</div>
           {detail.aftermath[lang].map((para, i) => (
-            <p key={i} style={{ fontSize: 15.5, color: T.textPrimary, lineHeight: 1.85, margin: "0 0 14px" }}>{para}</p>
+            <p key={i} style={{ fontSize: 15.5, color: T.textPrimary, lineHeight: 1.85, margin: "0 0 14px" }}>{linkify(para)}</p>
           ))}
         </motion.div>
       )}
@@ -250,7 +256,7 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, gotoDetai
         <motion.div id="today" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
           style={{ background: T.primarySoft, borderRadius: 16, padding: "24px 26px", marginBottom: 26, scrollMarginTop: 80 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: T.primary, marginBottom: 10, letterSpacing: 0.5, textTransform: "uppercase" }}><TrendingUp size={14} /> {tl.todayLink}</div>
-          <p style={{ fontSize: 15.5, color: T.strong, lineHeight: 1.85, margin: "0 0 16px" }}>{detail.today[lang]}</p>
+          <p style={{ fontSize: 15.5, color: T.strong, lineHeight: 1.85, margin: "0 0 16px" }}>{linkify(detail.today[lang])}</p>
           <motion.button whileHover={{ x: 3 }} onClick={openMarket}
             style={{ border: "none", background: "transparent", color: T.primary, fontWeight: 700, fontSize: 13.5, cursor: "pointer", fontFamily: FONT, display: "inline-flex", alignItems: "center", gap: 5, padding: 0 }}>
             {tl.relatedMarket} <ArrowRight size={15} />
