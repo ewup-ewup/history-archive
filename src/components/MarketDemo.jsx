@@ -8,10 +8,18 @@ import { EVENT_DETAIL } from "../data/timeline";
 import AdSlot from "./AdSlot.jsx";
 import QuoteChart from "./QuoteChart.jsx";
 
-// 파일럿 라이브 종목: 사이트 화면 sym → /api/quote symbol 매핑
+// 라이브 종목: 사이트 화면 sym → /api/quote symbol 매핑 (전체 8종목).
+// 미지원·실패 종목은 자동으로 데모 데이터 폴백되므로 그대로 두어도 안전.
+// (Twelve Data 무료 플랜은 미국 지수·크립토 위주 — KOSPI·N225는 데모 유지될 수 있음)
 const LIVE_SYMBOLS = {
+  KOSPI: "KOSPI",
   "S&P 500": "SPX",
+  N225: "N225",
+  NASDAQ: "NASDAQ",
   BTC: "BTC",
+  ETH: "ETH",
+  SOL: "SOL",
+  XRP: "XRP",
 };
 
 export default function MarketDemo({ lang, setView, gotoEra, gotoDetail }) {
@@ -28,23 +36,32 @@ export default function MarketDemo({ lang, setView, gotoEra, gotoDetail }) {
     return () => clearInterval(id);
   }, []);
 
-  // 파일럿 종목 실측 시세 fetch (마운트 시 1회).
-  // 실패하거나 키 미설정이면 기존 데모 데이터 그대로 사용 — 사이트는 절대 깨지지 않음.
+  // 전체 종목 실측 시세 fetch (마운트 시 1회).
+  // 실패·키 미설정·미지원 종목은 기존 데모 데이터 그대로 사용 — 사이트는 절대 깨지지 않음.
+  // 순차 + 소량 지연: 종목당 range=all이 내부 4콜이라, 동시 발사 시 무료 플랜
+  // 분당 한도(8콜)를 한 번에 초과. 순차로 흘려보내며 Cloudflare 캐시가 점진적으로
+  // 채워지게 함(progressive warm-up). 캐시가 차면 다음 방문부터는 즉시 LIVE.
   useEffect(() => {
     let alive = true;
-    Object.entries(LIVE_SYMBOLS).forEach(async ([displaySym, apiSym]) => {
-      try {
-        const r = await fetch(`/api/quote?symbol=${encodeURIComponent(apiSym)}&range=all`);
-        if (!r.ok) return;
-        const data = await r.json();
-        if (!alive || data?.fallback) return;
-        // 유효성 검사: base 또는 ranges 중 하나라도 있어야 사용
-        if (data?.base === undefined && !data?.ranges) return;
-        setLiveData((d) => ({ ...d, [displaySym]: data }));
-      } catch {
-        /* 조용히 데모 폴백 */
+    (async () => {
+      for (const [displaySym, apiSym] of Object.entries(LIVE_SYMBOLS)) {
+        if (!alive) return;
+        try {
+          const r = await fetch(`/api/quote?symbol=${encodeURIComponent(apiSym)}&range=all`);
+          if (!alive) return;
+          if (r.ok) {
+            const data = await r.json();
+            if (alive && !data?.fallback && (data?.base !== undefined || data?.ranges)) {
+              setLiveData((d) => ({ ...d, [displaySym]: data }));
+            }
+          }
+        } catch {
+          /* 조용히 데모 폴백 */
+        }
+        // 다음 종목 전 짧은 간격 (버스트 완화). 캐시 히트 시엔 사실상 즉시.
+        await new Promise((res) => setTimeout(res, 250));
       }
-    });
+    })();
     return () => {
       alive = false;
     };
@@ -161,7 +178,7 @@ export default function MarketDemo({ lang, setView, gotoEra, gotoDetail }) {
             </div>
           </div>
           <div style={{ marginTop: 10, fontSize: 11.5, color: T.textTertiary, display: "flex", alignItems: "center", gap: 5, lineHeight: 1.5 }}>
-            <Info size={13} style={{ flexShrink: 0 }} /> {t.tapHint} · {lang === "ko" ? "실제 적용 시 시세 API 연동, 데모는 가상 수치" : lang === "ja" ? "実適用時は相場API連携、デモは仮の数値" : "Real version connects a market API; demo uses sample data"}
+            <Info size={13} style={{ flexShrink: 0 }} /> {t.tapHint} · {lang === "ko" ? "LIVE 배지 = 실측 시세(약 15분 지연), 그 외 = 데모 수치" : lang === "ja" ? "LIVEバッジ＝実測相場(約15分遅延)、その他＝デモ数値" : "LIVE badge = real quotes (~15-min delayed); others = demo figures"}
           </div>
 
           {/* referral block — moved under quotes */}
