@@ -5,9 +5,11 @@ import { L } from "../data/i18n";
 import { FONT, T } from "../data/theme";
 import { ERAS, ERA_EVENTS, ERA_ICON, EVENT_DETAIL } from "../data/timeline";
 import { COMPARE } from "../data/compare";
+import { REFLECTIONS } from "../data/reflections";
 import { buildLinkIndex, linkifyText } from "./linkify.jsx";
 import Disclaimer from "./Disclaimer.jsx";
 import EventChart from "./EventChart.jsx";
+import Reflections from "./Reflections.jsx";
 
 // 사건 id로 글로벌 메타(year, title, eraIdx) 조회
 function lookupEvent(id) {
@@ -74,8 +76,9 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, gotoDetai
     if (detail?.aftermath) items.push({ id: "aftermath", label: tl.aftermath });
     if (compareList.length > 0) items.push({ id: "compare", label: tl.compareTitle });
     if (detail?.today) items.push({ id: "today", label: tl.todayLink });
+    if (REFLECTIONS[eventId]) items.push({ id: "reflections", label: tl.reflectionsTitle });
     return items;
-  }, [detail, tl, compareList.length]);
+  }, [detail, tl, compareList.length, eventId]);
 
   if (!found) return null;
   const { sub, eraIdx } = found;
@@ -263,6 +266,9 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, gotoDetai
           </motion.button>
         </motion.div>
       )}
+
+      {/* reflections — 자기점검 질문 + 답 자동 저장 */}
+      <Reflections lang={lang} eventId={eventId} color={era.color} />
 
       {/* CTA: try at fork */}
       <motion.button initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
