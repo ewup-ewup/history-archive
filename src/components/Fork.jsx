@@ -88,7 +88,7 @@ export default function Fork({ lang, forkState, choose, reset, setDayOffset }) {
           ) : (
             <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }}
               style={{ maxWidth: 560, margin: "26px auto 0", background: T.card, border: `1px solid ${T.line}`, borderRadius: 16, padding: "30px", textAlign: "center" }}>
-              <div style={{ width: 48, height: 48, borderRadius: "50%", background: "#E7F9ED", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}>
+              <div style={{ width: 48, height: 48, borderRadius: "50%", background: T.successSoft, display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}>
                 <Check size={24} color={T.success} />
               </div>
               <h3 style={{ fontSize: 19, fontWeight: 700, color: T.strong, margin: "0 0 8px" }}>{fk.doneTitle}</h3>

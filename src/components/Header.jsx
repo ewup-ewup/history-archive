@@ -1,8 +1,8 @@
-import { History } from "lucide-react";
+import { History, Moon, Sun } from "lucide-react";
 import { L } from "../data/i18n";
 import { FONT, T } from "../data/theme";
 
-export default function Header({ view, setView, lang, setLang, forkPending }) {
+export default function Header({ view, setView, lang, setLang, forkPending, theme, toggleTheme }) {
   const tt = L[lang];
   const nav = [
     { id: "timeline", label: tt.nav.home },
@@ -13,7 +13,7 @@ export default function Header({ view, setView, lang, setLang, forkPending }) {
   return (
     <div style={{
       position: "sticky", top: 0, zIndex: 50,
-      background: "rgba(255,255,255,0.78)", backdropFilter: "blur(12px)",
+      background: T.headerBg, backdropFilter: "blur(12px)",
       borderBottom: `1px solid ${T.line}`,
     }}>
       <div style={{ maxWidth: 1080, margin: "0 auto", padding: "0 20px", minHeight: 60, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap" }}>
@@ -47,6 +47,21 @@ export default function Header({ view, setView, lang, setLang, forkPending }) {
               }}>{v.flag}</button>
             ))}
           </div>
+          {toggleTheme && (
+            <button
+              onClick={toggleTheme}
+              title={theme === "dark" ? "라이트 모드" : "다크 모드"}
+              aria-label={theme === "dark" ? "라이트 모드로 전환" : "다크 모드로 전환"}
+              style={{
+                border: `1px solid ${T.line}`, background: T.card, color: T.textSecondary,
+                width: 34, height: 34, borderRadius: 8, cursor: "pointer",
+                display: "inline-flex", alignItems: "center", justifyContent: "center",
+                fontFamily: FONT, transition: "all .15s", flexShrink: 0,
+              }}
+            >
+              {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
+          )}
         </div>
       </div>
     </div>

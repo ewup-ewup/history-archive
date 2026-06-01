@@ -1,6 +1,57 @@
-/* History Archive — 전역 스타일
-   폰트(Pretendard)는 App 컴포넌트가 런타임에 <link>로 주입합니다.
-   여기서는 리셋과 폴백만 지정합니다. */
+/* History Archive — 전역 스타일 + 디자인 토큰(라이트/다크)
+   폰트(Pretendard)는 App 컴포넌트가 런타임에 <link>로 주입합니다. */
+
+/* ===== 라이트 테마 (기본) ===== */
+:root {
+  --t-primary: #3182F6;
+  --t-primaryPressed: #1B64DA;
+  --t-primarySoft: #E8F2FF;
+  --t-accent: #8B5CF6;
+  --t-success: #00C73C;
+  --t-error: #F04452;
+  --t-warning: #FF9F1C;
+  --t-bg: #F9FAFB;
+  --t-bgSoft: #F2F4F6;
+  --t-card: #FFFFFF;
+  --t-strong: #191F28;
+  --t-textPrimary: #333D4B;
+  --t-textSecondary: #6B7684;
+  --t-textTertiary: #8B95A1;
+  --t-gradient: linear-gradient(135deg, #3182F6 0%, #8B5CF6 100%);
+  --t-line: #E5E8EB;
+  --t-dangerSoft: #FFF5F4;
+  --t-dangerText: #7A1F1B;
+  --t-successSoft: #E7F9ED;
+  --t-infoSoft: #F7F4FF;
+  --t-headerBg: rgba(255, 255, 255, 0.78);
+  color-scheme: light;
+}
+
+/* ===== 다크 테마 ===== */
+html[data-theme="dark"] {
+  --t-primary: #4C8DF6;
+  --t-primaryPressed: #6BA2F8;
+  --t-primarySoft: #1E2A3D;
+  --t-accent: #A07CF8;
+  --t-success: #2DD05B;
+  --t-error: #FF5C68;
+  --t-warning: #FFB23E;
+  --t-bg: #15171A;
+  --t-bgSoft: #1F2226;
+  --t-card: #1C1F24;
+  --t-strong: #ECEEF0;
+  --t-textPrimary: #C9CDD2;
+  --t-textSecondary: #9AA0A8;
+  --t-textTertiary: #6B7178;
+  --t-gradient: linear-gradient(135deg, #4C8DF6 0%, #A07CF8 100%);
+  --t-line: #2C3036;
+  --t-dangerSoft: #2A1A1C;
+  --t-dangerText: #FF9BA2;
+  --t-successSoft: #152A1C;
+  --t-infoSoft: #211C2E;
+  --t-headerBg: rgba(21, 23, 26, 0.8);
+  color-scheme: dark;
+}
 
 * {
   box-sizing: border-box;
@@ -18,7 +69,9 @@ body {
     "Malgun Gothic", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f9fafb;
+  background: var(--t-bg);
+  /* 테마 전환 시 부드럽게 */
+  transition: background-color 0.25s ease;
 }
 
 #root {
@@ -30,4 +83,9 @@ button,
 input,
 textarea {
   font-family: inherit;
+}
+
+/* 테마 전환 시 주요 표면 색이 부드럽게 따라오도록 (과한 곳은 제외) */
+[data-theme] {
+  transition: background-color 0.25s ease;
 }

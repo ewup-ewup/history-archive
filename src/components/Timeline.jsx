@@ -88,15 +88,15 @@ export default function Timeline({ setView, lang, openIdx, focusEvent, gotoDetai
                               <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: T.primary, marginBottom: 8 }}><Globe size={13} /> {tl.world}</div>
                               <p style={{ fontSize: 13.5, color: T.textSecondary, lineHeight: 1.7, margin: 0 }}>{era.world[lang]}</p>
                             </div>
-                            <div style={{ background: "#F7F4FF", borderRadius: 12, padding: "16px 18px" }}>
+                            <div style={{ background: T.infoSoft, borderRadius: 12, padding: "16px 18px" }}>
                               <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: T.accent, marginBottom: 8 }}><Landmark size={13} /> {tl.korea}</div>
                               <p style={{ fontSize: 13.5, color: T.textSecondary, lineHeight: 1.7, margin: 0 }}>{era.korea[lang]}</p>
                             </div>
                           </div>
                           {/* psychology — the signature */}
-                          <div style={{ marginTop: 12, background: "#FFF5F4", borderRadius: 12, padding: "16px 18px", borderLeft: `3px solid ${T.error}` }}>
+                          <div style={{ marginTop: 12, background: T.dangerSoft, borderRadius: 12, padding: "16px 18px", borderLeft: `3px solid ${T.error}` }}>
                             <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: T.error, marginBottom: 8 }}><Brain size={13} /> {tl.psych}</div>
-                            <p style={{ fontSize: 14, color: "#7A1F1B", lineHeight: 1.75, margin: 0 }}>{era.psych[lang]}</p>
+                            <p style={{ fontSize: 14, color: T.dangerText, lineHeight: 1.75, margin: 0 }}>{era.psych[lang]}</p>
                           </div>
 
                           {/* 세부 사건 타임라인 */}
@@ -123,9 +123,9 @@ export default function Timeline({ setView, lang, openIdx, focusEvent, gotoDetai
                                           <span style={{ fontSize: 14.5, fontWeight: 700, color: T.strong, letterSpacing: -0.3 }}>{sub.title[lang]}</span>
                                         </div>
                                         <p style={{ fontSize: 13.5, color: T.textSecondary, lineHeight: 1.7, margin: "0 0 10px" }}>{sub.impact[lang]}</p>
-                                        <div style={{ display: "flex", gap: 7, alignItems: "flex-start", background: "#FFF5F4", borderRadius: 8, padding: "9px 11px" }}>
+                                        <div style={{ display: "flex", gap: 7, alignItems: "flex-start", background: T.dangerSoft, borderRadius: 8, padding: "9px 11px" }}>
                                           <Brain size={13} color={T.error} style={{ flexShrink: 0, marginTop: 2 }} />
-                                          <span style={{ fontSize: 12.5, color: "#7A1F1B", lineHeight: 1.6 }}>{sub.mind[lang]}</span>
+                                          <span style={{ fontSize: 12.5, color: T.dangerText, lineHeight: 1.6 }}>{sub.mind[lang]}</span>
                                         </div>
                                         <motion.button whileHover={{ x: 3 }} onClick={() => gotoDetail(sub.id)}
                                           style={{ marginTop: 11, border: "none", background: "transparent", color: era.color, fontWeight: 700, fontSize: 12.5, cursor: "pointer", fontFamily: FONT, display: "inline-flex", alignItems: "center", gap: 4, padding: 0 }}>

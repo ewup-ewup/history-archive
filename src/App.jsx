@@ -25,6 +25,21 @@ import Fork from "./components/Fork.jsx";
 
 const STORAGE_KEY = "ha-fork-state-v1";
 const POPUP_SEEN_KEY = "ha-popup-seen-date";
+const THEME_KEY = "ha-theme"; // 'light' | 'dark'
+
+// 초기 테마: 저장값 우선, 없으면 시스템 설정(prefers-color-scheme) 따름
+function initTheme() {
+  if (typeof window === "undefined") return "light";
+  try {
+    const saved = window.localStorage.getItem(THEME_KEY);
+    if (saved === "light" || saved === "dark") return saved;
+    return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  } catch {
+    return "light";
+  }
+}
 
 function loadPersisted() {
   if (typeof window === "undefined") return null;
@@ -47,6 +62,7 @@ export default function App() {
 
   const [view, setView] = useState("timeline"); // 홈 = 타임라인
   const [lang, setLang] = useState(persisted?.lang ?? "ko");
+  const [theme, setTheme] = useState(initTheme); // 'light' | 'dark'
   const [openIdx, setOpenIdx] = useState(null); // 타임라인에서 펼칠 시대
   const [focusEvent, setFocusEvent] = useState(null); // 타임라인에서 강조·스크롤할 사건
   const [detailId, setDetailId] = useState(null); // 상세 페이지로 볼 사건
@@ -89,6 +105,18 @@ export default function App() {
     setShowPopup(false);
     try { window.localStorage.setItem(POPUP_SEEN_KEY, todayKey()); } catch { /* ignore */ }
   }
+
+  function toggleTheme() {
+    setTheme((t) => (t === "dark" ? "light" : "dark"));
+  }
+
+  // 테마를 <html data-theme>에 반영 + localStorage 영속화
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.dataset.theme = theme;
+    }
+    try { window.localStorage.setItem(THEME_KEY, theme); } catch { /* ignore */ }
+  }, [theme]);
 
   // 갈림길 상태·언어 영속화: 변경마다 localStorage에 저장
   useEffect(() => {
@@ -143,7 +171,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <Header view={view} setView={setView} lang={lang} setLang={setLang} forkPending={forkPending} />
+      <Header view={view} setView={setView} lang={lang} setLang={setLang} forkPending={forkPending} theme={theme} toggleTheme={toggleTheme} />
       <AnimatePresence mode="wait">
         <motion.div key={view + lang} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
           {view === "timeline" && <Timeline setView={setView} lang={lang} openIdx={openIdx} focusEvent={focusEvent} gotoDetail={gotoDetail} />}

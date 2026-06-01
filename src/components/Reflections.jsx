@@ -154,7 +154,7 @@ export default function Reflections({ lang, eventId, color }) {
                     fontSize: 11,
                     fontWeight: 700,
                     color: T.success,
-                    background: "#E7F9ED",
+                    background: T.successSoft,
                     padding: "3px 7px",
                     borderRadius: 6,
                     pointerEvents: "none",

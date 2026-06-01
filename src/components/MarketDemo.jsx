@@ -148,7 +148,7 @@ export default function MarketDemo({ lang, setView, gotoEra, gotoDetail }) {
                             {q.sym}
                             {q._live && (
                               <span title="실측 시세 (Twelve Data, 약 15분 지연)"
-                                style={{ fontSize: 9.5, fontWeight: 800, color: T.success, background: "#E7F9ED", padding: "1px 6px", borderRadius: 4, letterSpacing: 0.4 }}>
+                                style={{ fontSize: 9.5, fontWeight: 800, color: T.success, background: T.successSoft, padding: "1px 6px", borderRadius: 4, letterSpacing: 0.4 }}>
                                 LIVE
                               </span>
                             )}

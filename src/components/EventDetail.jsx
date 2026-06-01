@@ -193,9 +193,9 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, gotoDetai
 
       {/* psychology */}
       <motion.div id="psychology" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-        style={{ background: "#FFF5F4", borderRadius: 16, padding: "22px 24px", borderLeft: `3px solid ${T.error}`, margin: "8px 0 18px", scrollMarginTop: 80 }}>
+        style={{ background: T.dangerSoft, borderRadius: 16, padding: "22px 24px", borderLeft: `3px solid ${T.error}`, margin: "8px 0 18px", scrollMarginTop: 80 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: T.error, marginBottom: 10, letterSpacing: 0.5, textTransform: "uppercase" }}><Brain size={14} /> {tl.mindLabel}</div>
-        <p style={{ fontSize: 15, color: "#7A1F1B", lineHeight: 1.85, margin: 0, fontWeight: 500 }}>{sub.mind[lang]}</p>
+        <p style={{ fontSize: 15, color: T.dangerText, lineHeight: 1.85, margin: 0, fontWeight: 500 }}>{sub.mind[lang]}</p>
       </motion.div>
 
       {/* lesson */}

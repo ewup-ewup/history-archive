@@ -114,7 +114,7 @@ export default function QuoteChart({ q, lang, t }) {
               const mc = iss.dir === "up" ? T.success : T.error;
               return (
                 <div key={k} style={{ display: "flex", gap: 9, alignItems: "flex-start", fontSize: 12.5, lineHeight: 1.55 }}>
-                  <span style={{ flexShrink: 0, marginTop: 1, width: 16, height: 16, borderRadius: "50%", background: iss.dir === "up" ? "#E7F9ED" : "#FFF0F0", color: mc, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, fontWeight: 800 }}>{iss.dir === "up" ? "▲" : "▼"}</span>
+                  <span style={{ flexShrink: 0, marginTop: 1, width: 16, height: 16, borderRadius: "50%", background: iss.dir === "up" ? T.successSoft : T.dangerSoft, color: mc, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, fontWeight: 800 }}>{iss.dir === "up" ? "▲" : "▼"}</span>
                   <span style={{ color: T.textSecondary }}><b style={{ color: T.strong }}>{iss.at}</b> · {iss.txt[lang]}</span>
                 </div>
               );
