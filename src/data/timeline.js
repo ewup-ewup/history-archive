@@ -6,7 +6,7 @@ export const ERA_ICON = { Brain, Coins, Landmark, Banknote, Globe, Cpu };
 // 돈의 역사 6시대 (세계사·한국사 듀얼 트랙)
 export const ERAS = [
   {
-    no: "01", icon: "Brain", color: "#888780", soft: "#F1EFE8",
+    no: "01", icon: "Brain", color: "var(--era-c0)", soft: "var(--era-s0)",
     title: { ko: "교환 이전 — 선물과 빚의 시대", en: "Before exchange — gifts and debts", ja: "交換以前 — 贈与と負債の時代" },
     when: { ko: "인류 탄생 ~ 정착 이전", en: "From humanity's dawn to settlement", ja: "人類誕生 ~ 定住以前" },
     mind: { ko: "신뢰", en: "Trust", ja: "信頼" }, mindFull: { ko: "기억이 곧 화폐였다", en: "Memory was the currency", ja: "記憶こそが貨幣だった" },
@@ -16,7 +16,7 @@ export const ERAS = [
     psych: { ko: "왜 돈도 없이 나눴을까? 인간은 '갚을 것'을 기억하는 뇌를 가졌기 때문입니다. 호혜(reciprocity)는 생존 본능이었고, 이 '빚의 기억'이 훗날 모든 신용·금융의 원형이 됩니다.", en: "Why share without money? Because humans evolved a brain that remembers 'what is owed.' Reciprocity was a survival instinct, and this 'memory of debt' became the prototype of all later credit and finance.", ja: "なぜお金もなく分けたのか？人間は『返すべきもの』を記憶する脳を持つからです。互恵は生存本能であり、この『負債の記憶』が後の全ての信用・金融の原型になります。" },
   },
   {
-    no: "02", icon: "Coins", color: "#BA7517", soft: "#FAEEDA",
+    no: "02", icon: "Coins", color: "var(--era-c1)", soft: "var(--era-s1)",
     title: { ko: "물물교환과 상품화폐", en: "Barter and commodity money", ja: "物々交換と商品貨幣" },
     when: { ko: "신석기 ~ 청동기", en: "Neolithic to Bronze Age", ja: "新石器 ~ 青銅器" },
     mind: { ko: "합의", en: "Consensus", ja: "合意" }, mindFull: { ko: "조개껍데기를 함께 믿기로 하다", en: "Agreeing to believe in shells", ja: "貝殻を共に信じることにした" },
@@ -26,7 +26,7 @@ export const ERAS = [
     psych: { ko: "조개껍데기엔 본래 가치가 없습니다. 그런데 왜 받았을까? '남들도 받아줄 것'이라 믿었기 때문입니다. 이 집단적 환상 — 모두가 믿으니 진짜가 되는 구조 — 이 화폐의 본질이고, 오늘날 비트코인까지 이어집니다.", en: "A shell has no inherent value. So why accept it? Because people believed 'others will accept it too.' This collective illusion — real because everyone believes — is the essence of money, reaching all the way to bitcoin today.", ja: "貝殻には本来価値がありません。ではなぜ受け取ったのか？『他人も受け取る』と信じたからです。この集団的幻想 — 皆が信じるから本物になる構造 — が貨幣の本質であり、今日のビットコインまで続きます。" },
   },
   {
-    no: "03", icon: "Landmark", color: "#BA7517", soft: "#FAEEDA",
+    no: "03", icon: "Landmark", color: "var(--era-c2)", soft: "var(--era-s2)",
     title: { ko: "금속 주화의 탄생", en: "The birth of metal coins", ja: "金属貨幣の誕生" },
     when: { ko: "기원전 7세기 ~", en: "7th century BCE onward", ja: "紀元前7世紀 ~" },
     mind: { ko: "권위", en: "Authority", ja: "権威" }, mindFull: { ko: "왕의 얼굴이 가치를 보증하다", en: "The king's face guarantees value", ja: "王の顔が価値を保証する" },
@@ -36,7 +36,7 @@ export const ERAS = [
     psych: { ko: "왜 금속 조각을 믿었나? 그 위에 찍힌 '권위' 때문입니다. 화폐 신뢰의 무게중심이 '공동체의 합의'에서 '국가의 보증'으로 옮겨간 순간입니다. 단, 왕이 순도를 속이면(주화 변조) 신뢰는 무너졌습니다 — 최초의 인플레이션입니다.", en: "Why trust a metal disc? Because of the 'authority' stamped on it. The center of monetary trust shifted from 'community consensus' to 'state guarantee.' Yet when kings debased purity, trust collapsed — the first inflation.", ja: "なぜ金属片を信じたのか？刻まれた『権威』のためです。貨幣信頼の重心が『共同体の合意』から『国家の保証』へ移った瞬間です。ただし王が純度を偽れば(貨幣改鋳)信頼は崩れました — 最初のインフレです。" },
   },
   {
-    no: "04", icon: "Banknote", color: "#1D9E75", soft: "#E1F5EE",
+    no: "04", icon: "Banknote", color: "var(--era-c3)", soft: "var(--era-s3)",
     title: { ko: "지폐와 은행", en: "Paper money and banks", ja: "紙幣と銀行" },
     when: { ko: "11세기 송나라 ~", en: "11th-century Song China onward", ja: "11世紀の宋 ~" },
     mind: { ko: "신용", en: "Credit", ja: "信用" }, mindFull: { ko: "종이를 금처럼 믿게 되다", en: "Trusting paper like gold", ja: "紙を金のように信じるようになる" },
@@ -46,7 +46,7 @@ export const ERAS = [
     psych: { ko: "종이 쪼가리를 어떻게 금처럼 믿었을까? '언제든 금으로 바꿔준다'는 약속, 곧 신용 덕분입니다. 이 신용의 도약이 자본주의를 폭발시켰지만, 동시에 '약속이 깨질 수 있다'는 새로운 공포 — 뱅크런(예금 인출 사태)의 씨앗도 심었습니다.", en: "How was a scrap of paper trusted like gold? Thanks to the promise 'redeemable for gold anytime' — that is, credit. This leap of credit detonated capitalism, but also planted a new fear that 'the promise can break' — the seed of bank runs.", ja: "紙切れをどうして金のように信じたのか？『いつでも金に換える』という約束、つまり信用のおかげです。この信用の飛躍が資本主義を爆発させましたが、同時に『約束が破れうる』という新たな恐怖 — 取り付け騒ぎの種も蒔きました。" },
   },
   {
-    no: "05", icon: "Globe", color: "#185FA5", soft: "#E6F1FB",
+    no: "05", icon: "Globe", color: "var(--era-c4)", soft: "var(--era-s4)",
     title: { ko: "금본위제와 환율", en: "The gold standard and exchange rates", ja: "金本位制と為替" },
     when: { ko: "19세기 ~ 1971", en: "19th century to 1971", ja: "19世紀 ~ 1971" },
     mind: { ko: "질서", en: "Order", ja: "秩序" }, mindFull: { ko: "나라들이 돈의 값을 맞추다", en: "Nations align the price of money", ja: "国々がお金の値を合わせる" },
@@ -56,7 +56,7 @@ export const ERAS = [
     psych: { ko: "왜 환율에 온 나라가 휘청일까? 환율은 곧 '내 나라 돈에 대한 세계의 신뢰 점수'이기 때문입니다. 1997년 외환위기는 그 신뢰가 무너질 때 벌어지는 집단 공포의 전형 — 모두가 동시에 달러로 도망치며 위기가 증폭됐습니다.", en: "Why does a whole nation reel at exchange rates? Because the rate is 'the world's trust score for my country's money.' The 1997 crisis was the archetype of collective panic when that trust breaks — everyone fled to dollars at once, amplifying the crisis.", ja: "なぜ為替に国全体が揺らぐのか？為替は『自国のお金に対する世界の信頼スコア』だからです。1997年の通貨危機はその信頼が崩れる時の集団恐怖の典型 — 皆が同時にドルへ逃げ危機が増幅しました。" },
   },
   {
-    no: "06", icon: "Cpu", color: "#534AB7", soft: "#EEEDFE",
+    no: "06", icon: "Cpu", color: "var(--era-c5)", soft: "var(--era-s5)",
     title: { ko: "신용화폐와 디지털 시대", en: "Fiat money and the digital age", ja: "信用貨幣とデジタル時代" },
     when: { ko: "1971 ~ 현재", en: "1971 to present", ja: "1971 ~ 現在" },
     mind: { ko: "공포와 탐욕", en: "Fear and greed", ja: "恐怖と貪欲" }, mindFull: { ko: "믿음이 흔들리면 시장도 흔들린다", en: "When belief shakes, so does the market", ja: "信頼が揺らげば市場も揺らぐ" },

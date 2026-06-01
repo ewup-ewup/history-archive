@@ -56,7 +56,7 @@ export default function Timeline({ setView, lang, openIdx, focusEvent, gotoDetai
                   <Icon size={16} color={era.color} />
                 </div>
 
-                <div style={{ background: T.card, border: `1px solid ${isOpen ? era.color + "66" : T.line}`, borderRadius: 16, overflow: "hidden", boxShadow: isOpen ? `0 12px 32px ${era.color}1a` : "none", transition: "border-color .2s, box-shadow .2s" }}>
+                <div style={{ background: T.card, border: `1px solid ${isOpen ? `color-mix(in srgb, ${era.color} 40%, transparent)` : T.line}`, borderRadius: 16, overflow: "hidden", boxShadow: isOpen ? `0 12px 32px color-mix(in srgb, ${era.color} 10%, transparent)` : "none", transition: "border-color .2s, box-shadow .2s" }}>
                   {/* header — clickable */}
                   <div onClick={() => setOpen(isOpen ? -1 : i)} style={{ padding: "18px 22px", cursor: "pointer", display: "flex", alignItems: "center", gap: 14 }}>
                     <div style={{ flex: 1 }}>
@@ -107,7 +107,7 @@ export default function Timeline({ setView, lang, openIdx, focusEvent, gotoDetai
                                 <div style={{ flex: 1, height: 1, background: T.bgSoft }} />
                               </div>
                               <div style={{ position: "relative", paddingLeft: 22 }}>
-                                <div style={{ position: "absolute", left: 4, top: 6, bottom: 6, width: 2, background: era.color + "33" }} />
+                                <div style={{ position: "absolute", left: 4, top: 6, bottom: 6, width: 2, background: `color-mix(in srgb, ${era.color} 20%, transparent)` }} />
                                 <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                                   {ERA_EVENTS[i].map((sub, si) => {
                                     const hot = focusEvent === sub.id;
@@ -116,7 +116,7 @@ export default function Timeline({ setView, lang, openIdx, focusEvent, gotoDetai
                                         initial={false}
                                         animate={hot ? { scale: [1, 1.015, 1] } : {}}
                                         transition={{ duration: 0.6 }}
-                                        style={{ position: "relative", background: hot ? era.soft : T.bg, border: `1px solid ${hot ? era.color + "88" : T.line}`, borderRadius: 12, padding: "14px 16px" }}>
+                                        style={{ position: "relative", background: hot ? era.soft : T.bg, border: `1px solid ${hot ? `color-mix(in srgb, ${era.color} 53%, transparent)` : T.line}`, borderRadius: 12, padding: "14px 16px" }}>
                                         <div style={{ position: "absolute", left: -22, top: 18, width: 10, height: 10, borderRadius: "50%", background: hot ? era.color : T.card, border: `2px solid ${era.color}`, zIndex: 1 }} />
                                         <div style={{ display: "flex", alignItems: "baseline", gap: 9, marginBottom: 6, flexWrap: "wrap" }}>
                                           <span style={{ fontSize: 15, fontWeight: 800, color: era.color, letterSpacing: -0.3 }}>{sub.year[lang]}</span>

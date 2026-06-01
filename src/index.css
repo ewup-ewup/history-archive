@@ -24,6 +24,13 @@
   --t-successSoft: #E7F9ED;
   --t-infoSoft: #F7F4FF;
   --t-headerBg: rgba(255, 255, 255, 0.78);
+  /* 시대 색 (accent c0~c5 / chip 배경 s0~s5) — 라이트 */
+  --era-c0: #888780; --era-s0: #F1EFE8;
+  --era-c1: #BA7517; --era-s1: #FAEEDA;
+  --era-c2: #BA7517; --era-s2: #FAEEDA;
+  --era-c3: #1D9E75; --era-s3: #E1F5EE;
+  --era-c4: #185FA5; --era-s4: #E6F1FB;
+  --era-c5: #534AB7; --era-s5: #EEEDFE;
   color-scheme: light;
 }
 
@@ -50,6 +57,13 @@ html[data-theme="dark"] {
   --t-successSoft: #152A1C;
   --t-infoSoft: #211C2E;
   --t-headerBg: rgba(21, 23, 26, 0.8);
+  /* 시대 색 — 다크: accent는 밝게(가독성), chip 배경은 해당 색의 어두운 틴트 */
+  --era-c0: #ABA99F; --era-s0: #26251F;
+  --era-c1: #D99231; --era-s1: #2E2515;
+  --era-c2: #D99231; --era-s2: #2E2515;
+  --era-c3: #2FC793; --era-s3: #14271E;
+  --era-c4: #4E9AE0; --era-s4: #15212E;
+  --era-c5: #8B82E0; --era-s5: #201C2E;
   color-scheme: dark;
 }
 
