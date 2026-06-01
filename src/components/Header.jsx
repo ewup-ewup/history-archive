@@ -1,8 +1,9 @@
-import { History, Moon, Sun } from "lucide-react";
+import { Download, History, Moon, Sun } from "lucide-react";
 import { L } from "../data/i18n";
 import { FONT, T } from "../data/theme";
 
-export default function Header({ view, setView, lang, setLang, forkPending, theme, toggleTheme }) {
+export default function Header({ view, setView, lang, setLang, forkPending, theme, toggleTheme, canInstall, onInstall }) {
+  const installLabel = lang === "ko" ? "앱 설치" : lang === "ja" ? "アプリ追加" : "Install";
   const tt = L[lang];
   const nav = [
     { id: "timeline", label: tt.nav.home },
@@ -60,6 +61,20 @@ export default function Header({ view, setView, lang, setLang, forkPending, them
               }}
             >
               {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
+          )}
+          {canInstall && onInstall && (
+            <button
+              onClick={onInstall}
+              title={installLabel}
+              style={{
+                border: "none", background: T.gradient, color: "#fff",
+                fontWeight: 700, fontSize: 13, padding: "8px 12px", borderRadius: 8, cursor: "pointer",
+                display: "inline-flex", alignItems: "center", gap: 5, fontFamily: FONT, flexShrink: 0,
+                whiteSpace: "nowrap",
+              }}
+            >
+              <Download size={14} /> {installLabel}
             </button>
           )}
         </div>

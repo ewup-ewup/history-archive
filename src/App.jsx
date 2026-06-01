@@ -66,6 +66,7 @@ export default function App() {
   const [view, setView] = useState(initialRoute.view); // 홈 = 타임라인
   const [lang, setLang] = useState(persisted?.lang ?? "ko");
   const [theme, setTheme] = useState(initTheme); // 'light' | 'dark'
+  const [installPrompt, setInstallPrompt] = useState(null); // PWA 설치 프롬프트 (Chromium)
   const [openIdx, setOpenIdx] = useState(null); // 타임라인에서 펼칠 시대
   const [focusEvent, setFocusEvent] = useState(null); // 타임라인에서 강조·스크롤할 사건
   const [detailId, setDetailId] = useState(initialRoute.detailId); // 상세 페이지로 볼 사건
@@ -112,6 +113,25 @@ export default function App() {
   function toggleTheme() {
     setTheme((t) => (t === "dark" ? "light" : "dark"));
   }
+
+  async function promptInstall() {
+    if (!installPrompt) return;
+    installPrompt.prompt();
+    try { await installPrompt.userChoice; } catch { /* ignore */ }
+    setInstallPrompt(null); // 한 번 띄우면 이벤트 소진
+  }
+
+  // PWA 설치 프롬프트 캡처 (Chromium). iOS Safari는 공유→홈화면 추가 네이티브 플로우.
+  useEffect(() => {
+    const onBIP = (e) => { e.preventDefault(); setInstallPrompt(e); };
+    const onInstalled = () => setInstallPrompt(null);
+    window.addEventListener("beforeinstallprompt", onBIP);
+    window.addEventListener("appinstalled", onInstalled);
+    return () => {
+      window.removeEventListener("beforeinstallprompt", onBIP);
+      window.removeEventListener("appinstalled", onInstalled);
+    };
+  }, []);
 
   // 테마를 <html data-theme>에 반영 + localStorage 영속화
   useEffect(() => {
@@ -221,7 +241,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <Header view={view} setView={setView} lang={lang} setLang={setLang} forkPending={forkPending} theme={theme} toggleTheme={toggleTheme} />
+      <Header view={view} setView={setView} lang={lang} setLang={setLang} forkPending={forkPending} theme={theme} toggleTheme={toggleTheme} canInstall={!!installPrompt} onInstall={promptInstall} />
       <AnimatePresence mode="wait">
         <motion.div key={view + lang} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
           {view === "timeline" && <Timeline setView={setView} lang={lang} openIdx={openIdx} focusEvent={focusEvent} gotoDetail={gotoDetail} />}

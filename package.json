@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "build-og": "node scripts/build-og.js"
+    "build-og": "node scripts/build-og.js",
+    "build-icons": "node scripts/build-icons.js"
   },
   "dependencies": {
     "framer-motion": "^11.3.0",

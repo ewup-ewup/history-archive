@@ -8,3 +8,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <App />
   </React.StrictMode>
 );
+
+// 서비스워커 등록 (오프라인·설치 지원). 프로덕션·dev 모두 동작.
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {
+      /* 등록 실패해도 앱은 정상 동작 */
+    });
+  });
+}
