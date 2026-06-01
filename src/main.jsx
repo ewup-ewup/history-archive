@@ -2,6 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
+import { ensureEsFallback } from "./data/i18nFallback";
+
+// es(스페인어)를 4번째 언어로 등록 + 미번역분 영어 폴백 (첫 렌더 전 1회)
+ensureEsFallback();
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

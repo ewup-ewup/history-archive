@@ -13,7 +13,7 @@ const COUNTRIES = [
   { key: "usa", flag: "🇺🇸" },
   { key: "hispanic", flag: "🇪🇸" },
 ];
-const defaultCountry = (lang) => (lang === "ja" ? "japan" : lang === "en" ? "usa" : "korea");
+const defaultCountry = (lang) => (lang === "ja" ? "japan" : lang === "en" ? "usa" : lang === "es" ? "hispanic" : "korea");
 
 export default function Timeline({ setView, lang, openIdx, focusEvent, gotoDetail }) {
   const tl = L[lang].timeline;
