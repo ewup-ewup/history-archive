@@ -264,4 +264,94 @@ export const ES_EVENT_DETAIL = {
     today: "Cuando los índices están en máximos históricos y todos son optimistas, 1929 pregunta en voz baja: ¿cuánta 'deuda' se ha acumulado ahora en el mercado, y cuántos miran hacia el otro lado?",
     source: "Edición propia a partir de la historia económica y financiera estándar. La caída y la recuperación varían según la base del índice.",
   },
+  dotcom: {
+    subtitle: "Estados Unidos · 1995–2002",
+    stats: [
+      { k: "Pico del Nasdaq", v: "Marzo de 2000" },
+      { k: "Caída desde el pico", v: "aprox. −78 %" },
+      { k: "Hasta recuperarse", v: "unos 15 años" },
+    ],
+    chart: {
+      unit: "Nasdaq Comp.",
+      cap: "Índice Nasdaq Composite (1995–2015)",
+      peak: "5.048 (10 mar. 2000)",
+      dataNote: "Basado en la trayectoria real del Nasdaq (751 en 1995 → pico 5.048,62 → repuntes intermedios → mínimo 1.108,49, −78 % → recuperado en 2015). Fuente: registros públicos de mercado",
+    },
+    body: [
+      "A finales de los años 90, internet surgió como la tecnología que lo cambiaría todo. Esa expectativa era correcta — el problema fue que los precios de las acciones corrieron muy por delante de ella. Bastaba añadir '.com' a un nombre para que las acciones se multiplicaran el primer día, incluso con cero ingresos.",
+      "Los inversores creían que 'las viejas medidas como el PER no se aplican a la nueva economía' — que el número de usuarios creciendo como bola de nieve, y no los beneficios, era la nueva medida del valor. El capital riesgo volcaba miles de millones en un solo plan de negocio.",
+      "Tras alcanzar el Nasdaq su pico en marzo de 2000, la burbuja se desinfló durante dos años. Miles de puntocom sin beneficios desaparecieron y el Nasdaq cayó cerca de un 78 %. Pero de los escombros sobrevivieron ganadores reales como Amazon y Google.",
+    ],
+    mechanism: [
+      "El mecanismo de la burbuja puntocom fue la combinación de tres nuevas infraestructuras de mercado. Primero, tras la exitosa salida a bolsa de Netscape en 1995, bastaba el nombre '.com' para cotizar con valoraciones de miles de millones sobre ingresos casi nulos — hubo unas 460 salidas a bolsa puntocom en EE. UU. en 1999–2000, con una rentabilidad media del primer día de cerca del 65 %. Segundo, surgieron nuevos criterios de valoración — métricas no financieras como 'eyeballs' (visitantes), 'tasa de clics' y 'mindshare' reemplazaron a los ingresos como herramientas de justificación, y empresas sin beneficios con alta 'tasa de quema' (burn rate) podían valorarse mientras prometieran una futura cuota de mercado enorme. Tercero, la expansión de los planes 401(k) y las correduías de descuento (E*Trade y otras) llevó por primera vez a los inversores minoristas al mercado a gran escala — 'day trading' se volvió una palabra cotidiana.",
+      "Sobre esto operaron dos bucles de retroalimentación. El primero fue el ciclo 'empresas de infraestructura como Cisco → startups puntocom → publicidad que vuelve a los ingresos de las de infraestructura' — gran parte de los ingresos de Cisco venía de startups puntocom financiadas con capital riesgo, y esas puntocom compraban equipos de Cisco, Oracle y Sun Microsystems para generar sus ingresos. El segundo fue un bucle mediático — la cobertura de cotizaciones las 24 horas de CNBC y Bloomberg reforzaba la narrativa de que 'las acciones suben para siempre'. En el pico de marzo de 2000 el Nasdaq Composite tocó 5.048 y para octubre de 2002 había caído a 1.114, un −78 %. Cisco fue brevemente la empresa más valiosa del mundo, con unos 500.000 millones de dólares de capitalización, y perdió casi un 90 %.",
+    ],
+    lesson: "La burbuja puntocom trazó la misma curva que la fiebre ferroviaria, 150 años después. 'Las viejas medidas no se aplican a la nueva tecnología' es la frase típica de toda burbuja. La revolución era real, pero el precio no podía saber de antemano quién sobreviviría a ella.",
+    aftermath: [
+      "La consecuencia institucional directa del desplome puntocom fue la Ley Sarbanes-Oxley de 2002 (SOX). Combinada con fraudes contables como Enron (2001) y WorldCom (2002), la SOX convirtió la responsabilidad contable personal de directores ejecutivos y financieros en materia de responsabilidad penal (hasta 20 años por certificación falsa) y reforzó las reglas de gobernanza — verificación del control interno de las cotizadas, independencia del auditor externo y más. Esto se volvió de hecho obligatorio para toda empresa estadounidense cotizada e influyó en las normas contables globales. La crítica de que los costes de cumplimiento de la SOX son excesivos para las empresas pequeñas continúa hoy.",
+      "El legado más profundo es un cambio en el patrón de las salidas a bolsa. Antes de las puntocom, incluso empresas pequeñas y jóvenes solían salir a bolsa pronto; después, la edad media de una salida a bolsa en EE. UU. pasó de unos 4 años desde la fundación a unos 11 (según el seguimiento de Jay Ritter). El hueco lo llenaron las 'rondas de capital riesgo en etapa tardía' (series C/D/E) que surgieron a finales de los 90 y estallaron en la década de 2010, junto con el capital privado — la carga de riesgo del capital se desplazó de los mercados públicos a los privados tras las puntocom. Entretanto, las puntocom supervivientes (Amazon, eBay, Google, etc.) acabaron realizando el 'dominio de la economía de internet' que la burbuja había prometido, lo que convierte este caso en uno de los más fuertes de la historia para el patrón de que 'lo verdadero llega después de la burbuja'.",
+    ],
+    today: "En el auge de la IA vuelve a oírse 'esta vez es diferente'. La lección de las puntocom tiene dos caras — internet realmente cambió el mundo y, a la vez, la mayoría de las acciones puntocom cayeron a cero. Creer en la revolución no es lo mismo que creer en cada precio.",
+    source: "Edición propia a partir de la historia financiera estándar. La caída y la recuperación varían según la base del índice.",
+  },
+  "2008": {
+    subtitle: "Estados Unidos · 2007–2009",
+    stats: [
+      { k: "El banco que quebró", v: "158 años de historia" },
+      { k: "Caída del S&P 500", v: "aprox. −57 %" },
+      { k: "Respuesta política", v: "Liquidez récord" },
+    ],
+    chart: {
+      unit: "S&P 500",
+      cap: "Índice S&P 500 (2007–2013)",
+      peak: "1.565 (9 oct. 2007)",
+      dataNote: "Basado en la trayectoria real del S&P 500 (pico 1.565,15 → desplome de Lehman en sept. 2008 → mínimo 676,53, ~−57 % → recuperado en 2013). Fuente: registros públicos de mercado",
+    },
+    body: [
+      "A mediados de los años 2000 dominaba la creencia de que los precios de la vivienda en EE. UU. 'nunca bajan'. Los bancos concedían hipotecas (subprime) incluso a deudores dudosos, y luego empaquetaban estos préstamos arriesgados en productos complejos vendidos por todo el mundo. El riesgo se empaquetó fuera de la vista.",
+      "Cuando los precios de la vivienda se giraron, empezó una reacción en cadena. En septiembre de 2008 quebró el banco de inversión Lehman Brothers, de 158 años. Un mercado que creía en el 'demasiado grande para caer' quedó atónito, y un congelamiento del crédito — nadie confiando en nadie — bloqueó las finanzas mundiales.",
+      "Los gobiernos y los bancos centrales liberaron una liquidez récord para evitar el colapso sistémico. Los mercados acabaron recuperándose, pero dejaron la lección: 'lo que se creía seguro era lo más peligroso'.",
+    ],
+    mechanism: [
+      "El mecanismo de la crisis de 2008 fue una cadena de tres capas. La primera capa fue el mercado inmobiliario de EE. UU. — a principios y mediados de los 2000, los tipos bajos y los criterios de préstamo relajados entregaron volúmenes enormes de hipotecas no tradicionales, a tipo variable y solo de intereses, a deudores 'subprime' de menor solvencia. De 2002 a 2006, los precios de la vivienda en EE. UU. (Case-Shiller) subieron cerca de un 80 %. La gente se endeudaba sobre el supuesto de que 'los precios de la vivienda suben para siempre', y algunos repetían el 'flipping' a casas más grandes en cuanto compraban.",
+      "La segunda capa fue la titulización. Los bancos no mantenían las hipotecas en sus libros; miles de hipotecas se agrupaban en bonos de titulización hipotecaria (MBS) → se reagrupaban en obligaciones de deuda garantizada (CDO) → se reestructuraban de nuevo en 'CDO sintéticos', vendidos a inversores de todo el mundo. Las agencias de calificación (Moody's, S&P) otorgaron la nota AAA a grandes porciones sin comprender del todo la estructura, y la percepción de 'activos seguros' generó demanda global. La tercera capa fueron las permutas de incumplimiento crediticio (CDS), que permitían a cualquiera apostar por el impago de un bono como si comprara un seguro — amplificando el riesgo sistémico. Cuando los precios de la vivienda en EE. UU. tocaron techo y bajaron en 2007, la cadena subprime → MBS → CDO → CDS se deshizo en sentido inverso, y el 15 de septiembre de 2008, Lehman Brothers (con 639.000 millones de dólares en activos) presentó la mayor quiebra empresarial de la historia de EE. UU.",
+    ],
+    lesson: "El núcleo de Lehman: la ilusión de que 'empaquetar el riesgo fuera de la vista lo hace desaparecer'. La compleja ingeniería financiera ocultó el riesgo, pero no lo eliminó. Y la creencia 'demasiado grande para caer' era en sí misma la burbuja más peligrosa.",
+    aftermath: [
+      "La respuesta de 2008 se desarrolló en dos dimensiones. A corto plazo: la primera política monetaria no convencional de la Reserva Federal — bajar el tipo de referencia al 0–0,25 % y comprar cerca de 4,5 billones de dólares en bonos mediante flexibilización cuantitativa (QE). Al mismo tiempo, el Programa de Alivio de Activos en Problemas (TARP, ~700.000 millones) inyectó capital directamente en los bancos, y AIG, Citigroup, GM y Chrysler fueron de hecho nacionalizados o rescatados. Esta respuesta evitó un colapso monetario y económico a la escala de 1929, pero recibió fuertes críticas por reafirmar el riesgo moral del 'demasiado grande para caer'.",
+      "El resultado institucional fue la Ley Dodd-Frank de Reforma de Wall Street y Protección al Consumidor de 2010 — con unas 2.300 páginas, la legislación más amplia de la historia regulatoria financiera de EE. UU. Sus herramientas centrales incluyen (1) la Regla Volcker (prohibir la negociación por cuenta propia de los bancos comerciales), (2) la nueva Oficina de Protección Financiera del Consumidor (CFPB), (3) reglas reforzadas de capital y liquidez para las instituciones financieras de importancia sistémica (SIFI, ligadas a Basilea III) y (4) la compensación central obligatoria de derivados. 2008 fue también un punto de inflexión social y político — la QE posterior a la crisis infló los precios de los activos y amplió la brecha entre quienes tienen activos y quienes no, alimentando el movimiento Occupy (2011), la política populista (de izquierda y derecha) y el auge de las criptomonedas (el documento técnico de Bitcoin se publicó el 31 de octubre de 2008). Dodd-Frank se flexibilizó en parte en 2018 y volvió a ponerse a prueba durante el episodio del SVB en 2023.",
+    ],
+    today: "Cuando 'este producto es seguro' o 'esto no puede quebrar' se extiende por el mercado, 2008 pregunta: ¿ha desaparecido el riesgo, o solo se ha empaquetado fuera de la vista?",
+    source: "Edición propia a partir de la historia financiera estándar. La caída varía según el índice y el periodo.",
+  },
+  bitcoin: {
+    subtitle: "Mundial · 2009 ~ presente",
+    stats: [
+      { k: "Emisor", v: "Ninguno (descentralizado)" },
+      { k: "Suministro total", v: "21 M fijo" },
+      { k: "Volatilidad", v: "muy alta" },
+    ],
+    chart: {
+      unit: "Bitcoin (USD)",
+      cap: "Precio del bitcoin (2013–2025)",
+      peak: "123.000 $ (jul. 2025)",
+      dataNote: "Basado en precios reales (19 mil $ en 2017 → 69 mil $ en 2021 → 16 mil $ tras FTX en 2022 → ~123 mil $ en jul. 2025). Marcado por ciclos de auge y caída de ~4 años; muy volátil",
+    },
+    body: [
+      "En 2009, justo después de que la crisis de 2008 sacudiera la confianza en 'el dinero gestionado por Estados y bancos', una figura desconocida (Satoshi Nakamoto) lanzó el bitcoin. La idea central era radical — dinero que funciona solo con matemáticas y código, sin un Estado emisor y sin un banco que lo garantice.",
+      "El bitcoin hizo funcionar por primera vez en la realidad el viejo sueño de la humanidad del 'dinero sin Estado'. También se sitúa en medio de un feroz debate — unos lo llaman el futuro del dinero, otros un activo especulativo sin valor intrínseco.",
+      "Lo llamativo: el bitcoin cerró el círculo de la historia del dinero. Como las conchas, no tiene valor inherente, pero gana valor 'si todos creen'. Volvió a mostrar, en la era digital, que la esencia del dinero es la misma que hace 5.000 años — la creencia colectiva.",
+    ],
+    mechanism: [
+      "El mecanismo del bitcoin fue una respuesta técnica a la vieja pregunta: '¿se puede crear dinero sin un Estado?'. Tres invenciones centrales: primero, la prueba de trabajo (Proof-of-Work) — generar un nuevo bloque exige enormes recursos de cómputo para resolver un difícil problema matemático, de modo que el coste de falsificar siempre es mayor que el de ser honesto. Segundo, el libro mayor distribuido (blockchain) — cada registro de transacción lo mantienen a la vez unos 10.000 nodos o más, y si un nodo manipula, la mayoría lo rechaza. Tercero, un suministro fijado en el propio código — un total de 21 millones, con la nueva emisión reduciéndose a la mitad cada cuatro años aproximadamente (el 'halving'). El emisor no es una persona, sino el código.",
+      "La idea central del diseño es distribuir la confianza. El dinero convencional se apoya en la confianza en un emisor (un banco central); el bitcoin reparte esa confianza entre unos 10.000 nodos y mineros independientes y un código público — para alterar el sistema, una institución tendría que reunir más de la mitad de la potencia de cómputo mundial. Sin embargo, el diseño conlleva contrapartidas. Primero, el rendimiento es lento (unas 7 transacciones por segundo, una fracción ínfima de la capacidad de Visa). Segundo, el consumo energético de la prueba de trabajo ronda los 150–170 TWh anuales — cercano al consumo total de Noruega. Tercero, y de forma más fundamental, el único ancla de valor es la demanda en sí, por lo que la volatilidad es intrínsecamente grande (el −84 % de la burbuja de 2017, el −77 % de la de 2021 y varios otros ciclos de desplome).",
+    ],
+    lesson: "El bitcoin es el caso que responde de forma más dramática a la pregunta de este archivo: '¿qué hace que el dinero sea dinero?'. Sin respaldo en oro, sin garantía estatal. Su valor se sostiene en un solo hecho: 'todos creen'. Esa es su fortaleza — y, a la vez, su mayor debilidad.",
+    aftermath: [
+      "La llegada del bitcoin es un punto de inflexión en curso en la historia del pensamiento monetario. Directamente, se han derivado más de 10.000 altcoins (la mayoría burbujas y fracasos), y desde que Ethereum (2015) introdujo los 'contratos inteligentes', se han formado nuevos mercados como las finanzas descentralizadas (DeFi), los NFT y las stablecoins. En 2024, las stablecoins (USDT, USDC, etc.) suman cerca de 150.000 millones de dólares de capitalización — una estructura paradójica de 'volver a poner el dólar sobre las cripto', es decir, la envoltura digital del dinero fiduciario.",
+      "Las respuestas institucionales van en dos direcciones. Por un lado, los bancos centrales de todo el mundo investigan y despliegan CBDC (monedas digitales de banco central) — China (piloto del yuan digital), Europa (estudio del euro digital), EE. UU. (en discusión) — todos respondiendo a la posibilidad del 'dinero digital' que planteó el bitcoin. Por otro lado, la regulación — la aprobación de ETF de bitcoin al contado por la SEC de EE. UU. en 2024, el reglamento europeo MiCA (en vigor en 2024) y la Ley de Protección del Usuario de Activos Virtuales de Corea (en vigor en 2024) — está absorbiendo las cripto en el universo legal de activos. La posición a largo plazo del propio bitcoin — oro digital o residuo de una manía especulativa — aún la decide la historia, pero, sin duda, ha cambiado de forma permanente el debate sobre el futuro del sistema monetario.",
+    ],
+    today: "Si el bitcoin es innovación o manía, la historia aún lo decide. Una cosa está clara — si la 'creencia' sostiene su precio, la pregunta que viene desde los tulipanes también se aplica aquí. Su alta volatilidad exige una mirada más prudente.",
+    source: "Edición propia a partir del documento técnico público y de relatos estándar. No es asesoramiento de inversión; las cripto son muy volátiles.",
+  },
 };
