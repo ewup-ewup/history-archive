@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { T, FONT } from "./data/theme";
 import { L } from "./data/i18n";
 import { EVENTS } from "./data/events";
+import { ERA_EVENTS } from "./data/timeline";
+import { pathFromState, stateFromPath, initialRouteState } from "./router";
 
 import Header from "./components/Header.jsx";
 import ForkPopup from "./components/ForkPopup.jsx";
@@ -60,12 +62,13 @@ function todayKey() {
 export default function App() {
   const persisted = loadPersisted();
 
-  const [view, setView] = useState("timeline"); // 홈 = 타임라인
+  const initialRoute = initialRouteState(); // 진입 URL에서 초기 뷰/사건 추출
+  const [view, setView] = useState(initialRoute.view); // 홈 = 타임라인
   const [lang, setLang] = useState(persisted?.lang ?? "ko");
   const [theme, setTheme] = useState(initTheme); // 'light' | 'dark'
   const [openIdx, setOpenIdx] = useState(null); // 타임라인에서 펼칠 시대
   const [focusEvent, setFocusEvent] = useState(null); // 타임라인에서 강조·스크롤할 사건
-  const [detailId, setDetailId] = useState(null); // 상세 페이지로 볼 사건
+  const [detailId, setDetailId] = useState(initialRoute.detailId); // 상세 페이지로 볼 사건
   // 팝업: 오늘 처음 방문일 때만 노출 (데일리 컨셉)
   const [showPopup, setShowPopup] = useState(() => {
     if (typeof window === "undefined") return true;
@@ -145,6 +148,53 @@ export default function App() {
       document.documentElement.lang = lang;
     }
   }, [lang]);
+
+  // ── 라우팅: view/detailId ↔ URL 동기화 ──
+  // 상태 변경 → URL push (현재 경로와 다를 때만; 마운트 시 일치하므로 중복 push 없음)
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const path = pathFromState(view, detailId);
+    if (window.location.pathname !== path) {
+      window.history.pushState({ view, detailId }, "", path);
+    }
+  }, [view, detailId]);
+
+  // 뒤로/앞으로 가기 → URL에서 상태 복원
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const onPop = () => {
+      const s = stateFromPath(window.location.pathname);
+      setView(s.view);
+      setDetailId(s.detailId);
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
+  // 뷰/사건/언어에 따라 document.title 동적 변경 (탭 제목·SEO·공유)
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    const brand = "History Archive";
+    let title = brand;
+    if (view === "detail" && detailId) {
+      let ev = null;
+      for (const k of Object.keys(ERA_EVENTS)) {
+        const f = ERA_EVENTS[k].find((e) => e.id === detailId);
+        if (f) { ev = f; break; }
+      }
+      if (ev) title = `${ev.title[lang]} — ${brand}`;
+    } else {
+      const navLabel = {
+        timeline: L[lang].timeline?.flag,
+        events: L[lang].eventsIndex?.flag,
+        market: L[lang].nav?.market,
+        my: L[lang].nav?.my,
+        fork: L[lang].forkPopup?.title,
+      }[view];
+      title = navLabel ? `${navLabel} — ${brand}` : `${brand} — ${lang === "ko" ? "역사로 읽는 오늘의 시장" : lang === "ja" ? "歴史で読む今日の市場" : "Reading today's market through history"}`;
+    }
+    document.title = title;
+  }, [view, detailId, lang]);
 
   return (
     <div style={{ background: T.bg, minHeight: "100vh", fontFamily: FONT, color: T.textPrimary }}>
