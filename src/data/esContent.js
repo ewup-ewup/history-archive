@@ -466,4 +466,118 @@ export const ES_EVENT_DETAIL = {
     today: "Hoy todos los billetes y el dinero digital son descendientes del jiaozi. La lección del siglo XI — 'la moderación en la emisión mantiene la confianza; la sobreemisión destruye el valor' — es exactamente el núcleo de la política monetaria moderna.",
     source: "Edición propia a partir de la historia monetaria y de la dinastía Song estándar.",
   },
+  "south-sea": {
+    subtitle: "Gran Bretaña · 1720",
+    stats: [
+      { k: "Subida de la acción", v: "~10× en un año" },
+      { k: "Víctima famosa", v: "Newton (según se dice)" },
+      { k: "Naturaleza", v: "Expectativa hueca" },
+    ],
+    chart: {
+      cap: "Acción de los Mares del Sur — una burbuja de expectativa hueca",
+      peak: "Pico de la burbuja (verano de 1720)",
+    },
+    body: [
+      "En la Gran Bretaña de 1720, la South Sea Company tenía un monopolio prometido sobre el comercio sudamericano. Su negocio real era escaso, pero la fantasía de 'las inmensas riquezas de Sudamérica' atrapó a la gente. Los privilegios concedidos por absorber la deuda del gobierno añadían confianza.",
+      "La acción se disparó cerca de diez veces en menos de un año. De los nobles a los plebeyos, todos se lanzaron, y surgieron por docenas 'compañías' imitadoras de sustancia desconocida. A todos los atrapó la fiebre de 'no puedo ser yo el que se quede atrás'.",
+      "La burbuja acabó estallando. Al derrumbarse las expectativas huecas, la acción se desplomó e innumerables inversores quebraron. Hasta el genio Isaac Newton, según se dice, perdió una fortuna. Se cuenta que comentó que podía calcular los movimientos de los cielos, pero no la locura de la gente.",
+    ],
+    mechanism: [
+      "La burbuja de los Mares del Sur no fue solo manía, sino una máquina financiera finamente diseñada. El mecanismo central fue un esquema de canje de deuda por acciones. A cambio de absorber la deuda del gobierno británico, la compañía recibía privilegios (nominalmente un monopolio sobre el comercio sudamericano) e ingresos anuales por intereses; a cambio, emitía sus propias acciones a los tenedores de deuda. El truco clave: 'a medida que sube el precio de la acción, la misma deuda se absorbe con menos acciones → la compañía obtiene un excedente de acciones → venderlas en el mercado o repartirlas como bonificaciones empuja el precio más alto'. Un bucle alcista que se autoalimenta.",
+      "Dos tipos de apalancamiento agravaron esto. Primero, los pagos a plazos de la suscripción — los suscriptores pagaban solo un 10–20 % por adelantado y el resto a plazos, permitiendo de hecho una compra apalancada de 5–10×. Segundo, el uso de información privilegiada por directores y políticos — inflaban el precio y vendían en el pico. Justo tras el pico del verano de 1720, los compradores apalancados incapaces de afrontar sus pagos a plazos se vieron forzados a vender, y el precio se desplomó casi un 90 % en un solo trimestre. Una investigación parlamentaria concluyó después que unos 500 diputados y más de 100 nobles habían estado enredados en las acciones y los sobornos.",
+    ],
+    lesson: "La lección de la burbuja de los Mares del Sur: 'hasta la inteligencia es impotente ante la psicología de masas'. Una de las mentes más brillantes de la historia fue arrastrada por la manía. La astucia no nos protege de las burbujas — de hecho, la confianza de 'yo soy diferente' puede ser lo más peligroso.",
+    aftermath: [
+      "La consecuencia institucional más directa de la burbuja de los Mares del Sur fue la Ley de Burbujas (Bubble Act) de 1720. La ley prohibió formar sociedades por acciones sin permiso real, suprimiendo de hecho el surgimiento de nuevas corporaciones en Gran Bretaña durante más de un siglo (derogada en 1825). La intención era frenar la especulación, pero los efectos secundarios fueron grandes — la formación de capital en los inicios de la Revolución Industrial quedó restringida, así que buena parte de la primera industrialización británica se financió a través de sociedades, propiedad familiar y préstamos bancarios. El primer caso histórico de 'sobrerregulación posterior a una burbuja que frena la innovación'.",
+      "El legado político y cultural perduró mucho más. Al gestionar las secuelas, Robert Walpole consolidó su influencia como el 'Screen-Master' que protegió de la exposición a la casa real y a los funcionarios del gobierno, convirtiéndose en el primer primer ministro de facto de Gran Bretaña (1721–1742). La palabra 'burbuja' se volvió sinónimo de las manías especulativas por este caso, y toda burbuja posterior se discute bajo la sombra del nombre 'South Sea'. La propia compañía, parcialmente liquidada, siguió a la deriva en su forma hasta su disolución total en 1853.",
+    ],
+    today: "Cuando sientes la certeza de que 'esta inversión es diferente porque he estudiado lo suficiente', la burbuja de los Mares del Sur advierte en voz baja a través de la anécdota de Newton — que hasta el más listo cayó.",
+    source: "Edición propia a partir de la historia financiera estándar. La anécdota de Newton se cita ampliamente pero es de origen incierto, por eso se indica 'según se dice'.",
+  },
+  "gold-standard": {
+    subtitle: "Orden mundial liderado por Gran Bretaña · siglo XIX",
+    stats: [
+      { k: "Ancla", v: "Fijado al oro" },
+      { k: "Efecto", v: "Tipos estables" },
+      { k: "Debilidad", v: "Rigidez" },
+    ],
+    chart: {
+      cap: "Estabilidad cambiaria — baja volatilidad gracias al ancla del oro",
+      peak: "Orden global estable",
+    },
+    body: [
+      "En el siglo XIX, al estallar el comercio mundial, surgió un problema nuevo: con monedas distintas por nación, ¿cómo alinear sus valores? Sin un estándar de cuántos francos franceses equivalían a una libra esterlina, el comercio internacional era una confusión sin fin.",
+      "La solución fue un ancla común: el oro. Cuando cada nación fijó su moneda a una cantidad fija de oro, todas las monedas se convertían automáticamente a través del oro. El patrón oro liderado por Gran Bretaña unió la economía mundial del siglo XIX en un orden estable. Con tipos de cambio previsibles, el comercio y la inversión florecieron.",
+      "Pero el patrón oro tenía una rigidez fatal. Con la oferta monetaria atada a las reservas de oro, los gobiernos no podían inyectar dinero con flexibilidad ni siquiera en una crisis. Esta rigidez se señaló después como una de las causas que agravaron la Gran Depresión, y en el siglo XX el patrón oro se desvaneció en la historia.",
+    ],
+    mechanism: [
+      "El patrón oro clásico (aproximadamente 1870–1914) funcionaba con dos reglas simples. Primero, el banco central de cada país estaba obligado a cambiar libremente su moneda por oro a una proporción fija — por ejemplo, 1 onza ≈ 4,25 £ en Gran Bretaña, 1 onza = 20,67 $ en EE. UU. Segundo, no había restricción al movimiento de oro entre países. Solo estas dos reglas fijaban los tipos de cambio automáticamente — cuando una moneda subía, la gente convertía oro en ella para obtener un beneficio de arbitraje, y ese flujo devolvía el tipo al equilibrio.",
+      "El mecanismo de autoajuste de este sistema se conoce como el 'mecanismo del flujo de precios y metálico' de David Hume. Cuando el oro salía de un país con déficit comercial, la oferta monetaria se contraía → los precios y los salarios bajaban → se recuperaba la competitividad exportadora → se restablecía la balanza comercial → el oro regresaba. La teoría era elegante, pero el coste real era alto — restablecer el equilibrio exigía bajar los precios y los salarios, lo que significaba desempleo y recortes salariales. Peor aún, en una crisis el banco central tenía que subir los tipos para frenar la salida de oro, agravando la recesión — el error político central de la Depresión de 1929 fue precisamente esta restricción del patrón oro.",
+    ],
+    lesson: "El patrón oro revela el dilema fundamental de la política monetaria: 'la estabilidad y la flexibilidad son una disyuntiva'. El ancla del oro dio confianza y estabilidad, pero ató las manos en una crisis. A qué anclar el dinero — la humanidad aún no ha encontrado una respuesta perfecta.",
+    aftermath: [
+      "El patrón oro se derrumbó en dos oleadas. La primera llegó al estallar la Primera Guerra Mundial en 1914, cuando los países suspendieron en masa la convertibilidad para financiar el gasto militar. En los años 20, Gran Bretaña intentó volver a la paridad de antes de la guerra en 1925 (Churchill, Norman), pero una revalorización demasiado agresiva produjo deflación crónica y la huelga general de 1926, y Gran Bretaña abandonó de nuevo el oro en 1931. El golpe decisivo fue la Gran Depresión — cuando EE. UU. prohibió la tenencia privada de oro y suspendió la convertibilidad en 1933, el sistema terminó de hecho.",
+      "El sistema de Bretton Woods de posguerra (1944–1971) fue un patrón oro modificado, anclando el dólar al oro y las demás monedas al dólar. Pero los déficits comerciales acumulados de EE. UU. y el gasto de la guerra de Vietnam lo derribaron en el shock Nixon de 1971, y la humanidad entró, por primera vez, en una era de dinero fiduciario sin ancla física. En el siglo XXI, algunos defensores del bitcoin que abogan por un 'patrón oro digital', y los bancos centrales que intentan crear anclas autoimpuestas mediante objetivos de inflación y reglas de oferta monetaria (la regla de Taylor), son todos intentos de responder a la pregunta posterior a 1971: 'en una era sin ancla física, ¿qué sostiene el valor del dinero?'.",
+    ],
+    today: "Que algunos llamen hoy al bitcoin un 'patrón oro digital' encaja en este contexto. Anclar la oferta para ganar confianza, o aflojarla por flexibilidad — el debate del siglo XIX continúa ahora de forma cambiada.",
+    source: "Edición propia a partir de la historia económica y financiera estándar.",
+  },
+  mississippi: {
+    subtitle: "Francia · 1716–1720",
+    stats: [
+      { k: "Subida de la acción", v: "~20× (~500 → ~10.000 libras)" },
+      { k: "Sobreemisión de billetes", v: "~2–3× las reservas de oro y plata" },
+      { k: "Confianza francesa en el papel moneda", v: "~80 años de silencio" },
+    ],
+    chart: {
+      cap: "Acción de la Compañía del Misisipi — ~20× de subida, colapso en un año",
+      peak: "Pico de 1719–1720",
+    },
+    body: [
+      "En 1716, el economista de origen escocés John Law hizo una propuesta radical a un gobierno francés cargado de deudas: 'en lugar de oro y plata, emitir papel moneda respaldado por el crédito del Estado y reactivar la economía'. Con la aprobación del Regente — el duque de Orleans, que gobernaba durante la minoría de Luis XV — Law fundó la Banque Générale en 1716 y empezó a emitir billetes.",
+      "En 1717, Law creó la Compañía del Misisipi (Compagnie d'Occident, luego absorbida por la Compagnie des Indes), recibiendo el monopolio del comercio y la minería de oro en la Luisiana francesa. La jugada decisiva — los tenedores de deuda pública podían canjear esa deuda por acciones de la Compañía del Misisipi. En 1718 la Banque Générale fue nacionalizada como Banque Royale, y sus billetes fueron declarados de curso legal; la gente exigía más billetes para comprar las acciones del Misisipi en alza, y Law accedía.",
+      "A lo largo de 1719, el precio de la acción subió cerca de veinte veces, de unas 500 libras a un pico cercano a 10.000. La palabra 'millonario' apareció por primera vez en las calles de París. Pero a principios de 1720, cuando algunos inversores intentaron convertir acciones y billetes en oro, todo el sistema tembló a la vez. Law restringió la convertibilidad en oro e imprimió más billetes, pero la confianza ya se había roto. A finales de 1720, la acción estaba cerca de cero y los billetes se habían desplomado. Law huyó de Francia y murió pobre en Venecia.",
+    ],
+    mechanism: [
+      "La estructura de la burbuja del Misisipi funcionó el mismo año (1720) con mecanismos casi idénticos a los de la burbuja de los Mares del Sur — canje de deuda por acciones, emisión creciente de billetes y apalancamiento a plazos. Pero con una diferencia decisiva: en Gran Bretaña, una compañía privada (la South Sea Company) llevó el esquema; en Francia, el propio Estado entregó a un solo hombre — John Law — el poder combinado de emitir dinero, emitir acciones y absorber la deuda estatal. Law era a la vez gobernador del banco central, director de una vasta compañía comercial multinacional y ministro de Finanzas.",
+      "Esa concentración de poder hizo la burbuja más grande y más rápida. Cuando los precios de las acciones flaqueaban, Law hacía que la Banque Royale imprimiera más billetes para comprar acciones; cuando los billetes vacilaban, empujaba con más fuerza a comprar acciones — uniendo los dos activos para que se sostuvieran mutuamente. Pero eso era, en el fondo, una mano apuntalando a la otra, y una vez que grandes inversores (como el príncipe de Conti y el duque de Borbón) empezaron a convertir sus tenencias en monedas de oro, ambos lados se derrumbaron a la vez. En su apogeo, se estima que los billetes emitidos fueron unas dos a tres veces las reservas de oro y plata de Francia.",
+    ],
+    lesson: "La burbuja del Misisipi es el arquetipo de la proposición de que 'cuando el Estado controla directamente el dinero y los activos a la vez, la burbuja crece más y el colapso es más profundo'. Por qué la separación de poderes — la independencia del banco central, la regulación de los valores, la responsabilidad separada de la política monetaria — es un pilar de la estabilidad económica, y no una mera formalidad administrativa: esa respuesta se aprendió al precio más alto en las calles de París en 1720.",
+    aftermath: [
+      "La consecuencia directa de la burbuja del Misisipi fue un largo estancamiento de las finanzas públicas francesas. La deuda estatal pareció desvanecerse brevemente con el canje de acciones, pero reapareció tras el desplome y — peor — los ciudadanos dejaron de confiar en el papel moneda en sí. Francia no volvió a intentar en serio emitir papel moneda durante unos 80 años (hasta la víspera de la Revolución de 1789), y esa presión fiscal crónica se convirtió en una de las mechas directas de la Revolución Francesa.",
+      "A escala histórica mundial, las burbujas gemelas de 1720 (Misisipi y Mares del Sur) produjeron una profunda autorreflexión en las finanzas europeas del siglo XVIII. Gran Bretaña restringió las nuevas sociedades por acciones durante un siglo con la Ley de Burbujas, y Francia no pudo reconstruir un banco central durante casi un siglo (hasta que Napoleón fundó el Banco de Francia en 1800). El propio legado de John Law tiene dos caras — el elogio como pionero de la teoría monetaria moderna y la crítica como un jugador que infló la ilusión de que 'el papel moneda lo resuelve todo' han corrido por carriles paralelos durante más de 200 años.",
+    ],
+    today: "Cuando los bancos centrales modernos apuntalan los mercados de activos con una flexibilización cuantitativa masiva, la burbuja del Misisipi pregunta en voz baja: ¿de verdad está bien que la misma mano mueva la emisión de dinero y los precios de los activos a la vez? París, en 1720, pagó el precio más alto para enseñar por qué es necesario un diseño institucional independiente y claramente separado.",
+    source: "Edición propia a partir de la historia financiera y de la economía francesa estándar. Las cifras de precios y de emisión varían algo según la estimación y el registro.",
+  },
+  "1907": {
+    subtitle: "Estados Unidos · oct.–nov. de 1907",
+    stats: [
+      { k: "Del pico al mínimo del Dow", v: "aprox. −47 %" },
+      { k: "Detonante clave", v: "Quiebra del Knickerbocker Trust (22 oct.)" },
+      { k: "Actor del rescate", v: "El sindicato privado de J.P. Morgan" },
+    ],
+    chart: {
+      unit: "Dow Jones",
+      cap: "Promedio Industrial Dow Jones (1906–1909) — desplome de ~47 % en el pánico y recuperación",
+      peak: "Pico de 1906, mínimo en nov. de 1907",
+      dataNote: "Basado en cierres mensuales reales del Dow. Pico ~100 → mínimo ~53 (nov. 1907) → recuperación hacia 1909.",
+    },
+    body: [
+      "En el otoño de 1907, el sistema financiero de EE. UU. estaba al borde de la explosión. Años de crédito laxo de las compañías fiduciarias (trust companies — banca en la sombra que operaba fuera de la regulación bancaria convencional, con activos más arriesgados) habían canalizado enormes préstamos hacia la especulación en acciones y cobre, y cuando el mercado flaqueó, los activos de los fideicomisos flaquearon con él. El 16 de octubre de 1907, dos especuladores, Otto Heinze y Charles Morse, intentaron acaparar la acción de United Copper y fracasaron — encendiendo la mecha.",
+      "El Mercantile National Bank, que había prestado a estos especuladores, quedó bajo presión, y el pánico inundó el mercado a medida que el dinero empezaba a drenarse de las compañías fiduciarias. El suceso decisivo llegó el 22 de octubre — el Knickerbocker Trust, uno de los tres mayores fideicomisos de EE. UU., ya no pudo atender las demandas de retirada y suspendió operaciones. Al día siguiente se formó una cola en la Trust Company of America, y el pánico se extendió de fideicomiso → banco → bolsa → dinero a la vista (call money). El tipo del dinero a la vista superó el 100 % — en efecto, el mercado se detuvo.",
+      "En ese momento, EE. UU. no tenía banco central (el Primer Banco terminó en 1811, el Segundo en 1836, dejando unos 70 años de vacío). Sin nadie institucionalmente responsable de rescatar el sistema, el banquero estadounidense dominante de la época, J. Pierpont Morgan, reunió a sus colegas banqueros en su propio despacho y dirigió personalmente las negociaciones. Morgan combinó sus fondos y los de sus colegas para inyectar liquidez directamente en los fideicomisos y bancos tambaleantes, y tras días de reuniones maratonianas, el pánico se calmó a principios de noviembre. Aun así, el Dow cayó cerca de un 47 % desde su pico, y el PIB se contrajo cerca de un 11 % a lo largo de dos años.",
+    ],
+    mechanism: [
+      "El mecanismo del pánico de 1907 combinó 'la fragilidad estructural de un sistema sin banco central' con 'el vacío regulatorio en torno a las compañías fiduciarias como banca en la sombra'. En aquel momento, EE. UU. funcionaba sin banco central; una asociación privada llamada las cámaras de compensación (clearing houses) gestionaba la liquidación interbancaria y podía emitir liquidez de emergencia, pero las compañías fiduciarias no eran miembros — cuando los fideicomisos flaqueaban, no había canal oficial para salvarlos. Para 1907, el total de activos de los fideicomisos era aproximadamente igual al de los bancos comerciales de Nueva York, así que el golpe de la caída de un gigante fuera de la regulación fue enorme.",
+      "El detonante fue pequeño, pero la cadena de amplificación, larga. Fracaso del acaparamiento de United Copper → crisis del Mercantile National Bank → las retiradas se extienden a los fideicomisos → los fideicomisos retiran el dinero a la vista → el tipo a la vista se dispara → liquidación forzosa de acciones → desplome del Dow → más colapso de fideicomisos. Lo que rompió la cadena fue que el sindicato privado de J.P. Morgan (1) evaluó con rapidez un fideicomiso clave (Trust Co. of America) y lo juzgó salvable, (2) reunió fondos y los inyectó de inmediato, y (3) envió al mercado una señal clara de que 'este fideicomiso se salvará'. En efecto, un solo actor privado desempeñó temporalmente la función de 'prestamista de última instancia'.",
+    ],
+    lesson: "La lección más profunda del pánico de 1907 fue que 'la credibilidad de un solo hombre podía sostener el sistema, pero ningún hombre es eterno'. J.P. Morgan tenía 70 años ese año. La pregunta '¿quién hará de Morgan en el próximo pánico?' produjo su respuesta seis años después en la Reserva Federal. Un caso decisivo de trasladar la responsabilidad de la respuesta a la crisis del carácter de un individuo privado a una institución oficial.",
+    aftermath: [
+      "Justo tras el pánico de 1907, el Congreso de EE. UU. aprobó la Ley Aldrich-Vreeland de 1908, que otorgaba la emisión de moneda de emergencia, y creó la Comisión Monetaria Nacional, que dedicó unos cinco años a estudiar a fondo los bancos centrales europeos. Sobre la base de ese informe, el Sistema de la Reserva Federal se creó el 23 de diciembre de 1913, firmado por el presidente Woodrow Wilson. Su estructura distribuida — doce Bancos de la Reserva regionales más una junta central en Washington — fue un compromiso político que reflejaba tanto la eficiencia de un banco central como una desconfianza típicamente estadounidense hacia el poder financiero concentrado del Este.",
+      "Los efectos institucionales fueron de dos caras. Desde su fundación en 1913 en adelante, la Reserva Federal desempeñó oficialmente la función de 'prestamista de última instancia' — financiando la Primera Guerra Mundial en 1914, respondiendo a la Depresión de 1929 (con muchos errores de política) y actuando en las crisis de 2008 y 2020 — abriendo una era en la que pánicos como el de 1907 ya no tenían que depender de un solo individuo privado. Sin embargo, el debate político sobre la propia Reserva Federal (independencia, transparencia, temores de interferencia política) ha continuado durante más de un siglo. Entretanto, J.P. Morgan, cuyo poder privado fue criticado en el Congreso tras 1907, fue investigado por el Comité Pujo en 1913 y murió ese mismo año — el nacimiento de la Reserva Federal y el final de la era Morgan ocurrieron casi a la vez.",
+    ],
+    today: "Toda respuesta moderna de un banco central a una crisis comenzó aquella noche de 1907 en la biblioteca de Morgan. Cuando la Reserva Federal rescató a Bear Stearns y AIG en la crisis de Lehman de 2008, y compró bonos corporativos directamente durante el shock de la COVID en 2020 — todo esto fue una institución oficial haciendo lo que un solo hombre había hecho en privado en 1907. La decisión de hace un siglo, 'nunca dejar una crisis sistémica en manos de una sola persona', se reafirma cada vez que vuelve una crisis hoy.",
+    source: "Edición propia a partir de la historia financiera de EE. UU. estándar. Las cifras del Dow Jones y del PIB varían ligeramente según la fuente.",
+  },
 };
