@@ -6,10 +6,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.js",
     "preview": "vite preview",
     "build-og": "node scripts/build-og.js",
-    "build-icons": "node scripts/build-icons.js"
+    "build-icons": "node scripts/build-icons.js",
+    "build-og-events": "node scripts/build-og-events.js"
   },
   "dependencies": {
     "framer-motion": "^11.3.0",
