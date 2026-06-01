@@ -202,3 +202,66 @@ export const ES_EVENTS_META = {
     mind: "¿En qué curva de la historia estamos ahora? Responder a eso depende de ti.",
   },
 };
+
+// 사건 상세 본문 스페인어 (EVENT_DETAIL에 주입). 배치로 채워나감.
+// 필드: subtitle·stats[{k,v}]·body[]·mechanism[]·aftermath[]·lesson·today·source·chart{unit,cap,peak,dataNote}
+export const ES_EVENT_DETAIL = {
+  tulip: {
+    subtitle: "Países Bajos · 1634–1637",
+    stats: [
+      { k: "Bulbo más caro", v: "El precio de una casa" },
+      { k: "Hasta el desplome", v: "Solo unos días" },
+      { k: "Valor restante", v: "Casi cero" },
+    ],
+    chart: {
+      cap: "Precio del bulbo de tulipán — colapso vertical pocos días tras el pico",
+      peak: "Pico de la manía (feb. 1637)",
+    },
+    body: [
+      "Los Países Bajos del siglo XVII vivían su Siglo de Oro. La Compañía de las Indias Orientales traía riqueza inmensa, y una nueva clase mercante buscaba símbolos de ella. El tulipán, llegado del Imperio otomano, ocupó ese lugar — sobre todo los bulbos mutados con patrones únicos por un virus, que se negociaban a precios astronómicos por su rareza.",
+      "En el apogeo, un solo bulbo equivalía a diez años del salario de un artesano, incluso a una mansión junto al canal. La gente no compraba para cultivarlos, sino para 'venderlos más caros'. El comercio estalló con 'contratos de futuros' antes de que ningún bulbo cambiara de manos, y los papeles cambiaban de dueño decenas de veces en las tabernas.",
+      "En febrero de 1637, en una subasta, de pronto dejaron de aparecer compradores. En ese instante todos comprendieron a la vez: 'ya no hay un tonto mayor que me lo compre más caro'. Los precios se hundieron más de un 99 % en días, dejando con las manos vacías a innumerables tenedores de papel.",
+    ],
+    mechanism: [
+      "La tulipomanía no puede explicarse como mera 'locura'. La mayoría de las operaciones no eran de bulbos reales, sino contratos a plazo durante el invierno — los bulbos solo se desentierran en primavera, así que la gente pasó todo el invierno comprando y vendiendo 'promesas de entrega', revendiéndolas en las tabernas sin cámara de compensación central, sin control de márgenes, sin garantías.",
+      "El precio se anclaba en bulbos infectados por un virus, cuyas franjas únicas eran la escasez — pero esos patrones no se reproducían de forma fiable, así que la calidad de la descendencia de cualquier bulbo era inverificable. El 'activo' subyacente de cada contrato era, pues, un resultado futuro fundamentalmente incomprobable. A medida que subían los precios, los nuevos compradores entraban no por el valor del bulbo, sino por la expectativa de que 'el próximo comprador pagará más'.",
+    ],
+    lesson: "La tulipomanía fue el primer caso a gran escala que mostró cómo el 'valor intrínseco' y el 'precio' pueden separarse por completo. Lo que sostenía el precio no era la belleza de la flor, sino la creencia en 'el próximo comprador pagando más'. El momento en que esa creencia se desvaneció fue el desplome.",
+    aftermath: [
+      "Tras el estallido, la respuesta del gobierno y los tribunales neerlandeses fue sorprendentemente tibia. En la primavera de 1637, ciudades como Haarlem dictaminaron que los contratos a plazo — tratados como algo parecido al juego — no se ejecutarían legalmente, y empujaron a las partes a saldar cuentas en privado. El daño se concentró en una parte de los mercaderes y la clase media; la economía neerlandesa en general no se hundió, y el comercio con las Indias Orientales y el poder naval continuaron durante décadas.",
+      "Lo que perduró mucho más que cualquier cambio institucional fue una cicatriz cultural. Tras 'Delirios populares extraordinarios' de Charles Mackay (1841), la tulipomanía se volvió la metáfora arquetípica de toda burbuja de activos — 'el tulipán del siglo XXI' reaparece automáticamente cada vez que un nuevo activo se dispara. En honor a la verdad, estudios más recientes han sostenido que la escala de la manía fue algo exagerada por los moralistas victorianos — una salvedad que conviene recordar.",
+    ],
+    today: "Cada vez que un nuevo activo se dispara con un 'esta vez es diferente', aparece la sombra del tulipán. La pregunta que separa la innovación de la manía siempre fue una: ¿sostiene este precio el valor, o la expectativa sobre el próximo comprador?",
+    source: "Edición propia a partir de la historia económica estándar. Algunas cifras varían según los registros de la época.",
+  },
+  "1929": {
+    subtitle: "Estados Unidos · octubre de 1929",
+    stats: [
+      { k: "Caída del pico al mínimo", v: "aprox. −89 %" },
+      { k: "Hasta recuperarse", v: "unos 25 años" },
+      { k: "Pico de desempleo", v: "aprox. 25 %" },
+    ],
+    chart: {
+      unit: "Dow Jones",
+      cap: "Promedio Industrial Dow Jones (1921–1954)",
+      peak: "381 (3 sept. 1929)",
+      dataNote: "Basado en la trayectoria real del Dow (pico 381,17 → falso repunte en primavera de 1930 → mínimo 41,22, −89 % → recuperado en 1954). Fuente: Federal Reserve History (FRED)",
+    },
+    body: [
+      "Los Estados Unidos de los años 20 — los 'Felices Años Veinte'. El automóvil, la radio y la electricidad rehicieron la vida diaria mientras las acciones subían sin fin. La compra a margen — pedir prestado para comprar acciones y luego volver a endeudarse con ellas como garantía — estaba muy extendida. El optimismo era unánime, hasta el punto de que se decía que incluso los limpiabotas daban consejos bursátiles.",
+      "Las grietas empezaron el 24 de octubre de 1929 (Jueves Negro). Solo el 29 de octubre (Martes Negro) el mercado entró en pánico; las acciones compradas a margen fueron liquidadas por la fuerza, y la caída alimentó la caída. Cinco años de ganancias implacables se desmoronaron en días.",
+      "La tragedia mayor vino después. El desplome se extendió a una cadena de quiebras bancarias y a la Gran Depresión, con el desempleo llegando al 25 %. El mercado tardó nada menos que 25 años en recuperar su pico.",
+    ],
+    mechanism: [
+      "La profundidad de la Gran Depresión no se explica solo por 'un desplome bursátil'. El mecanismo central fue el apalancamiento apilado en tres capas. Primero, la compra a margen de los inversores minoristas: un 10 % de entrada y un 90 % prestado estaba muy extendido, de modo que incluso una caída del 10 % desencadenaba la liquidación forzosa. Segundo, los fondos de inversión en forma de pirámide — un fondo tenía acciones de otro fondo, que tenía otro, multiplicando geométricamente las pérdidas al deshacerse la estructura.",
+      "La tercera capa fue el propio sistema financiero. EE. UU. no tenía seguro de depósitos, la banca comercial y la de inversión no estaban separadas, y los bancos tenían acciones directamente. La quiebra de un banco desataba pánicos sobre el siguiente, y unos 9.000 bancos cerraron entre 1930 y 1933. Atada al patrón oro, la Reserva Federal subió tipos una y otra vez en plena crisis para frenar la salida de oro — la masa monetaria se contrajo cerca de un tercio entre 1929 y 1933 (el clásico diagnóstico de Friedman y Schwartz).",
+    ],
+    lesson: "La Depresión es el arquetipo de la combinación más peligrosa: 'activos inflados por deuda' al encontrarse con el 'optimismo unánime'. Cuando todos miran en la misma dirección, no quedan compradores. Y el apalancamiento amplifica la caída tanto como la subida.",
+    aftermath: [
+      "El golpe impulsó un rediseño del propio sistema financiero de EE. UU. La Ley Glass-Steagall de 1933 separó la banca comercial de la de inversión para que el dinero de los depositantes ya no financiara la especulación bursátil (derogada en parte en 1999). Ese mismo año se creó la Corporación Federal de Seguro de Depósitos (FDIC), que rompió la reacción en cadena de los pánicos bancarios mediante el seguro de depósitos. La Ley de Bolsa de 1934 creó la SEC, lanzando la regulación moderna de divulgación, uso de información privilegiada y compra a margen.",
+      "También hubo giros en la política monetaria y fiscal. EE. UU. abandonó de hecho el patrón oro en 1933 (incluso se prohibió la tenencia privada de oro), y el New Deal levantó los pilares del Estado de bienestar moderno — obra pública, Seguridad Social, protección laboral. A nivel macroeconómico, la 'Teoría general' de Keynes (1936) fue profundamente influyente, desplazando el equilibrio desde la ortodoxia decimonónica del 'los mercados se autocorrigen' hacia 'en las depresiones profundas, el gobierno debe crear demanda'. Buena parte de este esqueleto institucional sigue funcionando hoy.",
+    ],
+    today: "Cuando los índices están en máximos históricos y todos son optimistas, 1929 pregunta en voz baja: ¿cuánta 'deuda' se ha acumulado ahora en el mercado, y cuántos miran hacia el otro lado?",
+    source: "Edición propia a partir de la historia económica y financiera estándar. La caída y la recuperación varían según la base del índice.",
+  },
+};

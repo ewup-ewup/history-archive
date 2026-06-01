@@ -16,7 +16,7 @@ import { ERAS, ERA_EVENTS, EVENT_DETAIL } from "./timeline";
 import { COMPARE } from "./compare";
 import { REFLECTIONS } from "./reflections";
 import { EVENT_LINKS } from "./eventLinks";
-import { ES_ERAS, ES_EVENTS_META } from "./esContent";
+import { ES_ERAS, ES_EVENTS_META, ES_EVENT_DETAIL } from "./esContent";
 
 const has = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
 
@@ -56,6 +56,27 @@ function applyEsOverrides() {
       if (!es) continue;
       for (const [field, text] of Object.entries(es)) {
         if (ev[field] && typeof ev[field] === "object") ev[field].es = text;
+      }
+    }
+  }
+
+  // EVENT_DETAIL 본문 es (번역된 사건만)
+  for (const [id, es] of Object.entries(ES_EVENT_DETAIL)) {
+    const d = EVENT_DETAIL[id];
+    if (!d) continue;
+    for (const f of ["subtitle", "lesson", "today", "source", "body", "mechanism", "aftermath"]) {
+      if (es[f] !== undefined && d[f]) d[f].es = es[f];
+    }
+    if (es.stats && d.stats) {
+      es.stats.forEach((s, i) => {
+        if (!d.stats[i]) return;
+        if (s.k && d.stats[i].k) d.stats[i].k.es = s.k;
+        if (s.v && d.stats[i].v) d.stats[i].v.es = s.v;
+      });
+    }
+    if (es.chart && d.chart) {
+      for (const f of ["unit", "cap", "peak", "dataNote"]) {
+        if (es.chart[f] && d.chart[f]) d.chart[f].es = es.chart[f];
       }
     }
   }

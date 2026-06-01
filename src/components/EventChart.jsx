@@ -31,7 +31,7 @@ export default function EventChart({ chart, color, lang }) {
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 6 }}>
           <span style={{ fontSize: 12.5, fontWeight: 700, color: T.strong }}>{chart.unit[lang]}</span>
           <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 10.5, fontWeight: 700, color: T.success, background: T.successSoft, padding: "3px 8px", borderRadius: 20 }}>
-            <span style={{ width: 5, height: 5, borderRadius: "50%", background: T.success }} /> {lang === "ko" ? "실제 데이터" : lang === "ja" ? "実データ" : "Real data"}
+            <span style={{ width: 5, height: 5, borderRadius: "50%", background: T.success }} /> {lang === "ko" ? "실제 데이터" : lang === "ja" ? "実データ" : lang === "es" ? "Datos reales" : "Real data"}
           </span>
         </div>
         <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label={chart.cap[lang]} style={{ display: "block" }}>
@@ -97,7 +97,7 @@ export default function EventChart({ chart, color, lang }) {
     <div style={{ background: T.card, border: `1px solid ${T.line}`, borderRadius: 16, padding: "18px 18px 14px", overflow: "hidden" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", marginBottom: 6 }}>
         <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 10.5, fontWeight: 700, color: T.textTertiary, background: T.bgSoft, padding: "3px 8px", borderRadius: 20 }}>
-          {lang === "ko" ? "개념도" : lang === "ja" ? "概念図" : "Conceptual"}
+          {lang === "ko" ? "개념도" : lang === "ja" ? "概念図" : lang === "es" ? "Conceptual" : "Conceptual"}
         </span>
       </div>
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label={chart.cap[lang]} style={{ display: "block" }}>
