@@ -85,3 +85,120 @@ export const ES_ERAS = [
     psych: "¿Por qué los mercados repiten siempre burbujas y pánicos? Porque cuanto más puro 'creer' se vuelve el dinero, más gobiernan el mercado las emociones que lo sacuden — la codicia y el miedo. Toda burbuja de la historia empezó con la codicia del 'esta vez es diferente' y terminó con el miedo del 'se acabó todo'.",
   },
 ];
+
+// 사건 목록 메타(제목·연도·임팩트·심리)의 스페인어 — ERA_EVENTS에 주입.
+// 사건 인덱스·타임라인 카드·검색·cross-link·이전다음 등 목록 레이어용.
+export const ES_EVENTS_META = {
+  cowrie: {
+    title: "Las conchas de cauri se difunden como dinero",
+    year: "a. C. ~",
+    impact: "Conchas sin valor propio circularon por toda Asia y África. El primer caso en que el dinero se sostuvo sobre un solo consenso: 'todos lo aceptan'.",
+    mind: "Creo porque los demás creen — la esencia del dinero, la 'confianza colectiva', funcionando por primera vez.",
+  },
+  tulip: {
+    title: "Tulipomanía — la primera burbuja",
+    impact: "Un solo bulbo de tulipán llegó a costar como una casa y se desplomó en días. Precio basado solo en la creencia — 'otros comprarán' — el arquetipo de toda burbuja.",
+    mind: "Cuando la codicia susurra 'esta vez es diferente', el final siempre fue el mismo.",
+  },
+  lydia: {
+    title: "Lidia acuña las primeras monedas",
+    year: "siglo VII a. C.",
+    impact: "Cuando el Estado garantizó el peso y el sello en el metal, desapareció la necesidad de pesar en cada trato. Un nuevo orden: 'la autoridad garantiza el valor'.",
+    mind: "El centro de la confianza pasó de la 'comunidad' al 'Estado'.",
+  },
+  debasement: {
+    title: "La degradación de la moneda romana — la primera inflación",
+    year: "Roma, siglo III",
+    impact: "Una Roma sin fondos redujo en secreto el contenido de plata, y el valor del dinero se desplomó. La primera lección sobre lo que ocurre cuando el Estado traiciona la confianza.",
+    mind: "Cuando la autoridad garante rompe su propia confianza, el dinero vale menos que el papel.",
+  },
+  jiaozi: {
+    title: "Jiaozi — el primer papel moneda del mundo",
+    year: "Song, siglo XI",
+    impact: "El comercio empezó con recibos de papel en lugar de monedas pesadas. Nació la era del crédito — comerciar con una promesa, sin lo físico.",
+    mind: "En cuanto se confió en 'canjeable en cualquier momento', el papel se volvió oro.",
+  },
+  "south-sea": {
+    title: "La burbuja de los Mares del Sur — hasta Newton perdió",
+    impact: "La acción de la South Sea Company británica subió diez veces en un año y se derrumbó. Hasta Newton perdió una fortuna, y se dice que afirmó que podía calcular los astros, pero no la locura de la gente.",
+    mind: "Hasta la inteligencia fue impotente ante la psicología de masas. La manía siempre arrastró también a los más listos.",
+  },
+  mississippi: {
+    title: "La burbuja del Misisipi — el gran experimento de John Law",
+    impact: "Francia entregó a John Law el poder de emitir dinero y montó un gran experimento canjeando deuda estatal por acciones de la Compañía del Misisipi. La acción se disparó y se derrumbó en un año, y la confianza francesa en el papel moneda no se recuperó durante casi un siglo.",
+    mind: "Que el propio Estado pudiera inflar una burbuja de papel moneda — ese golpe abonó el terreno fiscal de la Revolución Francesa.",
+  },
+  "gold-standard": {
+    title: "El patrón oro liderado por Gran Bretaña se expande",
+    year: "siglo XIX",
+    impact: "Al anclar las naciones sus monedas al oro, surgió un orden estable de tipos de cambio para el comercio. La economía mundial empezó a unirse bajo una sola regla.",
+    mind: "Un ancla común — el 'oro' — sostuvo la confianza entre naciones.",
+  },
+  "1907": {
+    title: "El pánico de 1907 — el rescate privado de J.P. Morgan",
+    impact: "El sistema financiero de EE. UU., que operaba sin banco central, estuvo al borde del colapso por una cascada de pánicos bancarios iniciada con la quiebra de un gran fideicomiso (el Knickerbocker), y solo las negociaciones personales de J.P. Morgan salvaron el sistema. El suceso fue el catalizador directo de la creación de la Reserva Federal seis años después.",
+    mind: "Una era en que la credibilidad de un solo hombre podía sostener el sistema — pero la conciencia de que ningún hombre es eterno forjó la institución.",
+  },
+  weimar: {
+    title: "La hiperinflación de Weimar — cien mil millones de marcos por un pan",
+    impact: "En noviembre de 1923, 1 dólar = 4,2 billones de marcos. Una hogaza de pan costaba cien mil millones de marcos. La peor inflación del siglo XX mostró hasta dónde puede caer una sociedad entera cuando la confianza monetaria se rompe una vez.",
+    mind: "La experiencia de ver la riqueza convertida en papel mojado quebró la autodefensa política de la sociedad de Weimar, y en ese vacío entró el extremismo.",
+  },
+  "1929": {
+    title: "El Martes Negro — comienza la Gran Depresión",
+    impact: "Cinco años de subidas implacables se desmoronaron en días. Activos inflados por deuda más optimismo unánime — el arquetipo de la combinación más peligrosa.",
+    mind: "Lo más peligroso es cuando todos son optimistas. Cuando la multitud señalaba un lado, los pocos que miraron al otro sobrevivieron.",
+  },
+  nixon: {
+    title: "El shock Nixon — fin de la convertibilidad del oro",
+    impact: "EE. UU. puso fin a su promesa de canjear dólares por oro. El dinero perdió al fin su ancla física, sosteniéndose en la pura 'creencia' — el inicio de la era moderna de tipos flotantes.",
+    mind: "Un solo anuncio de política reescribió las reglas del mercado mundial. La política siempre fue la mayor variable del mercado.",
+  },
+  "1997": {
+    title: "La crisis financiera asiática — el colapso de la confianza",
+    impact: "Las monedas asiáticas, incluida la coreana, se desplomaron en cadena. Un tipo de cambio es 'la nota de confianza del mundo hacia el dinero de un país'; cuando se rompió, todos huyeron al dólar a la vez, amplificando la crisis.",
+    mind: "Cuando la confianza se rompe, todos corren a la misma salida. Esa estampida agrandó la crisis.",
+  },
+  railway: {
+    title: "La fiebre ferroviaria británica",
+    year: "Década de 1840",
+    impact: "El capital inundó la nueva tecnología ferroviaria; las acciones de ferrocarriles se dispararon y luego cayeron. La tecnología era real, pero los precios se recalentaron — el inicio de un patrón clásico de la innovación derramándose en burbujas.",
+    mind: "La tecnología puede ser correcta y el precio equivocado. 'Innovación' y 'precio' eran cuestiones distintas.",
+  },
+  "black-monday": {
+    title: "Lunes Negro — el −22 % de la automatización en un día",
+    impact: "El 19 de octubre de 1987 el Dow cayó un 22,6 % en un solo día — una caída diaria mayor que el Martes Negro de 1929, pero la recuperación fue rápida y no siguió recesión. Fue la primera vez que la negociación automatizada por computadora se reveló como riesgo sistémico.",
+    mind: "Cuando las computadoras vendían más rápido que los humanos, los mercados se desplomaban a una velocidad que los humanos no podían prever. Un nuevo miedo para una nueva era.",
+  },
+  "japan-1989": {
+    title: "La burbuja de activos de Japón — el inicio de la década perdida",
+    impact: "Tras alcanzar el Nikkei un máximo histórico de 38.915, cayó cerca de un 80 % en más de una década, con el inmobiliario de Tokio desplomándose en proporción similar. La 'década perdida' (o tres) que empezó en el mayor pico de activos desde 1929 se volvió el caso de estudio estándar de política monetaria en una era de deflación y estancamiento demográfico.",
+    mind: "El pico de una burbuja no era 'ya subió todo', sino la certeza unánime de 'aún hay más'. Japón tampoco se libró de esa trampa.",
+  },
+  dotcom: {
+    title: "La burbuja puntocom — la ilusión del '.com'",
+    impact: "La era en que cualquier nombre con '.com' se disparaba se vino abajo. La revolución de internet era real, pero estallaron las burbujas de empresas sin beneficios. La misma curva que la fiebre ferroviaria, 150 años después.",
+    mind: "En cada era de innovación, el mercado primero se entusiasmó y luego separó el grano de la paja.",
+  },
+  "2008": {
+    title: "Lehman — se rompe el 'demasiado grande para caer'",
+    impact: "Un banco de inversión de 158 años quebró, sacudiendo el sistema financiero. Un mercado que creía en el 'demasiado grande para caer' se derrumbó de la noche a la mañana; el final de todo auge llevaba un 'esta vez es diferente'.",
+    mind: "La creencia 'demasiado grande para caer' era en sí misma la burbuja más peligrosa.",
+  },
+  bitcoin: {
+    title: "Bitcoin — dinero sin Estado",
+    impact: "El viejo sueño del 'dinero sin Estado' se hizo realidad en código. La historia del dinero, que empezó con conchas, volvió a 'un activo que se sostiene solo en la creencia' — innovación o ilusión, la historia aún decide.",
+    mind: "Como las conchas, el bitcoin gana valor 'si todos creen'. La esencia es la misma que hace 5.000 años.",
+  },
+  "covid-2020": {
+    title: "El shock COVID y el auge de activos — el oso más rápido + el mayor estímulo",
+    impact: "En solo cinco semanas de febrero-marzo de 2020, el S&P 500 se hundió un 34 % — el mercado bajista más rápido de la historia. Pero el mayor estímulo monetario y fiscal registrado dio la vuelta al mercado en seis meses, y en 2021 surgió una 'burbuja de todo' con todos los activos subiendo a la vez. El patrón de que la propia respuesta a la crisis se vuelve la semilla de la siguiente apareció en forma extrema.",
+    mind: "El miedo paralizó el sistema; la política lo revivió al instante. Pero la misma mano que lo revivió se volvió la fuente de la siguiente burbuja.",
+  },
+  ai: {
+    title: "La revolución de la IA y el mercado de hoy",
+    year: "2023 ~",
+    impact: "Las expectativas sobre la IA están elevando el mercado. Como con los ferrocarriles e internet, la tecnología es probablemente real — pero dónde divergen 'expectativa' y 'precio' solo se aclaró siempre en retrospectiva.",
+    mind: "¿En qué curva de la historia estamos ahora? Responder a eso depende de ti.",
+  },
+};

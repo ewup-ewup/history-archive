@@ -16,7 +16,7 @@ import { ERAS, ERA_EVENTS, EVENT_DETAIL } from "./timeline";
 import { COMPARE } from "./compare";
 import { REFLECTIONS } from "./reflections";
 import { EVENT_LINKS } from "./eventLinks";
-import { ES_ERAS } from "./esContent";
+import { ES_ERAS, ES_EVENTS_META } from "./esContent";
 
 const has = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
 
@@ -48,6 +48,17 @@ function applyEsOverrides() {
       }
     }
   });
+
+  // ERA_EVENTS 메타: 사건 목록의 title/year/impact/mind es
+  for (const list of Object.values(ERA_EVENTS)) {
+    for (const ev of list) {
+      const es = ES_EVENTS_META[ev.id];
+      if (!es) continue;
+      for (const [field, text] of Object.entries(es)) {
+        if (ev[field] && typeof ev[field] === "object") ev[field].es = text;
+      }
+    }
+  }
 }
 
 export function ensureEsFallback() {
