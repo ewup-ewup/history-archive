@@ -580,4 +580,118 @@ export const ES_EVENT_DETAIL = {
     today: "Toda respuesta moderna de un banco central a una crisis comenzó aquella noche de 1907 en la biblioteca de Morgan. Cuando la Reserva Federal rescató a Bear Stearns y AIG en la crisis de Lehman de 2008, y compró bonos corporativos directamente durante el shock de la COVID en 2020 — todo esto fue una institución oficial haciendo lo que un solo hombre había hecho en privado en 1907. La decisión de hace un siglo, 'nunca dejar una crisis sistémica en manos de una sola persona', se reafirma cada vez que vuelve una crisis hoy.",
     source: "Edición propia a partir de la historia financiera de EE. UU. estándar. Las cifras del Dow Jones y del PIB varían ligeramente según la fuente.",
   },
+  railway: {
+    subtitle: "Gran Bretaña · década de 1840",
+    stats: [
+      { k: "Líneas ferroviarias aprobadas", v: "Miles de km" },
+      { k: "Tras el pico", v: "más de −50 %" },
+      { k: "Tecnología que sobrevivió", v: "el ferrocarril era real" },
+    ],
+    chart: {
+      cap: "Acciones ferroviarias — el ferrocarril en sí sobrevivió al estallido de la burbuja",
+      peak: "Pico de la manía ferroviaria (1845)",
+    },
+    body: [
+      "En la Gran Bretaña de la década de 1840, el ferrocarril fue la primera 'revolución de la velocidad' que la humanidad experimentaba. Trayectos de días se reducían a horas, y todos sabían que el ferrocarril cambiaría el mundo. El problema: la creencia de que 'por tanto, comprar acciones ferroviarias te hace rico' se propagó de forma explosiva.",
+      "El Parlamento aprobó cientos de compañías ferroviarias; los periódicos se llenaban a diario de anuncios de nuevas líneas. La clase media e incluso los criados se endeudaban para comprar acciones ferroviarias. Muchas líneas eran 'ferrocarriles sobre el papel', sin ninguna posibilidad real de construirse.",
+      "Cuando la burbuja estalló, las acciones ferroviarias se desplomaron más de la mitad e innumerables inversores quebraron. Pero he aquí lo notable — el ferrocarril en sí no se desvaneció. Las líneas que sobrevivieron se convirtieron en las arterias de la revolución industrial británica.",
+    ],
+    mechanism: [
+      "El mecanismo de la manía ferroviaria surgió de la combinación de tres nuevas infraestructuras financieras en la década de 1840. Primero, las sociedades por acciones con responsabilidad limitada podían ahora constituirse a gran escala mediante leyes del Parlamento. Segundo, los depósitos parciales eran lo habitual — los suscriptores pagaban solo un 5–10 % del valor nominal por adelantado, con el resto pagadero en llamadas futuras, lo que permitía de hecho una suscripción apalancada de 10–20×. Tercero, el crecimiento explosivo de la prensa diaria nacional — los periódicos publicaban a diario decenas de anuncios de nuevas líneas, acelerando el contagio de información: 'si no la compro yo, la comprará mi vecino'.",
+      "La concesión activa del Parlamento se sumó a todo esto. Entre 1844 y 1846, el Parlamento aprobó unas 270 nuevas líneas ferroviarias (más que el acumulado de los veinte años anteriores), y la aprobación misma era un detonante inmediato de las subidas bursátiles. Según las cifras, entre 1840 y 1845 se tendieron unos 3.500 km de vía británica. Justo tras el pico del otoño de 1845, la mayoría de las líneas aprobadas encallaron o se fusionaron en 1846–48, faltas de capital e incapaces de afrontar las llamadas. El capital superviviente se concentró en cuatro o cinco grandes compañías (por ejemplo, la London and North Western Railway), y sobre los escombros de la burbuja se completó la red ferroviaria real.",
+    ],
+    lesson: "La verdadera lección de la manía ferroviaria: 'la tecnología puede tener razón mientras el precio está equivocado'. El juicio de que el ferrocarril cambiaría el mundo era 100 % correcto. Pero ese hecho y 'si comprar acciones ferroviarias a este precio es acertado' eran preguntas completamente distintas.",
+    aftermath: [
+      "Los resultados institucionales fueron de dos caras. El Parlamento introdujo la Ley de Regulación Ferroviaria de Gladstone de 1844, que obligaba a un servicio de pasajeros de tercera clase, limitaba las tarifas básicas y daba al gobierno la opción de comprar líneas, y luego impuso normas de ancho de vía y señalización mediante la Ley de Cláusulas Ferroviarias de 1845. La Ley del Ancho de Vía de 1846 fijó el ancho estándar (1.435 mm) como norma nacional británica — una norma que se extendió por el mundo a través de las colonias y sigue operando hoy. Un caso raro en que el subproducto de una burbuja se convierte en un estándar de infraestructura global.",
+      "El impacto económico y cultural perduró mucho más. El desplome infligió graves pérdidas a la clase media británica y arruinó a algunos, pero la red ferroviaria superviviente se convirtió en la arteria de la Revolución Industrial británica — los costes de transporte de mano de obra, carbón y grano se desplomaron, y se hicieron posibles los servicios postales, telegráficos y de carga regular. La manía de la década de 1840 se convirtió en el prototipo de todo patrón posterior de 'infraestructura + tecnología + frenesí', y es la comparación histórica más citada en los análisis de la burbuja puntocom (2000) y del auge de la IA (década de 2020). El Parlamento se mantuvo cauteloso ante las nuevas concesiones de sociedades durante casi un siglo.",
+    ],
+    today: "El juicio de que la IA cambiará el mundo puede ser correcto — también lo fueron el ferrocarril e internet. La pregunta de la manía ferroviaria viene después: ¿no es 'que la tecnología sea real' un asunto distinto de 'que este precio sea razonable'?",
+    source: "Edición propia a partir de la historia económica estándar. Las cifras pueden variar según la estimación y el registro.",
+  },
+  nixon: {
+    subtitle: "Estados Unidos · agosto de 1971",
+    stats: [
+      { k: "Lo que terminó", v: "el vínculo dólar-oro" },
+      { k: "Sistema previo", v: "Bretton Woods" },
+      { k: "Después", v: "tipos de cambio flotantes" },
+    ],
+    chart: {
+      cap: "Volatilidad cambiaria — tipos flotantes desde 1971",
+      peak: "Shock Nixon (ago. de 1971)",
+    },
+    body: [
+      "Tras la Segunda Guerra Mundial, el mundo construyó un nuevo orden centrado en el dólar estadounidense (el sistema de Bretton Woods). La promesa clave: los dólares eran convertibles en oro (1 onza = 35 $). Las demás monedas estaban fijadas al dólar, y el dólar al oro. El dólar se convirtió en 'dinero tan fiable como el oro'.",
+      "Pero con el tiempo, EE. UU. imprimió demasiados dólares para la guerra de Vietnam y el gasto social. Los dólares en el extranjero superaron con creces el oro de EE. UU., y las naciones empezaron a exigir oro — 'canjeen nuestros dólares como prometieron'. Las cámaras acorazadas de EE. UU. se vaciaban.",
+      "El 15 de agosto de 1971, el presidente Nixon declaró de forma abrupta: 'los dólares ya no se canjearán por oro'. Un solo anuncio puso fin a una promesa de 27 años. El dinero perdió finalmente por completo el ancla física del oro, sosteniéndose solo sobre 'la confianza en el Estado'. La era moderna de tipos flotantes en la que vivimos comenzó en ese instante.",
+    ],
+    mechanism: [
+      "El shock Nixon (15 de agosto de 1971) fue la explosión de grietas acumuladas. El sistema de Bretton Woods (fundado en 1944) obligaba a EE. UU. a convertir dólares en oro a 35 $ la onza, y las demás monedas estaban atadas al dólar. Pero hacia finales de los años 60, el gasto de la guerra de Vietnam (unos 25.000 millones de dólares al año), los desembolsos de la Gran Sociedad y los déficits comerciales crónicos se combinaron de modo que los dólares en manos extranjeras superaban con creces las reservas de oro del Tesoro de EE. UU. (unas 10.000 toneladas). El mercado lo notó, y Francia, bajo De Gaulle, había empezado a convertir oficialmente sus reservas de dólares en oro desde 1965.",
+      "Para el verano de 1971, las solicitudes de canje 'dólar → oro' habían alcanzado una escala que EE. UU. no podía afrontar. Tras una sola reunión de fin de semana en Camp David (13–15 de agosto), el presidente Nixon anunció unilateralmente — (1) la suspensión de la convertibilidad en oro (inmediata), (2) un recargo del 10 % a las importaciones (temporal), (3) un congelamiento de salarios y precios de 90 días. El anuncio llegó en un discurso televisado un domingo por la noche, con escaso aviso previo a los gobiernos extranjeros. Esa única decisión puso fin a un sistema monetario mundial de 27 años, empujando a todas las monedas hacia los tipos de cambio flotantes.",
+    ],
+    lesson: "El shock Nixon muestra que 'una sola decisión política puede cambiar las reglas fundamentales de los mercados mundiales'. También reveló la naturaleza del dinero moderno — lo que usamos ahora no está respaldado ni por oro ni por plata, sino puramente por 'la confianza en el Estado'. La política es el fundamento mismo del valor de una moneda.",
+    aftermath: [
+      "Justo tras el shock Nixon, el Acuerdo Smithsoniano de diciembre de 1971 intentó realinear los tipos de cambio, pero se derrumbó, y para marzo de 1973 las principales monedas habían pasado a tipos flotantes. Esto condujo directamente a la 'década de la estanflación' de los años 70 — inflación, desempleo y bajo crecimiento simultáneos, un fenómeno que la política keynesiana no podía explicar. El IPC estadounidense subió de cerca del 5 % en 1970 a cerca del 14 % en 1980, y solo se domó después de que Paul Volcker asumiera la presidencia de la Reserva Federal en 1979 y elevara el tipo de referencia al 20 % — un proceso que sometió a la economía de EE. UU. a dos recesiones profundas.",
+      "El legado institucional es doble. Primero, la liberalización cambiaria desencadenó el crecimiento explosivo de los mercados de divisas y derivados — hacia finales de los años 70, el volumen de operaciones de cambio superaba con creces el volumen del comercio, preparando el escenario para la crisis de la deuda latinoamericana de los años 80, la crisis de la libra de 1992 y la crisis asiática de 1997. Segundo, surgió la nueva pregunta de 'cómo anclar el dinero fiduciario', y a partir de los años 90 los objetivos de inflación (adoptados por primera vez en Nueva Zelanda en 1990) y la independencia de los bancos centrales se convirtieron en estándares globales. Los intentos actuales de 'dinero no estatal' como el bitcoin son también búsquedas de respuestas a la pregunta que aquel fin de semana de 1971 abrió.",
+    ],
+    today: "Por eso los mercados se tambalean ante un solo anuncio de política sobre tipos o divisas. El dinero moderno se sostiene sobre la confianza política, así que la política es siempre la mayor variable del mercado — aquel día de 1971 lo decidió.",
+    source: "Edición propia a partir de la historia financiera y contemporánea estándar.",
+  },
+  "1997": {
+    subtitle: "Asia y Corea · 1997–1998",
+    stats: [
+      { k: "Tipo won/dólar", v: "casi se duplicó" },
+      { k: "Rescate", v: "emergencia del FMI" },
+      { k: "Respuesta ciudadana", v: "campaña de recogida de oro" },
+    ],
+    chart: {
+      unit: "KRW/USD",
+      cap: "Tipo de cambio won/dólar (1996–2000)",
+      peak: "1.962 (23 dic. 1997)",
+      dataNote: "Basado en la evolución real del tipo de cambio (finales de los ~800 a principios de nov. de 1997 → tras eliminarse la banda de fluctuación el 16 dic., ~1.995 intradía el 23 dic.; el won se redujo a la mitad en un mes → se estabilizó a lo largo de 1998). Fuente: Banco de Corea y registros públicos.",
+    },
+    body: [
+      "En los años 90, las economías de Asia fueron llamadas un 'milagro'. Las naciones emergentes, incluida Corea, crecieron deprisa con fondos a corto plazo tomados en préstamo en el extranjero. Todos eran optimistas; el riesgo era invisible. Pero bajo ese crecimiento se escondía un eslabón débil — la 'deuda en dólares'.",
+      "La crisis que comenzó en Tailandia en 1997 se extendió como un dominó. Al huir el capital extranjero todo a la vez, las monedas se desplomaron. También en Corea el won se hundió, y empresas de primera línea incapaces de pagar su deuda en dólares cayeron una tras otra. Corea acabó solicitando un rescate de emergencia al FMI.",
+      "Las calles se llenaron de desempleados, y los ciudadanos se unieron a una 'campaña de recogida de oro', entregando a la nación el oro de sus hogares. Todos aprendieron en sus huesos que un número abstracto — el tipo de cambio — podía sacudir la vida de todo un pueblo.",
+    ],
+    mechanism: [
+      "El mecanismo de la crisis de 1997 fue el derrumbe simultáneo de dos pilares: la 'deuda externa a corto plazo' y 'la ilusión de los tipos de cambio fijos'. Primero, a lo largo de los años 90 las empresas e instituciones financieras coreanas ampliaron de forma agresiva el endeudamiento exterior a corto plazo — usando tipos extranjeros (en torno al 5 %) muy por debajo de los internos (en torno al 12 %) y un won aparentemente estable (unos 800 por dólar) para financiar inversiones. A mediados de 1997, la deuda externa a corto plazo de Corea rondaba los 67.000 millones de dólares frente a unas reservas de cerca de 30.000 millones: 'los fondos para pagar eran menos de la mitad de lo que había que pagar'.",
+      "El segundo pilar fue el 'contagio en dominó'. El derrumbe del baht tailandés en julio fue el punto de partida, e Indonesia, Malasia y Filipinas cayeron en cadena. Al ver el mismo patrón — 'deuda a corto plazo + tipos fijos + burbujas inmobiliaria y bursátil' —, el capital extranjero juzgó que en Corea pasaría lo mismo y se retiró de golpe. Las empresas y bancos coreanos empezaron a no poder refinanciar (rollover) la deuda a corto plazo que vencía. Para noviembre, las reservas estaban prácticamente agotadas (saldo utilizable inferior a 9.000 millones de dólares), y el 21 de noviembre el gobierno anunció su solicitud de rescate al FMI. El programa del FMI, de unos 58.000 millones de dólares, se firmó el 3 de diciembre, y el won cayó hasta 1.962 por dólar (unas 2,3 veces el nivel de julio).",
+    ],
+    lesson: "El núcleo de la crisis: 'un tipo de cambio es la nota de confianza que el mundo pone al dinero de tu país'. En el momento en que esa confianza se rompe, todos se lanzan a la vez hacia la misma salida (el dólar), y la crisis se amplifica a sí misma. Y 'el crecimiento construido con dinero prestado' es el primero en caer cuando la confianza flaquea.",
+    aftermath: [
+      "Para Corea, la crisis del FMI se convirtió en el catalizador que rehízo su estructura económica y social. El programa del FMI exigió una dura austeridad macroeconómica (el tipo de interés a la vista llevado hasta el 25 %, recorte del gasto público), la reestructuración de instituciones financieras quebradas (8 bancos expulsados) y la reestructuración de los chaebol ('Big Deals', con 16 de los 30 mayores grupos desmantelados); el PIB de 1998 se desplomó un 5,7 %. La liberalización del mercado laboral (la introducción legal de los despidos masivos) y la plena liberalización de la inversión extranjera datan también de este momento, cuando la proporción del empleo no regular se disparó — unos 2 millones de personas perdieron su empleo y más de 17.000 empresas quebraron.",
+      "El legado institucional y cultural corre en dos direcciones. Primero, Corea recuerda la crisis como un trauma y ha acumulado reservas de divisas de forma agresiva — alcanzando unos 420.000 millones de dólares en 2024 (en torno al 9.º puesto mundial) — y gestiona con rigor el ratio de deuda externa a corto plazo: 'nunca más' como política explícita. Segundo, aunque la 'campaña de recogida de oro' (1998, unas 227 toneladas reunidas) sigue siendo un símbolo de solidaridad cívica, el 'coste social de la reestructuración forzada' (el colapso de la clase media, el aumento de las tasas de suicidio, la precariedad juvenil arraigada) se convirtió en un trauma de largo plazo para la sociedad coreana. Es común argumentar que incluso las tendencias actuales de la juventud coreana hacia 'la preferencia por la estabilidad y la evitación del matrimonio y la maternidad' descienden, directa o indirectamente, de la sombra de esta crisis.",
+    ],
+    today: "Cuando salta la noticia de que la estructura de deuda o el valor de la moneda de una nación tambalean, 1997 pregunta: ¿fue ese crecimiento fuerza real, o se apoyaba en confianza prestada? Y ¿qué ocurre cuando todos huyen a la vez por el mismo camino?",
+    source: "Edición propia a partir de la historia financiera y contemporánea estándar.",
+  },
+  weimar: {
+    subtitle: "Alemania de Weimar · 1922–1923",
+    stats: [
+      { k: "Peor tipo de cambio", v: "1 $ = 4,2 billones de marcos (nov. 1923)" },
+      { k: "Pico de una hogaza de pan", v: "~100.000 millones de marcos" },
+      { k: "Fin de la inflación", v: "introducción del Rentenmark (15 nov. 1923)" },
+    ],
+    chart: {
+      cap: "Nivel de precios — aceleración explosiva a finales de 1922 → congelado en nov. de 1923 por el Rentenmark",
+      peak: "Finales de 1923: multiplicado por 100.000 millones",
+    },
+    body: [
+      "Tras la derrota de Alemania en la Primera Guerra Mundial, el Tratado de Versalles de 1919 impuso reparaciones de unos 132.000 millones de marcos oro (cerca de 33.000 millones de dólares de la época) — alrededor de dos a tres veces el PIB alemán. El gobierno cargaba a la vez con los pagos de reparaciones, las pérdidas industriales por los recortes territoriales y la deuda de guerra, enfrentando un déficit que ninguna recaudación fiscal podía cerrar. La única solución: el Reichsbank comprando bonos del Estado e imprimiendo marcos.",
+      "Tras la Conferencia de Londres de mayo de 1921, que fijó el calendario de reparaciones, el marco empezó a caer a velocidad creciente. 1921: 1 marco ≈ 0,013 $; julio de 1922: 0,0029 $; enero de 1923: 0,000045 $. La verdadera explosión comenzó en enero de 1923, cuando Francia ocupó la región industrial del Ruhr por un pago de reparaciones impagado. El gobierno alemán llamó a la 'resistencia pasiva', pagando salarios a los trabajadores del Ruhr mientras detenía la producción — y pagó esos salarios con marcos recién impresos.",
+      "Para el otoño de 1923, ni las imprentas funcionando 24 horas podían seguir el ritmo de la demanda de moneda. Los trabajadores corrían del día de paga directamente a las tiendas a comprar pan (porque horas después el mismo dinero ya no alcanzaba), y los restaurantes actualizaban los menús minuto a minuto. En el pico de noviembre de 1923, un dólar equivalía a 4,2 billones de marcos. El dinero dejó de funcionar de hecho, y la gente volvió al trueque. En ese pico — el 15 de noviembre de 1923 — se introdujo una nueva moneda, el Rentenmark (una moneda temporal respaldada por tierras y activos industriales), a razón de 1 billón de marcos = 1 Rentenmark, y la inflación se detuvo casi de inmediato.",
+    ],
+    mechanism: [
+      "El mecanismo de la hiperinflación de Weimar fue la acción simultánea de tres fuerzas. Primero, la compra directa de bonos del Estado por el Reichsbank — casi todos los marcos impresos por el Reichsbank en 1922–1923 fueron a tapar los déficits del gobierno. Para agosto de 1923, se estima que el 99 % del gasto público se cubría con marcos recién impresos (el análisis clásico de Stephen B. Webb). Segundo, la ausencia de toda separación entre el Reichsbank emisor de dinero y el gobierno responsable de las finanzas — el Reichsbank era nominalmente independiente, pero no tenía salvaguarda institucional alguna para rechazar las solicitudes de préstamo del gobierno.",
+      "Tercero — y lo más importante — la naturaleza autocumplida de las expectativas de inflación. En el momento en que la gente se convenció de que 'mañana el marco valdrá menos', convertir de inmediato los salarios en bienes se volvió la norma, y la velocidad de circulación del dinero se disparó. Con el crecimiento de la oferta monetaria multiplicado por una velocidad disparada, los precios subieron mucho más rápido que la propia oferta monetaria. Para el otoño de 1923, la inflación diaria rondaba el 20–30 % — no al año, sino al día. Una vez que la economía entra en esa fase, la política monetaria ordinaria no puede detenerla; solo una nueva moneda más una separación explícita de la responsabilidad de emisión (el Rentenmark y la reforma del Reichsbank) pueden lograrlo.",
+    ],
+    lesson: "La lección más profunda de Weimar: 'la confianza monetaria, una vez rota, no revive por medios ordinarios'. Restaurarla requiere una nueva moneda más un compromiso institucional que separe su emisión de la presión política. Una lección aún más honda es social — la rabia de quienes vieron los ahorros de toda una vida convertirse en papel mojado en una semana es tan fuerte como para derribar un sistema político. La Alemania de 1923 lo demostró al precio más alto.",
+    aftermath: [
+      "El fin de la inflación se logró casi de inmediato con la institución de emisión de emergencia Deutsche Rentenbank, lanzada el 14 de noviembre de 1923, y el nuevo Rentenmark introducido al día siguiente. El Rentenmark estaba nominalmente respaldado por tierras y activos industriales y su emisión se limitó estrictamente a 2.400 millones de marcos, por lo que la estabilidad del valor se recuperó pronto. Para agosto de 1924, la normalización se completó con la introducción por el Reichsbank del nuevo Reichsmark, y el Plan Dawes de 1924 reprogramó las reparaciones, haciendo volver el capital extranjero.",
+      "Pero las profundas cicatrices políticas y sociales ya estaban grabadas. Buena parte de la clase media alemana — que había ahorrado para la vejez — lo perdió casi todo en un año, y su ira y su miedo aceleraron la polarización política de finales de los años 20. Cuando la Gran Depresión se sumó en 1929 — sobre una sociedad sin apenas amortiguador social para absorber un segundo golpe — se abrió el camino hacia el ascenso del NSDAP (el partido nazi) en 1932–33. Los historiadores coinciden en términos generales en que 'la inflación de Weimar no causó directamente el nazismo, pero su trauma dejó a la sociedad alemana políticamente incapaz de resistir el golpe de 1929'. Al mismo tiempo, la experiencia de Weimar se convirtió en el argumento más poderoso de todo debate posterior sobre la independencia de los bancos centrales — conduciendo al poderosamente independiente Bundesbank en 1957 y, más tarde, en 1998, al diseño del Banco Central Europeo (BCE).",
+    ],
+    today: "La razón por la que los bancos centrales modernos defienden un 'objetivo de inflación del 2 %' casi como una religión — esa respuesta está en las calles de Weimar. Tras el shock inflacionario global de 2022, la Reserva Federal, el BCE y el Banco de Japón se lanzaron todos a subidas rápidas de tipos pese a las críticas políticas, y la misma sombra estaba detrás de ellos. Aprendimos en 1923, al precio más alto, lo que cuesta volver a meter en la botella unas 'expectativas de inflación desancladas'.",
+    source: "Edición propia a partir de la historia económica estándar, la historia económica alemana y materiales del Reichsbank. Las cifras de tipo de cambio y precios varían algo según la fuente de cada periodo.",
+  },
 };
