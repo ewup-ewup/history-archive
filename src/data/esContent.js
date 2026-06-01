@@ -354,4 +354,116 @@ export const ES_EVENT_DETAIL = {
     today: "Si el bitcoin es innovación o manía, la historia aún lo decide. Una cosa está clara — si la 'creencia' sostiene su precio, la pregunta que viene desde los tulipanes también se aplica aquí. Su alta volatilidad exige una mirada más prudente.",
     source: "Edición propia a partir del documento técnico público y de relatos estándar. No es asesoramiento de inversión; las cripto son muy volátiles.",
   },
+  cowrie: {
+    subtitle: "Asia y África · a. C. ~",
+    stats: [
+      { k: "Circulación", v: "A través de continentes" },
+      { k: "Valor intrínseco", v: "Casi ninguno" },
+      { k: "Duración de uso", v: "Milenios" },
+    ],
+    chart: {
+      cap: "Adopción del dinero mercancía — difusión gradual durante milenios",
+      peak: "Uso intercontinental",
+    },
+    body: [
+      "Cuando los humanos obtuvieron excedentes con la agricultura, comenzó el intercambio. Pero el trueque tenía una falla fundamental — había que encontrar a alguien que a la vez quisiera tu arroz y tuviera la sal que tú querías. Esta 'doble coincidencia de deseos' exigía una solución.",
+      "Una de las cosas que ocupó ese papel fue la concha de cauri. Duradera y de desgaste lento, difícil de falsificar, lo bastante uniforme para contarse con facilidad. Sobre todo, a todos les parecía 'bonita' y la aceptaban de buen grado. Las cauris circularon como dinero por vastas regiones de Asia y África.",
+      "Lo llamativo: una concha en sí casi no tenía 'utilidad' — no se podía comer ni vestir. Aun así la gente la aceptaba, porque creía que 'la próxima persona también la aceptará'. El secreto más profundo del dinero se reveló aquí por primera vez.",
+    ],
+    mechanism: [
+      "Las cauris funcionaron como dinero por razones estructurales claras. Primero, las conchas de Cypraea moneta eran naturalmente uniformes en forma y tamaño — contables como 'unidades' sin procesarlas. Segundo, eran duraderas, ligeras y prácticamente imposibles de falsificar (haría falta el molusco vivo de la misma especie). Tercero, su origen — sobre todo las Maldivas en el océano Índico — era limitado, así que se volvían naturalmente escasas tierra adentro.",
+      "Lo que sostenía el valor era la combinación de la aceptación colectiva y de un suministro naturalmente restringido: todos las tomaban por convención social, y nadie podía 'imprimir' más con facilidad. Pero el equilibrio podía romperse — cuando las potencias coloniales europeas del siglo XIX enviaron toneladas de cauris maldivas a África Occidental, la moneda local de cauris perdió valor rápidamente. Un caso temprano de 'colapso monetario por un shock de oferta externo'.",
+    ],
+    lesson: "La cauri es la primera prueba de que la esencia del dinero no es 'el valor de la cosa en sí', sino 'la confianza colectiva en que todos la aceptan'. Esta estructura no ha cambiado ni un ápice en 5.000 años, hasta el bitcoin — si todos creen, aparece el valor; si se pierde la creencia, no es más que una concha.",
+    aftermath: [
+      "La era de la cauri dejó marcas profundas en la historia del dinero. La más directa está en los caracteres chinos — los relativos al dinero y el comercio (財/riqueza, 貨/bienes, 買/comprar, 賣/vender, 貯/guardar) llevan todos el radical 貝 de 'concha'. La escritura que usamos milenios después aún conserva fosilizada aquella era.",
+      "El legado conceptual es mayor. Lo que enseñaron las cauris — que 'un objeto inútil puede volverse dinero si todos lo aceptan' — se convirtió en la raíz de toda forma monetaria posterior (moneda, papel, digital). Cada vez que un activo digital como el bitcoin se enfrenta a la pregunta '¿por qué tiene valor esto?', volvemos a la misma respuesta que dio primero la cauri: 'aceptación colectiva + suministro restringido = dinero'.",
+    ],
+    today: "Si el valor de un activo viene de su 'utilidad inherente' o de la 'creencia en que otros lo aceptarán' — esta pregunta se aplica por igual a toda moneda y todo activo, desde la era de las conchas hasta hoy.",
+    source: "Edición propia a partir de la historia económica y la antropología estándar.",
+  },
+  lydia: {
+    subtitle: "Reino de Lidia · siglo VII a. C.",
+    stats: [
+      { k: "Material", v: "Electro (aleación de oro y plata)" },
+      { k: "Primera garantía", v: "El sello del Estado" },
+      { k: "Legado", v: "2.600 años de moneda" },
+    ],
+    chart: {
+      cap: "Confianza en la moneda — la garantía estatal difundió el comercio con rapidez",
+      peak: "La era de la moneda se establece",
+    },
+    body: [
+      "El dinero mercancía era cómodo, pero limitado. Para comerciar con trozos de oro o plata había que pesarlos cada vez y sospechar de su pureza. Necesitar balanza y ensayo en cada trato era una gran fricción.",
+      "En el siglo VII a. C., el reino de Lidia, en Asia Menor, ofreció una solución: estampar un emblema de león sobre trozos de electro (una aleación natural de oro y plata) de peso fijo. Ese sello declaraba: 'el rey garantiza el peso y la pureza de este metal'. Nació la primera moneda del mundo.",
+      "El efecto fue revolucionario. Ahora la gente comerciaba confiando en el sello del rey, sin pesar. El centro de la confianza pasó de 'lo que yo mismo verifico' a 'lo que el Estado garantiza' — una idea que recorre Grecia y Roma hasta cada moneda de hoy.",
+    ],
+    mechanism: [
+      "La innovación de Lidia parece simple, pero fue esencial. Primero, estandarizar el peso de los trozos de electro (una aleación natural de oro y plata) eliminó el pesaje en cada trato. Segundo, el sello del león del rey firmaba visualmente 'el Estado garantiza la pureza y el peso de este metal'. Tercero, la proporción natural de oro y plata del electro variaba mucho (12–43 %), así que los comerciantes no podían verificar el valor con facilidad — el sello del Estado asumió exactamente ese coste de verificación.",
+      "El verdadero poder de la idea fue transferir los costes de transacción. El coste de 'pesar + ensayar' que cada comerciante había soportado cada vez quedó agrupado en el coste único del Estado al acuñar. El pago se redujo a contar, y el comercio se aceleró sin comparación. Incluso tras la caída de Lidia, Persia (dárico/siglo), Grecia y Roma adoptaron el modelo por completo; más tarde, para resolver la incertidumbre de valor del electro, se emitieron por separado monedas de oro puro y de plata pura, refinando el estándar.",
+    ],
+    lesson: "El núcleo de la moneda de Lidia: el descubrimiento de que 'la garantía de la autoridad' reduce drásticamente los costes de transacción. El dinero nunca fue un simple disco de metal, sino 'la confianza en el poder que lo respalda'. La larga historia de la unión entre Estado y dinero empieza aquí.",
+    aftermath: [
+      "El sistema monetario de Lidia transformó las propias estructuras militar, política y económica. El cambio más directo fue el amanecer de la 'era de los mercenarios' — una vez que un Estado pudo pagar salarios en moneda estandarizada, fueron posibles los ejércitos profesionales independientes de las milicias tribales o ciudadanas, y tanto las ciudades-Estado griegas como el Imperio persa tomaron ese camino. La fiscalidad monetaria, los mercados urbanos y el comercio de larga distancia estallaron con ello.",
+      "Institucionalmente, aquí empieza la larga historia de la 'unificación de Estado y dinero'. Desde el dárico de Persia hasta el dracma de Atenas, el denario de Roma y el sólido de Bizancio, hasta los billetes de los bancos centrales modernos — el modelo de Lidia, 'el emisor garantiza el valor', se ha mantenido esencialmente sin cambios durante 2.600 años. Solo ha cambiado la base de la garantía: del contenido metálico (Lidia, Roma), pasando por la convertibilidad en oro (el patrón oro del siglo XIX), hasta la credibilidad del banco central (el dinero fiduciario moderno).",
+    ],
+    today: "Que hoy aceptemos billetes y cifras digitales sin dudar también descansa en 'la confianza en el emisor'. El sello del león de Lidia solo cambió de forma hasta convertirse en el logotipo de un banco central; la esencia es la misma tras 2.600 años.",
+    source: "Edición propia a partir de la historia monetaria estándar.",
+  },
+  debasement: {
+    subtitle: "Imperio romano · siglos I–III",
+    stats: [
+      { k: "Plata del denario", v: "Hacia cero" },
+      { k: "Causa", v: "Déficit crónico" },
+      { k: "Resultado", v: "Precios desbocados" },
+    ],
+    chart: {
+      cap: "Contenido de plata del denario — confianza erosionada lentamente",
+      peak: "Plata casi pura (inicio del imperio)",
+    },
+    body: [
+      "La moneda de referencia del Imperio romano era el denario de plata. A comienzos del imperio era casi de plata pura, y esa confianza sostenía la vasta economía romana — pagaba a los soldados y era la base de todo trato con las provincias.",
+      "Pero cuando la guerra y el lujo vaciaron el tesoro, los emperadores cayeron en una tentación silenciosa: reducir poco a poco el contenido de plata del denario y mezclar metales más baratos. Con la misma plata acuñaban más monedas para cubrir el gasto inmediato. Al principio nadie lo notó.",
+      "Pero el mercado acabó por darse cuenta. Al comprender que las monedas tenían menos plata, la gente exigía más monedas por los mismos bienes — los precios se dispararon. Hacia el siglo III el denario había perdido casi todo su valor, y la economía romana cayó en una profunda turbulencia. El primer colapso registrado del valor de una moneda.",
+    ],
+    mechanism: [
+      "La degradación del denario romano no fue mera corrupción, sino una trampa estructural. Primero, subir los impuestos era políticamente difícil (la resistencia del Senado y de los ciudadanos), así que cada vez que faltaban fondos, 'acuñar más monedas con el mismo nombre' era la solución inmediata y silenciosa. La única forma de hacer más monedas con la misma plata era reducir el contenido de plata por moneda y mezclar cobre o plomo. El contenido de plata cayó de cerca del 95 % a mediados del siglo I a menos del 5 % a mediados del III.",
+      "Segundo, una vez que el mercado reconoció que 'las monedas tienen menos plata', entró en juego la ley de Gresham — la gente atesoraba las viejas monedas de alta calidad (la moneda mala expulsa a la buena), solo circulaban las degradadas, y exigían más monedas por los mismos bienes. Además, Diocleciano (301 d. C.) intentó fijar los precios por ley (el Edicto de Precios Máximos), pero congelar los precios mientras la oferta monetaria crecía solo hizo que los bienes desaparecieran de los mercados — la primera demostración a gran escala de que los controles de precios no pueden contener la inflación.",
+    ],
+    lesson: "La degradación de la moneda romana mostró por primera vez qué ocurre 'cuando la autoridad que garantiza el dinero traiciona su propia confianza'. Cuando un emisor erosiona el valor por una ganancia a corto plazo, acaba derrumbándose toda la confianza en esa moneda. La esencia de la inflación, antes y ahora, es 'la dilución de la confianza'.",
+    aftermath: [
+      "Tras la crisis del siglo III, Roma tuvo que reconstruir su sistema monetario desde cero. Diocleciano (284–305) reacuñó monedas y reorganizó la administración y la fiscalidad, y Constantino (306–337) introdujo una nueva moneda de oro, el sólido. Con unos 4,5 g y más del 95 % de pureza, el sólido se mantuvo estable durante casi 700 años, convirtiéndose en la moneda de referencia del Imperio bizantino y en el patrón medieval del 'oro de verdad' en el comercio europeo, islámico y de Asia oriental — su estabilidad vino directamente de la lección del colapso del denario.",
+      "El legado conceptual es más profundo. El patrón 'presión fiscal + monopolio de la emisión = tentación de degradar' se convirtió en el punto de partida de toda la teoría monetaria posterior. Los dos dispositivos centrales de los bancos centrales modernos — los objetivos de inflación explícitos (normalmente el 2 %) y la independencia política del banco central (sobre todo desde los años 70) — tienen su raíz directa en la lección romana: 'no dejes que el emisor destruya el valor del dinero por una ganancia política a corto plazo'. La sombra del denario aún se proyecta sobre toda política monetaria dos milenios después.",
+    ],
+    today: "Cada vez que los bancos centrales modernos imprimen dinero en masa, surgen temores de un 'denario de la era digital'. La relación entre la oferta monetaria, los precios y la confianza en el dinero — la pregunta que planteó Roma hace 2.000 años sigue vigente hoy.",
+    source: "Edición propia a partir de la historia monetaria y romana estándar. Los cambios en el contenido de plata varían según el registro de cada periodo.",
+  },
+  jiaozi: {
+    subtitle: "Sichuan, China Song · siglo XI",
+    stats: [
+      { k: "Primicia mundial", v: "Papel moneda estatal" },
+      { k: "Origen", v: "Monedas de hierro pesadas" },
+      { k: "Debilidad", v: "Sobreemisión" },
+    ],
+    chart: {
+      cap: "Valor del jiaozi — la sobreemisión quebró la confianza",
+      peak: "Pico de uso generalizado",
+    },
+    body: [
+      "En la China Song del siglo XI, la región de Sichuan tenía un problema peculiar. Escasa de cobre, usaba pesadas monedas de hierro; comprar un rollo de seda significaba acarrear decenas de kilos de monedas en carro. El comercio estaba lastrado.",
+      "Los mercaderes idearon un truco: depositar las pesadas monedas de hierro en tiendas de confianza y comerciar con los 'recibos' — una promesa de canjear el papel por monedas en cualquier momento. Ese papel pasaba de mano en mano y se volvió, de hecho, dinero: el primer papel moneda del mundo, el 'jiaozi'. Más tarde el gobierno Song lo emitió oficialmente.",
+      "Aquí la humanidad dio un gran salto — comerciar con 'una promesa en papel' sin lo físico pesado. Pero con ello nació una debilidad. Cuando el gobierno se vio en apuros fiscales, imprimió más jiaozi que las monedas de hierro en reserva; la confianza vaciló y el valor se desplomó. La luz y la sombra del papel moneda estuvieron presentes desde el principio.",
+    ],
+    mechanism: [
+      "El funcionamiento del jiaozi evolucionó en dos etapas. La primera (principios del siglo XI) fue de origen privado — dieciséis casas mercantiles de confianza de Sichuan recibían depósitos de monedas de hierro y emitían papel que prometía su valor; ese papel circulaba a su valor nominal. La clave era una correspondencia 1:1 entre las monedas de hierro depositadas y los jiaozi emitidos — la promesa de canjear el papel en cualquier momento era el pilar de la confianza. En 1023 el gobierno Song nacionalizó el sistema y creó la Oficina del Jiaozi en Yizhou, estandarizando la emisión.",
+      "La segunda etapa fue la erosión de la confianza. Al principio las reservas se mantuvieron de forma bastante sólida en torno al 70 % de la emisión, pero con el tiempo, bajo la presión del gasto militar (sobre todo las guerras con los kitán, los yurchen y los mongoles en el norte), el Estado Song imprimió muchos más jiaozi que sus reservas. El patrón se repitió cuando la moneda se rebautizó como 'huizi' a finales del siglo XII, y con el 'jiaochao' de la dinastía Yuan llegó de hecho a una emisión ilimitada. El resultado fue el mismo cada vez — cuando el mercado se daba cuenta, el valor se desplomaba.",
+    ],
+    lesson: "El jiaozi es el punto de partida de una gran invención: el 'crédito'. La capacidad de comerciar solo con una promesa, sin lo físico, hizo estallar el capitalismo. Al mismo tiempo, el dilema eterno del papel moneda apareció desde el principio: 'cuando el emisor de promesas se excede, la confianza se derrumba'.",
+    aftermath: [
+      "El auge y la caída del jiaozi dejaron un trauma profundo dentro de China. La dinastía Ming volvió a intentar el papel moneda temprano con el 'Da Ming Baochao', pero repitió los fracasos de los Song y los Yuan y perdió valor rápidamente; al final, Ming y Qing se replegaron a un orden monetario conservador anclado en la plata (monedas de plata y lingotes 'sycee') durante unos 400 años. La civilización que primero alcanzó el potencial del papel moneda fue también la primera en reconocer sus peligros y la que más tiempo se mantuvo a distancia.",
+      "Desde una perspectiva global, el verdadero legado del jiaozi es haber 'demostrado a la vez el potencial y el peligro del dinero de crédito'. Tras llegar a Europa a través de los relatos de Marco Polo (finales del siglo XIII), la lección Song actuó como advertencia latente cuando el Riksbank de Suecia (1661) y el Banco de Inglaterra (1694) reinventaron el papel moneda en el siglo XVII. El dinero fiduciario de hoy (universalizado tras el fin de Bretton Woods en 1971) funciona como el jiaozi — solo con confianza, sin reservas físicas. En esencia, repetimos el experimento del jiaozi de 1023, sobre un aparato más elaborado (independencia del banco central, objetivos de inflación, disciplina de mercado).",
+    ],
+    today: "Hoy todos los billetes y el dinero digital son descendientes del jiaozi. La lección del siglo XI — 'la moderación en la emisión mantiene la confianza; la sobreemisión destruye el valor' — es exactamente el núcleo de la política monetaria moderna.",
+    source: "Edición propia a partir de la historia monetaria y de la dinastía Song estándar.",
+  },
 };
