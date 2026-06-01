@@ -16,6 +16,7 @@ import { ERAS, ERA_EVENTS, EVENT_DETAIL } from "./timeline";
 import { COMPARE } from "./compare";
 import { REFLECTIONS } from "./reflections";
 import { EVENT_LINKS } from "./eventLinks";
+import { ES_ERAS } from "./esContent";
 
 const has = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
 
@@ -35,12 +36,29 @@ function addEsLeaf(node, seen) {
   for (const key of Object.keys(node)) addEsLeaf(node[key], seen);
 }
 
+// 명시적 es 오버라이드 주입 (일반 en 폴백보다 먼저 적용)
+function applyEsOverrides() {
+  // ERAS: 6시대 각 필드의 es
+  ES_ERAS.forEach((es, i) => {
+    const era = ERAS[i];
+    if (!era) return;
+    for (const [field, text] of Object.entries(es)) {
+      if (era[field] && typeof era[field] === "object" && !Array.isArray(era[field])) {
+        era[field].es = text;
+      }
+    }
+  });
+}
+
 export function ensureEsFallback() {
   // UI 사전: 독립 얕은 복사 + 국기/언어명만 스페인어 (내용은 영어 폴백)
   if (!L.es) L.es = { ...L.en, langName: "Español", flag: "🇪🇸" };
   if (!I18N.es) I18N.es = { ...I18N.en, name: "Español", flag: "🇪🇸" };
 
-  // 콘텐츠 데이터: 모든 {ko,en,ja} 리프에 es 폴백
+  // 명시적 스페인어 콘텐츠 먼저 주입
+  applyEsOverrides();
+
+  // 나머지: 모든 {ko,en,ja} 리프에 es=en 폴백 (이미 es 있으면 건너뜀)
   const seen = new WeakSet();
   for (const data of [ERAS, ERA_EVENTS, EVENT_DETAIL, COMPARE, REFLECTIONS, EVENT_LINKS]) {
     addEsLeaf(data, seen);
