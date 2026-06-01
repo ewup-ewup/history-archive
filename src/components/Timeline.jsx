@@ -6,9 +6,19 @@ import { FONT, T } from "../data/theme";
 import { ERAS, ERA_EVENTS, ERA_ICON } from "../data/timeline";
 import Disclaimer from "./Disclaimer.jsx";
 
+// 국사 트랙 (세계사 옆에 나란히 볼 나라). 기본값은 읽는 언어에 맞춤.
+const COUNTRIES = [
+  { key: "korea", flag: "🇰🇷" },
+  { key: "japan", flag: "🇯🇵" },
+  { key: "usa", flag: "🇺🇸" },
+  { key: "hispanic", flag: "🇪🇸" },
+];
+const defaultCountry = (lang) => (lang === "ja" ? "japan" : lang === "en" ? "usa" : "korea");
+
 export default function Timeline({ setView, lang, openIdx, focusEvent, gotoDetail }) {
   const tl = L[lang].timeline;
   const [open, setOpen] = useState(openIdx != null ? openIdx : 0); // 펼친 시대 인덱스 (-1이면 모두 닫힘)
+  const [country, setCountry] = useState(() => defaultCountry(lang)); // 국사 트랙 선택
   useEffect(() => { if (openIdx != null) setOpen(openIdx); }, [openIdx]);
   useEffect(() => {
     if (focusEvent) {
@@ -35,8 +45,25 @@ export default function Timeline({ setView, lang, openIdx, focusEvent, gotoDetai
         </p>
         <div style={{ display: "inline-flex", alignItems: "center", gap: 18, marginTop: 20, fontSize: 13, color: T.textTertiary }}>
           <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}><Globe size={14} color={T.primary} /> {tl.legendWorld}</span>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}><Landmark size={14} color={T.accent} /> {tl.legendKorea}</span>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}><Landmark size={14} color={T.accent} /> {tl.nations[country]}</span>
           <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}><Brain size={14} color={T.error} /> {tl.legendMind}</span>
+        </div>
+
+        {/* 국사 나라 선택기 — 세계사 옆에 어느 나라 국사를 볼지 */}
+        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: 6, marginTop: 18 }}>
+          {COUNTRIES.map((c) => {
+            const on = country === c.key;
+            return (
+              <button key={c.key} onClick={() => setCountry(c.key)} style={{
+                border: `1px solid ${on ? T.accent : T.line}`, background: on ? T.accent : T.card,
+                color: on ? "#fff" : T.textSecondary, fontWeight: on ? 700 : 600, fontSize: 13,
+                padding: "6px 13px", borderRadius: 18, cursor: "pointer", fontFamily: FONT,
+                display: "inline-flex", alignItems: "center", gap: 6, transition: "all .15s",
+              }}>
+                <span style={{ fontSize: 14 }}>{c.flag}</span> {tl.nations[c.key]}
+              </button>
+            );
+          })}
         </div>
       </motion.div>
 
@@ -89,8 +116,15 @@ export default function Timeline({ setView, lang, openIdx, focusEvent, gotoDetai
                               <p style={{ fontSize: 13.5, color: T.textSecondary, lineHeight: 1.7, margin: 0 }}>{era.world[lang]}</p>
                             </div>
                             <div style={{ background: T.infoSoft, borderRadius: 12, padding: "16px 18px" }}>
-                              <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: T.accent, marginBottom: 8 }}><Landmark size={13} /> {tl.korea}</div>
-                              <p style={{ fontSize: 13.5, color: T.textSecondary, lineHeight: 1.7, margin: 0 }}>{era.korea[lang]}</p>
+                              <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 700, color: T.accent, marginBottom: 8 }}>
+                                <Landmark size={13} /> {tl.nations[country]}
+                                <span style={{ fontSize: 12 }}>{COUNTRIES.find((c) => c.key === country)?.flag}</span>
+                              </div>
+                              {era[country] ? (
+                                <p style={{ fontSize: 13.5, color: T.textSecondary, lineHeight: 1.7, margin: 0 }}>{era[country][lang]}</p>
+                              ) : (
+                                <p style={{ fontSize: 13, color: T.textTertiary, lineHeight: 1.7, margin: 0, fontStyle: "italic" }}>{tl.nationSoon}</p>
+                              )}
                             </div>
                           </div>
                           {/* psychology — the signature */}
