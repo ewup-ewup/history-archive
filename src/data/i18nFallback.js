@@ -16,7 +16,7 @@ import { ERAS, ERA_EVENTS, EVENT_DETAIL } from "./timeline";
 import { COMPARE } from "./compare";
 import { REFLECTIONS } from "./reflections";
 import { EVENT_LINKS } from "./eventLinks";
-import { ES_ERAS, ES_EVENTS_META, ES_EVENT_DETAIL } from "./esContent";
+import { ES_ERAS, ES_EVENTS_META, ES_EVENT_DETAIL, ES_COMPARE, ES_REFLECTIONS } from "./esContent";
 
 const has = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
 
@@ -79,6 +79,21 @@ function applyEsOverrides() {
         if (es.chart[f] && d.chart[f]) d.chart[f].es = es.chart[f];
       }
     }
+  }
+
+  // COMPARE: angle.es (각 사건의 2개 비교 관점, 순서대로 매핑)
+  for (const [id, esList] of Object.entries(ES_COMPARE)) {
+    const list = COMPARE[id];
+    if (!Array.isArray(list)) continue;
+    esList.forEach((text, i) => {
+      if (list[i] && list[i].angle && text) list[i].angle.es = text;
+    });
+  }
+
+  // REFLECTIONS: 사건별 es 배열(질문 3개) 주입
+  for (const [id, esArr] of Object.entries(ES_REFLECTIONS)) {
+    const r = REFLECTIONS[id];
+    if (r && Array.isArray(esArr)) r.es = esArr;
   }
 }
 

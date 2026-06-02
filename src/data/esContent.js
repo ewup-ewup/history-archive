@@ -813,3 +813,201 @@ export const ES_EVENT_DETAIL = {
     source: "Una perspectiva de edición propia sobre un fenómeno en curso, no un consejo de inversión. No predice ni garantiza resultados futuros.",
   },
 };
+
+// ES_COMPARE — angle (perspectiva comparativa) en español, en el orden de COMPARE[id].
+// Cada evento tiene 2 cadenas correspondientes a sus 2 comparaciones.
+export const ES_COMPARE = {
+  cowrie: [
+    "A lo largo de 5.000 años la esencia es la misma — un objeto sin valor intrínseco (concha, código) adquiere valor puramente por aceptación colectiva. El debate central del bitcoin es la pregunta que las conchas de cauri respondieron primero.",
+    "Ambos marcan un salto de la 'cosa' a la 'promesa'. Las conchas de cauri eran físicas pero sin valor — ya cercanas a una promesa; el jiaozi hizo la promesa explícita sobre el papel.",
+  ],
+  tulip: [
+    "Con tres siglos de diferencia, la misma curva. 'Las viejas medidas no se aplican a los nuevos activos' como justificación, precios cada vez más temerarios, y luego la conciencia colectiva en un solo día. 'Esta vez es diferente' es la letra de siempre de toda burbuja.",
+    "83 años de diferencia, la misma esencia — 'los tulipanes de verdad me harán rico' y 'la acción de los Mares del Sur de verdad trae las riquezas del Nuevo Mundo'. Ambos: una manía de confianza que cubre un activo subyacente imposible de verificar.",
+  ],
+  lydia: [
+    "Ambos redefinieron la base de la autoridad monetaria. Lidia inició el modelo del 'valor garantizado por el Estado'; Nixon cortó su último ancla física (el oro), dejando que la moneda se sostuviera solo sobre 'la credibilidad del Estado'.",
+    "El modelo de Lidia de hace 2.600 años, 'la autoridad garantiza el valor', es lo que el bitcoin intenta sustituir — cambiando la autoridad del Estado por la del código. Cauri → Lidia → bitcoin son respuestas distintas a la misma pregunta: ¿qué respalda el dinero?",
+  ],
+  debasement: [
+    "Ambos son casos de un emisor que erosiona su propio dinero — pero a velocidades distintas. Roma lo hizo de forma gradual a lo largo de 200 años (plata del 95 % al 5 %); Weimar explotó en 4 (valor a una billonésima parte). El mismo mecanismo, distinta escala temporal.",
+    "En la superficie, el shock Nixon fue el mismo acto que la devaluación romana — un emisor rompiendo unilateralmente su promesa de valor. La diferencia: Nixon fue abierto y único, dejando una vía de normalización; Roma fue encubierta y repetida, rompiendo la confianza para siempre.",
+  ],
+  jiaozi: [
+    "La sobreemisión de jiaozi por el gobierno Song y el sistema del Misisipi de John Law de 1720 comparten una estructura — 'el fracaso del autocontrol cuando el Estado es a la vez emisor y operador de activos'. A través de 700 años, la tentación fue idéntica.",
+    "Ambos son casos en que un 'dinero de crédito que funcionaba solo sobre la promesa' perdió su valor por la sobreemisión del emisor. El jiaozi es el primer caso de la humanidad (s. XI); Weimar es el extremo de la era industrial del mismo patrón (s. XX).",
+  ],
+  "south-sea": [
+    "En el mismo año (1720), burbujas del mismo mecanismo explotaron en Gran Bretaña y Francia casi simultáneamente. Pero la británica la lideró una empresa privada y la francesa la dirigió el propio Estado — casi un experimento natural de una misma manía financiera desarrollada en dos modelos políticos.",
+    "Dos siglos de diferencia, pero el patrón coincide — compra a crédito, implicación política, optimismo unánime de 'esta vez es diferente', y luego un momento de despertar. 1929 puede leerse como 1720 repetido en la era industrial.",
+  ],
+  mississippi: [
+    "En la primavera y el otoño de 1720, burbujas de mecanismos casi idénticos explotaron a la vez en Francia y Gran Bretaña — el Misisipi dirigido por el Estado, los Mares del Sur privados. Un experimento natural sobre si la concentración de poder agranda las burbujas y profundiza los desplomes.",
+    "La lección es la misma — 'cuando el emisor (el Estado) no puede contenerse, el dinero de crédito se rompe'. El Misisipi fue la primera prueba a gran escala; Weimar fue la segunda, mostrando que la proposición puede llegar a su extremo en la era industrial.",
+  ],
+  "gold-standard": [
+    "Uno es el comienzo del patrón oro (liderado por Gran Bretaña, s. XIX), el otro su final (Nixon, 1971). Juntos muestran en un solo cuadro el arco completo, de un siglo, de 'anclar el dinero al oro'.",
+    "Por qué algunos llaman al bitcoin un 'patrón oro digital' — la misma filosofía de diseño: limitar la oferta para ganar confianza. Ver las disyuntivas del patrón oro del s. XIX (estabilidad frente a manos atadas en una crisis) revela también los límites del bitcoin.",
+  ],
+  "1907": [
+    "Un siglo de diferencia, el mismo patrón — el derrumbe en dominó de la banca en la sombra fuera de la regulación. 1907: compañías fiduciarias; 2008: bancos de inversión + MBS. La diferencia: J.P. Morgan gestionó 1907 en privado, mientras que la Fed (creada por 1907) gestionó 2008 de forma oficial.",
+    "La lección 'la liquidez rápida salva el sistema' la creó Morgan en 1907 y la llevó al extremo la Fed en 2020. Pero 1907 fue voluntad privada a lo largo de días; 2020 fue institucional, instantáneo. Los dos extremos de la evolución.",
+  ],
+  weimar: [
+    "Ambos son casos de un emisor que erosiona su propio dinero — pero a velocidades distintas. Roma lo hizo de forma gradual a lo largo de 200 años (plata del 95 % al 5 %); Weimar explotó en 4 (valor a una billonésima parte). El mismo mecanismo, distinta escala temporal.",
+    "Ambas sociedades recordaron su crisis monetaria y crediticia como un trauma colectivo y luego se sobrecorrigieron con una política muy conservadora que las hizo resistentes a crisis posteriores — Corea con 420.000 millones de dólares en reservas, Alemania con la fuerte independencia del Bundesbank y del BCE. El trauma forja instituciones.",
+  ],
+  "1929": [
+    "Las dos grandes crisis financieras del siglo XX. Ambas: 'burbuja de activos apalancada con deuda + optimismo unánime'. Pero 1929 se profundizó hasta la Depresión por un fallo de política, mientras que 2008 absorbió el golpe con una respuesta más rápida moldeada por la lección de 1929 (sembrando las semillas de la próxima crisis).",
+    "Dos especímenes de larga estancación que arrancan en el pico de una burbuja de activos. EE. UU. tras 1929: 25 años para recuperarse; Japón tras 1989: 34 años. Cuanto mayor la burbuja, más se mide la recuperación en generaciones.",
+  ],
+  nixon: [
+    "La cubierta delantera y trasera de un mismo libro — gold-standard es 'el comienzo de los 100 años del oro', nixon es 'su final'. Leídos juntos, se ve de un vistazo qué respondió la humanidad a 'a qué anclar el dinero' desde el s. XIX hasta 1971 y por qué lo cambiamos.",
+    "Nixon abrió la era del 'dinero sin ancla física'; el bitcoin es su forma más extrema (oferta fijada por código). Juntos revelan que 'la libertad del dinero fiduciario' y 'el impulso de volver a un ancla física' son dos caras de la misma era.",
+  ],
+  "1997": [
+    "Ambas son crisis de crédito y de divisas, pero con epicentros distintos. 1997: deuda a corto plazo de un mercado emergente (Asia); 2008: derivados de crédito de un mercado desarrollado (EE. UU.). Dos expresiones de 'la crisis empieza en el eslabón más débil' en periodos distintos.",
+    "Ambas sociedades recordaron la crisis como un trauma colectivo, y ese trauma se endureció en una política posterior muy conservadora — Corea con 420.000 millones de dólares en reservas, Alemania con una fuerte independencia del banco central. Casos paralelos de un trauma que forja instituciones.",
+  ],
+  railway: [
+    "La misma curva, con 150 años de diferencia — aparece una infraestructura de verdad revolucionaria (ferrocarril/internet) → fiebre de 'compra la acción y hazte rico' → precios irreales → la mayoría de las empresas quiebran → los pocos supervivientes construyen la infraestructura real. La tecnología tenía razón, el precio estaba equivocado.",
+    "La pregunta que planteó el ferrocarril — '¿no es distinto que la tecnología sea real de que este precio sea razonable?' — se aplica directamente al mercado de la era de la IA. Quien miraba las acciones ferroviarias de la década de 1840 y quien mira las acciones de IA de 2024 afrontan en esencia el mismo dilema.",
+  ],
+  "black-monday": [
+    "Ambos: el patrón de mercado bajista más rápido + recuperación inmediata, pero con causas distintas. 1987 fue la estructura del mercado (los algoritmos); 2020 fue el cierre de la economía real. En común — la rápida promesa de la Fed fue clave para la recuperación. Dos etapas en la evolución de la 'Fed Put'.",
+    "Un par de contraste — 1987 cayó un 22 % solo por las herramientas del mercado, con los fundamentos macro intactos, y se recuperó en 2 años. 2008 cayó un 57 % al romperse los propios fundamentos, recuperándose solo en 6. La ilustración más nítida de 'problema de mercado' frente a 'problema de economía'.",
+  ],
+  "japan-1989": [
+    "Dos especímenes de larga estancación que arrancan en el pico de una burbuja de activos: 1929 condujo a la Depresión; 1989 condujo a las tres décadas perdidas. Juntos muestran cuánto dura la sombra del pico de una burbuja sobre toda una sociedad — 25 años, 34 años.",
+    "Ambos: una burbuja inmobiliaria y financiera a la vez como mecanismo central, pero con distinta profundidad. Japón fue más hondo y más largo (inmobiliario −70 % a lo largo de 20 años). EE. UU. en 2008 fue menos hondo porque — la Fed citó explícitamente los errores de Japón — hizo QE más rápido y más grande.",
+  ],
+  dotcom: [
+    "Con 150 años de diferencia, la curva idéntica — nueva infraestructura tecnológica → manía bursátil → desplome → los pocos supervivientes construyen la infraestructura real. La puntocom es en esencia una copia exacta de la manía ferroviaria británica de la década de 1840.",
+    "El acontecimiento con el que más a menudo se compara el mercado de la era de la IA. La pregunta de la puntocom — 'internet de verdad cambió el mundo, y la mayoría de las acciones puntocom valieron cero. Creer en la revolución no es lo mismo que creer en todos los precios' — se aplica directamente a la IA.",
+  ],
+  "2008": [
+    "Las dos grandes crisis financieras del siglo XX. Ambas: apalancamiento con deuda + optimismo unánime. Pero 1929 se profundizó hasta la Depresión por un error de política; 2008 absorbió el golpe con una respuesta rápida moldeada por la lección de 1929. El mismo paciente, distinto médico.",
+    "Un siglo de diferencia, el mismo patrón — el derrumbe en dominó de la banca en la sombra fuera de la regulación. 1907: compañías fiduciarias; 2008: bancos de inversión + MBS. La diferencia: la Fed, nacida de la crisis de 1907, gestionó oficialmente el mismo tipo de crisis un siglo después.",
+  ],
+  bitcoin: [
+    "A lo largo de 5.000 años, la esencia es la misma — un objeto sin valor intrínseco (concha, código) adquiere valor puramente por aceptación colectiva. La pregunta que las conchas de cauri formularon primero la responde de nuevo, en digital, el bitcoin.",
+    "Nixon abrió la era del 'dinero sin ancla física' en 1971; el bitcoin es su forma extrema — oferta fijada por código de forma permanente, estabilidad en la dirección opuesta al dinero fiduciario. Una respuesta ideológica 50 años después del shock Nixon.",
+  ],
+  "covid-2020": [
+    "Los dos extremos de la evolución de la respuesta a las crisis. El sindicato privado de Morgan en 1907 y la QE de 4 billones de dólares de la Fed en 2020 son expresiones, de dos eras, de la misma proposición (la liquidez rápida salva el sistema). Un siglo de evolución.",
+    "Una evolución del patrón de 1987 de mercado bajista más rápido + recuperación inmediata. Pero 1987 tenía un problema de estructura de mercado con una macro normal, mientras que 2020 tuvo un cierre de la economía real y un shock macro sin precedentes. La misma forma de recuperación, distinta gravedad.",
+  ],
+  ai: [
+    "Por qué se compara la era de la IA con el ferrocarril británico de la década de 1840 — aparece una infraestructura de verdad revolucionaria, y le sigue una manía de capital a su alrededor. El ferrocarril acabó por convertirse en la arteria de la Revolución Industrial; por el camino, la mayoría de las acciones ferroviarias se desplomaron. ¿En qué etapa está la IA?",
+    "La pregunta que la puntocom planteó y respondió con claridad — 'la tecnología es real, pero muchos precios pueden estar equivocados'. Si la IA es la repetición exacta o de verdad un caso distinto — es el único acontecimiento cuyo final aún no se ha escrito.",
+  ],
+};
+
+// ES_REFLECTIONS — 3 preguntas de autoevaluación en español por evento.
+export const ES_REFLECTIONS = {
+  cowrie: [
+    "¿Cuál fue la verdadera razón por la que las conchas de cauri pudieron convertirse en dinero sin valor intrínseco?",
+    "Si fueras un miembro de una tribu en la era del cauri, ¿en qué momento te habrías negado a aceptar una concha?",
+    "Entre los activos digitales de hoy, ¿cuáles mantienen su valor puramente por 'creencia colectiva' del mismo modo?",
+  ],
+  tulip: [
+    "Más allá de la simple 'locura', ¿qué factores sistémicos (contratos a plazo, ausencia de cámara de compensación, etc.) impulsaron la tulipomanía?",
+    "Si fueras un comerciante holandés en 1636 y los precios se hubieran duplicado, ¿venderías o comprarías más? ¿Por qué?",
+    "Entre los activos que sigues ahora, ¿cuál sientes más impulsado por 'la expectativa del próximo comprador' que por el valor intrínseco?",
+  ],
+  lydia: [
+    "Antes de las monedas lidias, ¿cómo se hacían las transacciones, y cuál era la mayor fricción?",
+    "Si fueras el rey de Lidia, ¿qué harías primero para ganar confianza en 'el sello del rey'?",
+    "En el debate actual sobre las CBDC, ¿cómo podría aplicarse o ampliarse el modelo de Lidia?",
+  ],
+  debasement: [
+    "¿Por qué Roma devaluó de forma gradual a lo largo de un siglo en vez de hacerlo de golpe?",
+    "Si fueras un comerciante romano del siglo II, ¿cómo podrías detectar que las nuevas monedas tenían menos plata?",
+    "Cuando la inflación moderna supera el 2 %, ¿qué señales dicen a la gente 'mi dinero está perdiendo valor'?",
+  ],
+  jiaozi: [
+    "¿Qué razón estructural impidió que el gobierno Song contuviera la emisión de jiaozi?",
+    "Si fueras un comerciante de Sichuan del siglo XI, ¿qué te diría si aceptar o no el jiaozi?",
+    "Hoy, ¿qué grietas en la confianza hacia el dinero fiduciario (dólares, won) podrían aparecer primero?",
+  ],
+  "south-sea": [
+    "¿Por qué el enredo de la South Sea Company con la política fue el mecanismo central que infló la burbuja?",
+    "Si fueras una persona de la clase media británica en 1720 y la acción hubiera subido cinco veces, ¿habrías comprado?",
+    "En las industrias de hoy fuertemente respaldadas por el gobierno, ¿ves patrones similares?",
+  ],
+  mississippi: [
+    "¿Por qué el sistema de John Law creció más rápido y se derrumbó más hondo que la South Sea Company británica?",
+    "Si fueras uno de los hombres de confianza de John Law, ¿en qué momento le habrías advertido 'esto no va a funcionar'?",
+    "En los mercados controlados directamente por los Estados hoy (p. ej., algunas economías emergentes), ¿existen riesgos similares?",
+  ],
+  "gold-standard": [
+    "¿Por qué el mecanismo de autoajuste del patrón oro amplificaba las crisis en vez de amortiguarlas?",
+    "Como responsable político británico de 1925, ¿cómo habrías fijado la paridad de retorno al patrón oro?",
+    "¿Podría la 'oferta limitada' del bitcoin recrear las mismas disyuntivas que el patrón oro?",
+  ],
+  "1907": [
+    "¿Cuál fue la vulnerabilidad decisiva que la ausencia de un banco central creó en el sistema estadounidense de 1907?",
+    "Como J.P. Morgan, ¿qué fideicomiso habrías elegido salvar primero, y con qué criterios?",
+    "¿Dónde es más visible para ti hoy el riesgo de 'demasiado grande para caer + banca en la sombra'?",
+  ],
+  weimar: [
+    "¿Dónde estuvo el umbral más allá del cual la inflación de Weimar ya no podía detenerse con la política ordinaria?",
+    "Si fueras un oficinista de Berlín en 1923, ¿qué harías en el momento en que recibieras tu paga?",
+    "Hoy, ¿qué señales sugerirían que las 'expectativas de inflación' se están desanclando de nuevo?",
+  ],
+  "1929": [
+    "Justo antes del desplome de 1929, cuando todos eran optimistas, ¿cómo podrías haber encontrado opiniones contrarias?",
+    "Si fueras un inversor que compraba a crédito en el otoño de 1929, ¿cómo habrías actuado ante la primera caída del −10 %?",
+    "Cuando los índices de hoy se sitúan en máximos históricos, ¿qué misma pregunta plantea en voz baja 1929?",
+  ],
+  nixon: [
+    "¿Por qué la decisión abierta y única de Nixon en 1971 dejó una vía de normalización?",
+    "El 16 de agosto de 1971 (el día después del shock), como ministro de Finanzas extranjero, ¿cuál sería tu primera reacción?",
+    "Hoy, ¿qué señales marcarían el comienzo de una amenaza al estatus de la moneda de reserva?",
+  ],
+  "1997": [
+    "¿Cuál fue el único factor estructural que hizo a Corea más vulnerable en la crisis de 1997?",
+    "Como director financiero de una empresa coreana en noviembre de 1997, ¿cómo podrías haber evitado el fracaso en la refinanciación de la deuda a corto plazo?",
+    "Entre los mercados emergentes de hoy, ¿dónde ves estructuras similares de deuda externa a corto plazo?",
+  ],
+  railway: [
+    "En la Gran Bretaña de la década de 1840, ¿cuál fue la razón central de que la tecnología ferroviaria fuera real y, aun así, los precios de las acciones se convirtieran en una burbuja?",
+    "Como persona de la clase media británica en 1845, ¿cómo habrías elegido a qué compañías ferroviarias apoyar?",
+    "En el mercado de IA de hoy, ¿existen pistas para detectar las empresas que sobrevivirán?",
+  ],
+  "black-monday": [
+    "¿Cuál fue la diferencia clave que impidió que el desplome de 1987 desembocara en una recesión como la de 1929?",
+    "Como gestor de carteras el 19 de octubre de 1987, ¿qué decisión habrías tomado en el momento en que el mercado se congeló?",
+    "¿Dónde ves hoy riesgos similares procedentes de la negociación algorítmica y la HFT?",
+  ],
+  "japan-1989": [
+    "¿Qué razones estructurales hicieron que la recesión de Japón fuera más honda y más larga que la de EE. UU. tras 1929?",
+    "Como responsable político del Banco de Japón en 1989, ¿cómo habrías fijado el ritmo de las subidas de tipos de 1990?",
+    "Para que Corea y China eviten hoy la 'japonización', ¿qué señales deberían vigilar?",
+  ],
+  dotcom: [
+    "Que la burbuja puntocom trazara la misma curva que la manía ferroviaria británica, ¿fue coincidencia o algo estructural?",
+    "Como inversor en acciones puntocom a principios de 2000, ¿ante qué señal habrías salido?",
+    "Hoy, ¿qué pistas distinguen que la IA sea una repetición exacta de la puntocom de que sea un caso distinto?",
+  ],
+  "2008": [
+    "¿Por qué la compleja ingeniería financiera solo ocultó el riesgo en vez de eliminarlo?",
+    "Como analista de valores respaldados por hipotecas en 2007, ¿qué datos deberías haber estado vigilando?",
+    "Hoy, ¿dónde sigue habiendo la creencia de que 'esto es demasiado grande para caer' — en activos, instituciones o naciones?",
+  ],
+  bitcoin: [
+    "Si el valor del bitcoin se apoya en pura confianza colectiva, ¿qué escenarios podrían romper esa confianza?",
+    "¿Cómo explicarías el valor del bitcoin en una sola frase a alguien que oye hablar de él por primera vez?",
+    "¿Cómo cambiará el equilibrio entre el 'dinero sin Estado' y el 'dinero estatal' en los próximos diez años?",
+  ],
+  "covid-2020": [
+    "¿Qué mecanismo hizo que la respuesta de 2020 a la vez evitara un colapso al estilo de 1929 y sembrara el shock inflacionario de 2022?",
+    "Si hubieras tenido capital en el mínimo del mercado del 23 de marzo de 2020, ¿qué habrías comprado, y qué habrías evitado?",
+    "Hoy, ¿qué cambios de mercado pueden llamarse con justicia la secuela directa del ciclo de la COVID?",
+  ],
+  ai: [
+    "¿Qué indicador clave separa que el auge de la IA sea un verdadero cambio de paradigma de que sea una repetición de la puntocom?",
+    "Mirando el mercado de hoy, ¿cómo distinguirías 'una burbuja sobre algo real'?",
+    "Dentro de cinco años, ¿cómo esperas que esté escrito el final de este acontecimiento, y por qué?",
+  ],
+};
