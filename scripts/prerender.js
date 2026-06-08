@@ -39,8 +39,25 @@ function lookup(id) {
   return null;
 }
 
-const shell = readFileSync(resolve(dist, "index.html"), "utf-8");
+const rawShell = readFileSync(resolve(dist, "index.html"), "utf-8");
 const metaRe = /<!-- prerender:meta:start[\s\S]*?prerender:meta:end -->/;
+
+// Cloudflare Web Analytics beacon — env로만 주입(토큰을 레포에 커밋하지 않음).
+// Cloudflare Pages → Settings → Environment variables 에 CF_BEACON_TOKEN 설정 시
+// 다음 배포부터 홈·SPA·21개 per-event 페이지 전부에 자동 적용됨.
+const CF_TOKEN = process.env.CF_BEACON_TOKEN;
+const beaconTag = CF_TOKEN
+  ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"${CF_TOKEN}"}'></script>`
+  : "";
+const shell = beaconTag ? rawShell.replace("</body>", `    ${beaconTag}\n  </body>`) : rawShell;
+
+// 홈/SPA 진입점(dist/index.html)에도 beacon 주입
+if (beaconTag) {
+  writeFileSync(resolve(dist, "index.html"), shell);
+  console.log("✓ Cloudflare Web Analytics beacon injected (CF_BEACON_TOKEN set)");
+} else {
+  console.log("· CF_BEACON_TOKEN not set — analytics beacon skipped");
+}
 
 const allEvents = Object.values(ERA_EVENTS).flat();
 let count = 0;
