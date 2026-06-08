@@ -178,7 +178,7 @@ export default function MarketDemo({ lang, setView, gotoEra, gotoDetail }) {
             </div>
           </div>
           <div style={{ marginTop: 10, fontSize: 11.5, color: T.textTertiary, display: "flex", alignItems: "center", gap: 5, lineHeight: 1.5 }}>
-            <Info size={13} style={{ flexShrink: 0 }} /> {t.tapHint} · {lang === "ko" ? "LIVE 배지 = 실측 시세(약 15분 지연), 그 외 = 데모 수치" : lang === "ja" ? "LIVEバッジ＝実測相場(約15分遅延)、その他＝デモ数値" : "LIVE badge = real quotes (~15-min delayed); others = demo figures"}
+            <Info size={13} style={{ flexShrink: 0 }} /> {t.tapHint} · {lang === "ko" ? "LIVE 배지 = 실측 시세(약 15분 지연), 그 외 = 데모 수치" : lang === "ja" ? "LIVEバッジ＝実測相場(約15分遅延)、その他＝デモ数値" : lang === "es" ? "Insignia LIVE = cotizaciones reales (~15 min de retraso); las demás = cifras de demostración" : "LIVE badge = real quotes (~15-min delayed); others = demo figures"}
           </div>
 
           {/* referral block — moved under quotes */}
