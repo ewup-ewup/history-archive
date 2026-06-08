@@ -104,6 +104,7 @@ for (const ev of allEvents) {
     <link rel="alternate" hreflang="ko" href="${esc(url)}" />
     <link rel="alternate" hreflang="en" href="${esc(url)}" />
     <link rel="alternate" hreflang="ja" href="${esc(url)}" />
+    <link rel="alternate" hreflang="es" href="${esc(url)}" />
     <link rel="alternate" hreflang="x-default" href="${esc(url)}" />
     <meta property="og:site_name" content="History Archive" />
     <meta property="og:title" content="${esc(titleKo + " · " + year)}" />
@@ -118,6 +119,7 @@ for (const ev of allEvents) {
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="ja_JP" />
+    <meta property="og:locale:alternate" content="es_ES" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${esc(titleKo + " · " + year)}" />
     <meta name="twitter:description" content="${esc(desc)}" />
@@ -164,6 +166,7 @@ const urlXml = [...staticUrls, ...eventUrls]
     const alts = `\n    <xhtml:link rel="alternate" hreflang="ko" href="${u.loc}"/>` +
       `\n    <xhtml:link rel="alternate" hreflang="en" href="${u.loc}"/>` +
       `\n    <xhtml:link rel="alternate" hreflang="ja" href="${u.loc}"/>` +
+      `\n    <xhtml:link rel="alternate" hreflang="es" href="${u.loc}"/>` +
       `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${u.loc}"/>`;
     return `  <url>\n    <loc>${u.loc}</loc>\n    <changefreq>${u.freq}</changefreq>\n    <priority>${u.priority}</priority>${alts}\n  </url>`;
   })
