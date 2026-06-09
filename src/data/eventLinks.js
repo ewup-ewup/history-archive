@@ -115,4 +115,9 @@ export const EVENT_LINKS = {
     en: ["AI era", "AI rally", "AI revolution", "AI mania"],
     ja: ["AI時代", "AI狂熱", "AI革命"],
   },
+  "crypto-2022": {
+    ko: ["테라·루나", "테라/루나", "FTX 사태", "FTX"],
+    en: ["Terra-Luna", "Terra/Luna", "FTX collapse", "FTX"],
+    ja: ["テラ・ルナ", "FTX破綻", "FTX"],
+  },
 };

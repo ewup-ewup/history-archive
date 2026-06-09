@@ -366,4 +366,21 @@ export const REFLECTIONS = {
       "5年後、この事件の結末はどう書かれていると期待しますか?なぜそう予想しますか?",
     ],
   },
+  "crypto-2022": {
+    ko: [
+      "담보 없는 스테이블코인이 '신뢰가 완전할 때만' 작동하고, 그 신뢰가 깨지면 왜 그렇게 빠르게 무너졌을까요?",
+      "당신이 2022년에 FTX나 UST에 돈을 맡기고 있었다면, 어떤 신호에서 빠져나왔을까요? 그 신호를 그 순간에 알아채기 어려운 이유는 무엇일까요?",
+      "오늘 어떤 스테이블코인이나 새 거래소가 안전과 높은 수익을 약속할 때, 그 가치를 무엇이 진짜 보증하는지 어떻게 검증할 수 있을까요?",
+    ],
+    en: [
+      "Why does a stablecoin without collateral work only while trust is total, and why did it collapse so fast once that trust broke?",
+      "If you had funds in FTX or UST in 2022, at what signal would you have pulled out — and why is that signal so hard to recognize in the moment?",
+      "Today, when a stablecoin or a new exchange promises safety and high yields, how would you verify what really backs its value?",
+    ],
+    ja: [
+      "担保のないステーブルコインが『信頼が完全なときだけ』機能し、その信頼が崩れるとなぜあれほど速く崩壊したのでしょうか?",
+      "あなたが2022年にFTXやUSTに資金を預けていたら、どの兆候で引き上げたでしょうか?その兆候をその瞬間に気づくのが難しい理由は何でしょうか?",
+      "今日、あるステーブルコインや新しい取引所が安全と高い収益を約束するとき、その価値を何が本当に保証するのかをどう検証できるでしょうか?",
+    ],
+  },
 };

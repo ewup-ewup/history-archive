@@ -201,6 +201,12 @@ export const ES_EVENTS_META = {
     impact: "Las expectativas sobre la IA están elevando el mercado. Como con los ferrocarriles e internet, la tecnología es probablemente real — pero dónde divergen 'expectativa' y 'precio' solo se aclaró siempre en retrospectiva.",
     mind: "¿En qué curva de la historia estamos ahora? Responder a eso depende de ti.",
   },
+  "crypto-2022": {
+    title: "Colapso de Terra-Luna y FTX — el invierno cripto",
+    year: "2022",
+    impact: "En 2022, las criptomonedas — que soñaban con un 'dinero sin Estado' — sufrieron dos colapsos autoinfligidos. En mayo, la stablecoin algorítmica Terra-Luna evaporó unos 45.000 millones de dólares en días; en noviembre, FTX, el segundo mayor exchange, cayó con cerca de 8.000 millones de dólares de fondos de clientes desaparecidos. Fue la respuesta más oscura a la pregunta que planteó el bitcoin — 'dinero que se sostiene solo sobre la creencia'.",
+    mind: "Un activo que se sostiene sobre la creencia se desvanece más rápido cuando la creencia se rompe. Ni el código ni el genio pudieron frenar la certeza de que 'esta vez es diferente'.",
+  },
 };
 
 // 사건 상세 본문 스페인어 (EVENT_DETAIL에 주입). 배치로 채워나감.
@@ -812,6 +818,34 @@ export const ES_EVENT_DETAIL = {
     today: "Solo en este acontecimiento, el final aún no está escrito. La única pregunta que deberías hacerte, mirando el mercado de hoy, es esta — ¿el fervor actual es una 'burbuja sobre algo real', como el ferrocarril e internet, o un valor justo? Ese juicio es solo tuyo.",
     source: "Una perspectiva de edición propia sobre un fenómeno en curso, no un consejo de inversión. No predice ni garantiza resultados futuros.",
   },
+  "crypto-2022": {
+    subtitle: "Cripto global · 2022",
+    stats: [
+      { k: "Terra-Luna evaporado", v: "~45.000 mill. USD (en días)" },
+      { k: "Agujero de fondos de clientes de FTX", v: "~8.000 mill. USD" },
+      { k: "Condena de SBF", v: "25 años (2024)" },
+    ],
+    chart: {
+      cap: "El valor de LUNA — una 'espiral de la muerte' a casi cero en días",
+      peak: "Pico de LUNA (abr. 2022, ~119 $)",
+    },
+    body: [
+      "2022 fue el año en que las criptomonedas traicionaron su propia promesa dos veces. La primera fue Terra-Luna, en mayo. TerraUSD (UST) era una 'stablecoin algorítmica' que prometía una paridad 1:1 con el dólar — pero, en lugar de un colateral como el oro o los dólares, mantenía la paridad únicamente mediante un arbitraje de 'acuñar y quemar' con su moneda hermana LUNA. A esto se sumaba el protocolo Anchor, que atraía la demanda prometiendo un rendimiento anual de cerca del 20 % sobre los depósitos en UST.",
+      "El 9 de mayo de 2022, cuando grandes retiradas y ventas se combinaron para empujar el UST por debajo de 1 dólar, el defecto de diseño salió a la luz. 'Para restaurar la paridad, se quema UST y se acuña nuevo LUNA' — pero, a medida que ese LUNA inundaba el mercado, su precio se desplomaba, y cuanto más caía el precio, más lejos quedaba recuperar la paridad. En esta 'espiral de la muerte', la oferta de LUNA explotó de unos 350 millones a 6,5 billones de tokens en días, y el ecosistema LUNA-UST — que llegó a valer unos 119.000 millones de dólares — quedó prácticamente en cero. Se evaporaron unos 45.000 millones de dólares.",
+      "La segunda fue FTX, en noviembre. FTX — el segundo mayor exchange de criptomonedas del mundo, aclamado como 'el salvador de las cripto' — empezó a caer cuando se reveló que la mayor parte de los activos de su firma de trading hermana, Alameda Research, eran FTT, un token que la propia FTX había acuñado. Cuando su rival Binance anunció que vendería sus FTT, comenzó una corrida bancaria y FTX no pudo atender las retiradas. Se declaró en quiebra el 11 de noviembre — después de que unos 8.000 millones de dólares de depósitos de clientes se hubieran gastado en las apuestas arriesgadas de Alameda y desaparecido. El fundador, Sam Bankman-Fried (SBF), fue declarado culpable de fraude y condenado a 25 años de prisión en 2024.",
+    ],
+    mechanism: [
+      "El mecanismo de Terra-Luna expone el límite de la 'confianza sin colateral'. La paridad de 1 dólar del UST funcionaba solo mientras los arbitrajistas creyeran que podían 'cambiar siempre 1 UST por 1 dólar en LUNA'. En tiempos normales funcionaba sin problemas, pero la estructura tenía una debilidad fatal — un bucle autodestructivo en el que, cuanto más se tambaleaba el UST, más LUNA se acuñaba; cuanto más LUNA había, menos valía; y cuanto menos valía el LUNA, menos razones había para 'cambiar UST por LUNA'. Peor aún, el 20 % de rendimiento de Anchor no se pagaba con beneficios reales, sino quemando una reserva, así que la mera sospecha de que el subsidio terminaría podía desencadenar retiradas masivas. Las stablecoins algorítmicas se construyeron sobre el supuesto de que 'la confianza es permanente', y se derrumbaron más rápido en el instante en que la confianza se rompió.",
+      "El mecanismo de FTX no tenía nada de nuevo — era el mismo 'uso indebido de fondos de clientes + apalancamiento opaco + corrida bancaria' de 1907 y 2008. FTX prestó los depósitos de los clientes (en contra de sus propios términos) a su firma hermana Alameda para apuestas arriesgadas, tomando como garantía el token FTT que la propia FTX había acuñado. Era una estructura circular que 'garantizaba su propia deuda con dinero que ella misma imprimía'. Mientras el precio del FTT se sostenía, parecía una riqueza inmensa, pero cuando una sola palabra de Binance derrumbó el FTT, la garantía se evaporó y apareció un agujero de 8.000 millones de dólares. Un sistema que funcionaba fuera de la regulación apoyado solo en la confianza en un 'fundador genio' se derrumbó en pocos días una vez que esa confianza desapareció.",
+    ],
+    lesson: "La lección de 2022 es exactamente la pregunta que la historia del dinero ha planteado desde el principio — '¿qué garantiza el valor de este dinero?'. Terra dijo 'lo garantizan el código y un algoritmo', pero la confianza sin colateral se evaporó en cuanto la confianza flaqueó; FTX dijo 'lo garantiza una persona de fiar', pero esa persona estaba desviando el dinero de los clientes. Pese a todo el discurso de descentralización e innovación, la forma en que cayeron no se diferenció ni en una letra de las compañías fiduciarias de 1907, la compra a crédito de 1929 o la banca en la sombra de 2008.",
+    aftermath: [
+      "La consecuencia directa fue un 'invierno' en todo el mercado cripto. La capitalización total de las criptomonedas — unos 3 billones de dólares en noviembre de 2021 — se derrumbó hasta cerca de 800.000 millones a finales de 2022. El colapso de Terra se extendió de inmediato como un dominó: el fondo de cobertura Three Arrows Capital (3AC) quebró, y prestamistas cripto como Celsius y Voyager congelaron las retiradas y cayeron uno tras otro. El colapso de FTX desató otra reacción en cadena de confianza rota, llevando a la quiebra a firmas relacionadas como BlockFi. El hecho de que 'las cripto están todas interconectadas' se demostró al precio más alto.",
+      "El legado institucional fue la regulación. Los países pasaron a una legislación seria sobre las criptomonedas, que durante mucho tiempo habían estado en una zona gris regulatoria — el MiCA de la UE (Mercados de Criptoactivos, adoptado en 2023), normas más estrictas en EE. UU. para exchanges y stablecoins, y la Ley de Protección de los Usuarios de Activos Virtuales de Corea (en vigor en 2024) fueron respuestas directas a estos dos sucesos. Al mismo tiempo, lecciones como 'not your keys, not your coins' ('si no son tus claves, no son tus monedas') y 'el dinero dejado en un exchange no es tu dinero' se convirtieron en sentido común del sector. SBF fue declarado culpable de siete cargos de fraude y conspiración en noviembre de 2023 y condenado a 25 años en marzo de 2024 — y los dos sucesos quedaron registrados como la paradoja de 'un fracaso de la centralización disfrazada de descentralización'.",
+    ],
+    today: "Cada vez que una stablecoin, un esquema de tokenización o un nuevo exchange vuelven a surgir, 2022 plantea las mismas preguntas — ¿qué garantiza el valor de este activo, es verificable esa garantía, y el dinero que deposité es de verdad mío? La pregunta que 5.000 años de historia monetaria han enseñado una y otra vez fue demostrada una vez más, a la mayor velocidad, por la tecnología más nueva.",
+    source: "Edición propia a partir de la información estándar del sector cripto y del registro del juicio a SBF (2023). Cifras como la capitalización de mercado, los importes evaporados y los faltantes de fondos de clientes pueden variar según la fuente, la fecha y el criterio contable.",
+  },
 };
 
 // ES_COMPARE — angle (perspectiva comparativa) en español, en el orden de COMPARE[id].
@@ -900,6 +934,10 @@ export const ES_COMPARE = {
   ai: [
     "Por qué se compara la era de la IA con el ferrocarril británico de la década de 1840 — aparece una infraestructura de verdad revolucionaria, y le sigue una manía de capital a su alrededor. El ferrocarril acabó por convertirse en la arteria de la Revolución Industrial; por el camino, la mayoría de las acciones ferroviarias se desplomaron. ¿En qué etapa está la IA?",
     "La pregunta que la puntocom planteó y respondió con claridad — 'la tecnología es real, pero muchos precios pueden estar equivocados'. Si la IA es la repetición exacta o de verdad un caso distinto — es el único acontecimiento cuyo final aún no se ha escrito.",
+  ],
+  "crypto-2022": [
+    "Dos caras de la misma moneda. El bitcoin realizó el sueño del 'dinero basado en la confianza'; 2022 mostró su lado oscuro — qué ocurre cuando esa confianza se fabrica sin colateral (una stablecoin algorítmica) o se abusa de ella (un exchange que desvía fondos de clientes). Cauri → bitcoin → Terra/FTX: la misma pregunta sobre qué respalda el dinero, con respuestas cada vez más extremas.",
+    "FTX fue el 'Lehman de las cripto' — fondos de clientes mezclados, apalancamiento opaco, garantía circular y una corrida bancaria. Un siglo de regulación bancaria nació justamente para impedir esto; las cripto, fuera de esa regulación, repitieron 2008 a mayor velocidad y sin red de seguridad.",
   ],
 };
 
@@ -1009,5 +1047,10 @@ export const ES_REFLECTIONS = {
     "¿Qué indicador clave separa que el auge de la IA sea un verdadero cambio de paradigma de que sea una repetición de la puntocom?",
     "Mirando el mercado de hoy, ¿cómo distinguirías 'una burbuja sobre algo real'?",
     "Dentro de cinco años, ¿cómo esperas que esté escrito el final de este acontecimiento, y por qué?",
+  ],
+  "crypto-2022": [
+    "¿Por qué una stablecoin sin colateral solo funciona mientras la confianza es total, y por qué se derrumba tan rápido cuando esa confianza se rompe?",
+    "Si en 2022 hubieras tenido fondos en FTX o en UST, ¿qué señal te habría hecho retirarlos a tiempo — y por qué es tan difícil reconocerla en el momento?",
+    "Hoy, cuando una stablecoin o un nuevo exchange prometen seguridad y altos rendimientos, ¿cómo verificarías qué respalda realmente su valor?",
   ],
 };
