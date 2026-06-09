@@ -45,7 +45,9 @@ const metaRe = /<!-- prerender:meta:start[\s\S]*?prerender:meta:end -->/;
 // Cloudflare Web Analytics beacon — env로만 주입(토큰을 레포에 커밋하지 않음).
 // Cloudflare Pages → Settings → Environment variables 에 CF_BEACON_TOKEN 설정 시
 // 다음 배포부터 홈·SPA·21개 per-event 페이지 전부에 자동 적용됨.
-const CF_TOKEN = process.env.CF_BEACON_TOKEN;
+// 토큰은 안전 문자(영숫자·_-)만 허용 — HTML/JSON 속성 깨짐·인젝션 차단.
+// Cloudflare beacon 토큰은 hex 형식이라 정상값은 그대로 통과.
+const CF_TOKEN = (process.env.CF_BEACON_TOKEN || "").replace(/[^A-Za-z0-9_-]/g, "");
 const beaconTag = CF_TOKEN
   ? `<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"${CF_TOKEN}"}'></script>`
   : "";
