@@ -207,6 +207,12 @@ export const ES_EVENTS_META = {
     impact: "En 2022, las criptomonedas — que soñaban con un 'dinero sin Estado' — sufrieron dos colapsos autoinfligidos. En mayo, la stablecoin algorítmica Terra-Luna evaporó unos 45.000 millones de dólares en días; en noviembre, FTX, el segundo mayor exchange, cayó con cerca de 8.000 millones de dólares de fondos de clientes desaparecidos. Fue la respuesta más oscura a la pregunta que planteó el bitcoin — 'dinero que se sostiene solo sobre la creencia'.",
     mind: "Un activo que se sostiene sobre la creencia se desvanece más rápido cuando la creencia se rompe. Ni el código ni el genio pudieron frenar la certeza de que 'esta vez es diferente'.",
   },
+  ltcm: {
+    title: "Colapso de LTCM — la caída de los genios",
+    year: "1998",
+    impact: "LTCM, un fondo de cobertura fundado por premios Nobel, gestionaba más de 100.000 millones de dólares en activos con unos 4.700 millones de capital — y se derrumbó en 1998 de un solo golpe: el impago de Rusia. Mostró por qué 'las mejores mentes + los mejores modelos + un apalancamiento enorme' es la combinación más peligrosa, y que el precio de ignorar ese riesgo fue 2008, diez años después.",
+    mind: "Un modelo solo tiene razón hasta que el mundo deja de comportarse como el modelo. Ni el genio ni las matemáticas pudieron con la certeza — no de que 'esta vez es diferente', sino de que 'esto es seguro'.",
+  },
 };
 
 // 사건 상세 본문 스페인어 (EVENT_DETAIL에 주입). 배치로 채워나감.
@@ -846,6 +852,34 @@ export const ES_EVENT_DETAIL = {
     today: "Cada vez que una stablecoin, un esquema de tokenización o un nuevo exchange vuelven a surgir, 2022 plantea las mismas preguntas — ¿qué garantiza el valor de este activo, es verificable esa garantía, y el dinero que deposité es de verdad mío? La pregunta que 5.000 años de historia monetaria han enseñado una y otra vez fue demostrada una vez más, a la mayor velocidad, por la tecnología más nueva.",
     source: "Edición propia a partir de la información estándar del sector cripto y del registro del juicio a SBF (2023). Cifras como la capitalización de mercado, los importes evaporados y los faltantes de fondos de clientes pueden variar según la fuente, la fecha y el criterio contable.",
   },
+  ltcm: {
+    subtitle: "Fondo de cobertura de EE. UU. · 1994–1998",
+    stats: [
+      { k: "Apalancamiento", v: "~25:1 (4.700 mill. capital → 125.000 mill. activos)" },
+      { k: "Pérdida en 4 meses", v: "~4.600 mill. USD" },
+      { k: "Rescate", v: "3.600 mill. privados, orquestado por la Fed" },
+    ],
+    chart: {
+      cap: "El capital de LTCM — cuatro años de crecimiento espectacular, cuatro meses de colapso",
+      peak: "Pico (principios de 1998, ~4.700 mill. de capital)",
+    },
+    body: [
+      "En 1994, John Meriwether — el legendario operador de bonos de Salomon Brothers — reunió a las mejores mentes de Wall Street para fundar el fondo de cobertura Long-Term Capital Management (LTCM). En su consejo figuraban Myron Scholes y Robert Merton, que ganaron el Premio Nobel de Economía de 1997 por la fórmula de valoración de opciones (Black-Scholes-Merton). Un fondo que prometía 'capturar las ineficiencias del mercado con matemáticas', LTCM ganó cerca del 40 % anual en sus tres primeros años y fue llamado 'el equipo de ensueño de Wall Street'.",
+      "El núcleo de la estrategia era el 'arbitraje de convergencia' — apostar a que, cuando la diferencia de precio entre dos bonos similares se abría de forma anormal, pronto se estrecharía de vuelta a la normalidad. El problema era que esa diferencia era tan pequeña que obtener rendimientos significativos exigía un apalancamiento enorme. LTCM gestionaba unos 125.000 millones de dólares en activos sobre cerca de 4.700 millones de capital (alrededor de 25:1), con una exposición nocional en derivados que alcanzaba los 1,25 billones de dólares. Era una estrategia de 'recoger monedas delante de una apisonadora'.",
+      "Tras la crisis financiera asiática de 1997, cuando Rusia declaró el impago de su deuda soberana en agosto de 1998, todo se desmoronó. Cuando los inversores asustados corrieron hacia los activos seguros — una 'huida hacia la calidad' —, las diferencias de precio que LTCM había apostado que 'pronto se estrecharían' se abrieron en cambio aún más. Posiciones que se suponían no relacionadas se movieron todas en la misma dirección a la vez, y el apalancamiento de 25× amplificó las pérdidas directamente. LTCM perdió unos 4.600 millones de dólares en menos de cuatro meses, y a finales de septiembre su capital se había reducido a 400 millones. La Reserva Federal (la Fed de Nueva York), temiendo que el colapso de LTCM se extendiera por todo el sistema financiero, convocó a 14 grandes bancos para organizar un rescate privado de unos 3.600 millones de dólares.",
+    ],
+    mechanism: [
+      "El colapso de LTCM demostró 'el límite del modelo' al precio más alto. El arbitraje de convergencia se apoyaba en dos supuestos — que 'las diferencias de precio acaban revirtiendo a la normalidad (reversión a la media)' y que 'los distintos mercados se mueven de forma independiente'. En tiempos normales se cumplían. Pero cuando golpeó la crisis, ambos se rompieron a la vez: todos los activos de riesgo se vendieron simultáneamente, de modo que las correlaciones convergieron a 1, y la liquidez del mercado se evaporó, así que las posiciones ni siquiera podían deshacerse. El modelo de riesgo de LTCM (VaR) subestimaba este 'riesgo de cola' mediante su supuesto de distribución normal, y el apalancamiento de 25× convirtió una pequeña pérdida en una fatal.",
+      "El segundo mecanismo fue 'demasiado interconectado para caer'. La exposición nocional de 1,25 billones de dólares de LTCM estaba entrelazada como contraparte con casi todos los grandes bancos de Wall Street. Una liquidación desordenada habría volcado esas posiciones sobre el mercado de golpe, arrastrando a los bancos contraparte a pérdidas encadenadas. Así que el presidente de la Fed de Nueva York, William McDonough, hizo que 14 bancos — con su propio dinero, no el de los contribuyentes — se hicieran cargo de LTCM y lo liquidaran. Este precedente de rescatar a un único fondo de cobertura privado por motivos de riesgo sistémico se convirtió en el tráiler directo de los rescates de Bear Stearns y AIG en 2008, exactamente diez años después.",
+    ],
+    lesson: "La lección de LTCM es que 'el encuentro del genio y el apalancamiento es lo más peligroso'. Un modelo describe la 'normalidad' de los tiempos de calma, pero las crisis viven en la 'cola' que el modelo excluye, y el apalancamiento amplifica la pérdida de esa cola hasta la quiebra. Una lección más pesada está más allá — la fórmula 'apalancamiento + correlación + interconexión = riesgo sistémico' ya estaba escrita en la pizarra en 1998, pero el mercado la ignoró durante una década y la reaprendió, en letras mucho más grandes, en 2008.",
+    aftermath: [
+      "El rescate en sí tuvo éxito. LTCM se liquidó de forma ordenada hacia el año 2000; los bancos participantes recuperaron más o menos su capital y no hubo coste para el contribuyente. Los fundadores y los inversores perdieron la mayor parte de sus participaciones. Pero este 'rescate orquestado por la Fed' dejó un efecto secundario profundo — grabó en el mercado la expectativa de que 'las instituciones sistémicamente importantes acaban siendo rescatadas', es decir, el riesgo moral. Significativamente, Bear Stearns se negó a sumarse a este rescate — y diez años después se encontró siendo el rescatado.",
+      "El legado intelectual e institucional corre en dos direcciones. Primero, LTCM expuso 'cuánto subestiman el riesgo de cola los modelos de riesgo como el VaR' y 'lo peligroso que es el apalancamiento con derivados extrabursátiles' — pero esa advertencia fluyó hacia 2008 sin traducirse en una regulación suficiente. Segundo, LTCM se convirtió en el caso de estudio estándar de todo plan de estudios de finanzas y de riesgo (When Genius Failed, de Roger Lowenstein). El mismo patrón exacto — 'un fondo apalancado, dependiente de un modelo e interconectado que se derrumba en medio de una huida hacia la calidad' — se repitió, con forma cambiada, con Lehman y Bear Stearns en 2008, y con Three Arrows Capital (3AC) en las cripto en 2022.",
+    ],
+    today: "Cuando un fondo o una estrategia presentan rendimientos altos, suaves y de 'bajo riesgo' construidos sobre el apalancamiento y un modelo sofisticado, LTCM plantea la misma pregunta — ¿qué cola ha excluido el modelo, y qué ocurre el día en que todas las posiciones 'no correlacionadas' se mueven en la misma dirección a la vez? Hasta las personas más inteligentes se hicieron esa pregunta demasiado tarde.",
+    source: "Edición propia a partir de la historia financiera estándar, When Genius Failed de Roger Lowenstein y los registros de la Fed de Nueva York. Cifras como el ratio de apalancamiento, las pérdidas y la exposición pueden variar según la fuente, la fecha y el criterio contable.",
+  },
 };
 
 // ES_COMPARE — angle (perspectiva comparativa) en español, en el orden de COMPARE[id].
@@ -938,6 +972,10 @@ export const ES_COMPARE = {
   "crypto-2022": [
     "Dos caras de la misma moneda. El bitcoin realizó el sueño del 'dinero basado en la confianza'; 2022 mostró su lado oscuro — qué ocurre cuando esa confianza se fabrica sin colateral (una stablecoin algorítmica) o se abusa de ella (un exchange que desvía fondos de clientes). Cauri → bitcoin → Terra/FTX: la misma pregunta sobre qué respalda el dinero, con respuestas cada vez más extremas.",
     "FTX fue el 'Lehman de las cripto' — fondos de clientes mezclados, apalancamiento opaco, garantía circular y una corrida bancaria. Un siglo de regulación bancaria nació justamente para impedir esto; las cripto, fuera de esa regulación, repitieron 2008 a mayor velocidad y sin red de seguridad.",
+  ],
+  ltcm: [
+    "LTCM fue el ensayo general de 2008 que nadie escuchó. Apalancamiento extremo, correlaciones que saltan a 1, una entidad 'demasiado interconectada para caer' y un rescate orquestado por la Fed — todo estaba ya en 1998, a menor escala. El mercado tardó exactamente diez años en repetirlo, mucho más grande, con Lehman y Bear Stearns.",
+    "Dos casos en que una estrategia cuantitativa elegante funcionó de maravilla hasta que un evento de estrés rompió sus supuestos a la vez. El seguro de cartera (1987) y el arbitraje de convergencia (1998) asumían liquidez continua e independencia entre los mercados; cuando esos supuestos cayeron, el propio modelo amplificó el desplome en lugar de amortiguarlo.",
   ],
 };
 
@@ -1052,5 +1090,10 @@ export const ES_REFLECTIONS = {
     "¿Por qué una stablecoin sin colateral solo funciona mientras la confianza es total, y por qué se derrumba tan rápido cuando esa confianza se rompe?",
     "Si en 2022 hubieras tenido fondos en FTX o en UST, ¿qué señal te habría hecho retirarlos a tiempo — y por qué es tan difícil reconocerla en el momento?",
     "Hoy, cuando una stablecoin o un nuevo exchange prometen seguridad y altos rendimientos, ¿cómo verificarías qué respalda realmente su valor?",
+  ],
+  ltcm: [
+    "¿Por qué una estrategia que asume que 'los mercados se mueven de forma independiente' funciona en tiempos de calma pero se vuelve letal cuando, en una crisis, todas las correlaciones saltan a 1?",
+    "Si hubieras sido inversor de LTCM viendo tres años de rendimientos cercanos al 40 %, ¿qué te habría hecho dudar — y por qué es tan difícil cuestionar a 'los genios' cuando ganan?",
+    "Hoy, cuando un fondo presenta rendimientos altos y 'estables' apoyados en apalancamiento y un modelo, ¿cómo evaluarías el riesgo de cola que el modelo no muestra?",
   ],
 };

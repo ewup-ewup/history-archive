@@ -383,4 +383,21 @@ export const REFLECTIONS = {
       "今日、あるステーブルコインや新しい取引所が安全と高い収益を約束するとき、その価値を何が本当に保証するのかをどう検証できるでしょうか?",
     ],
   },
+  ltcm: {
+    ko: [
+      "'시장은 서로 독립적으로 움직인다'는 가정이 평상시엔 통하다가, 위기에 모든 상관관계가 1로 치솟으면 왜 그렇게 치명적이 될까요?",
+      "당신이 LTCM 투자자로 3년간 연 40% 가까운 수익을 보고 있었다면, 무엇이 의심을 품게 했을까요? 그리고 '천재들'이 돈을 벌고 있을 때 그들을 의심하기 어려운 이유는 무엇일까요?",
+      "오늘 어떤 펀드가 레버리지와 모델에 기대 높고 '안정적인' 수익을 낼 때, 모델이 보여주지 않는 꼬리 위험을 어떻게 가늠할 수 있을까요?",
+    ],
+    en: [
+      "Why does the assumption that 'markets move independently' hold in calm times but become lethal when, in a crisis, all correlations spike to 1?",
+      "If you had been an LTCM investor watching three years of nearly 40% returns, what would have made you doubt — and why is it so hard to question 'the geniuses' while they are winning?",
+      "Today, when a fund posts high, 'stable' returns built on leverage and a model, how would you gauge the tail risk the model does not show?",
+    ],
+    ja: [
+      "『市場は互いに独立して動く』という仮定が平時には通用するのに、危機にすべての相関が1に跳ね上がるとなぜそれほど致命的になるのでしょうか?",
+      "あなたがLTCMの投資家として3年間、年40%近い収益を見ていたら、何が疑いを抱かせたでしょうか?そして『天才たち』が儲けているとき、彼らを疑うのが難しい理由は何でしょうか?",
+      "今日、あるファンドがレバレッジとモデルに頼って高く『安定的な』収益を上げるとき、モデルが示さないテールリスクをどう見積もれるでしょうか?",
+    ],
+  },
 };

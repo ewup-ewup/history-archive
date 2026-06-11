@@ -120,4 +120,9 @@ export const EVENT_LINKS = {
     en: ["Terra-Luna", "Terra/Luna", "FTX collapse", "FTX"],
     ja: ["テラ・ルナ", "FTX破綻", "FTX"],
   },
+  ltcm: {
+    ko: ["LTCM", "롱텀 캐피털"],
+    en: ["LTCM", "Long-Term Capital"],
+    ja: ["LTCM", "ロングターム・キャピタル"],
+  },
 };
