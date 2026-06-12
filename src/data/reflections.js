@@ -417,4 +417,21 @@ export const REFLECTIONS = {
       "今日、ある銀行やファンドが信用を少数の非常に力のある顧客に集中させるとき、メディチを倒したその誤りが繰り返されていることをどう見抜けるでしょうか?",
     ],
   },
+  "price-revolution": {
+    ko: [
+      "은이 희소해서 가치가 있다면, 더 이상 희소하지 않게 됐을 때 그 가치엔 무슨 일이 일어날까요? 그리고 수십 년에 걸쳐 천천히 진행될 때 그것을 알아차리기 어려운 이유는 무엇일까요?",
+      "당신이 16세기 유럽에서 임금은 고정인데 물가가 해마다 오르는 노동자였다면, 당신이 번 돈의 가치를 어떻게 지켰을까요?",
+      "오늘 '희소하다'고 여겨지는 자산(금·비트코인·토지) 중, 공급이나 대체재가 늘어날 수 있는 것은 무엇이며, 그러면 그 가치는 어떻게 달라질까요?",
+    ],
+    en: [
+      "If silver is valuable because it is scarce, what happens to its value when it stops being scarce — and why is that so hard to see while it unfolds slowly, over decades?",
+      "If you had been a worker in 16th-century Europe with a fixed wage while prices rose year after year, how would you have protected the value of what you earned?",
+      "Today, which assets considered 'scarce' (gold, bitcoin, land) could see their supply or a substitute grow — and how would that change their value?",
+    ],
+    ja: [
+      "銀が希少だから価値があるなら、もはや希少でなくなったとき、その価値には何が起きるでしょうか?そして数十年かけてゆっくり進むとき、それに気づくのが難しい理由は何でしょうか?",
+      "あなたが16世紀ヨーロッパで賃金は固定なのに物価が年々上がる労働者だったら、稼いだお金の価値をどう守ったでしょうか?",
+      "今日『希少だ』とされる資産(金・ビットコイン・土地)のうち、供給や代替が増えうるものは何で、そうなればその価値はどう変わるでしょうか?",
+    ],
+  },
 };

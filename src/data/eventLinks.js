@@ -130,4 +130,9 @@ export const EVENT_LINKS = {
     en: ["Medici Bank", "the Medici", "Medici"],
     ja: ["メディチ銀行", "メディチ"],
   },
+  "price-revolution": {
+    ko: ["가격혁명", "신대륙 은", "포토시"],
+    en: ["Price Revolution", "New World silver", "Potosí"],
+    ja: ["価格革命", "ポトシ"],
+  },
 };

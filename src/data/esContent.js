@@ -219,6 +219,12 @@ export const ES_EVENTS_META = {
     impact: "No una burbuja ni un desplome, sino el nacimiento de una institución. El Banco de los Médici, en la Florencia del siglo XV, sistematizó la partida doble, las letras de cambio y una red de sucursales por toda Europa, creando el prototipo del 'banco moderno' que reúne el dinero disperso y lo canaliza hacia la inversión. Ese poder financiero sostuvo el Renacimiento — y prestar a los poderosos acabó por hundir el banco.",
     mind: "Cuando se asentó un sistema de confianza para guardar y prestar dinero, las finanzas remodelaron incluso el arte y las ciudades. Pero prestar lo máximo a los mayores clientes fue la mayor debilidad.",
   },
+  "price-revolution": {
+    title: "La Revolución de los Precios — la inflación de la plata del Nuevo Mundo",
+    year: "siglo XVI",
+    impact: "Cuando la enorme plata extraída en el Nuevo Mundo (sobre todo en Potosí) se vertió sobre Europa, los precios subieron unas seis veces a lo largo de más de un siglo. Fue el momento en que se rompió la creencia de que 'el metal precioso es seguro' — la primera experiencia a gran escala de la humanidad de que el oro o la plata también pierden valor cuando su cantidad se dispara. Y España, que recibió la mayor parte de la plata, fue la primera en declinar, mientras esa plata se drenaba hacia las guerras y las importaciones.",
+    mind: "Aunque lo que tengas en la mano sea plata de verdad, cuando las manos de todos rebosan de plata, lo que esa plata puede comprar se encoge. El valor de una moneda no estaba en su material, sino en su escasez.",
+  },
 };
 
 // 사건 상세 본문 스페인어 (EVENT_DETAIL에 주입). 배치로 채워나감.
@@ -914,6 +920,34 @@ export const ES_EVENT_DETAIL = {
     today: "Cada vez que depositamos dinero en un banco, pedimos un préstamo o leemos un balance, usamos una maquinaria que los Médici ayudaron a estandarizar. Y ya sean las hipotecas fallidas de 2008 o las apuestas equivocadas de un fondo de cobertura, toda quiebra bancaria moderna repite la última lección de los Médici — el peligro nunca estuvo en 'prestar' en sí, sino en prestar demasiado a quienes son demasiado poderosos para recibir un no.",
     source: "Edición propia a partir de la historia económica y bancaria estándar (incluida 'The Rise and Decline of the Medici Bank' de Raymond de Roover). La partida doble y las letras de cambio no fueron invenciones de los Médici, sino técnicas de su época que ellos sistematizaron y difundieron. Fechas, nombres y cifras pueden variar según la fuente.",
   },
+  "price-revolution": {
+    subtitle: "Europa · siglos XVI–XVII",
+    stats: [
+      { k: "Subida de precios", v: "~6× (~150 años)" },
+      { k: "Principal fuente de plata", v: "Potosí (1545–)" },
+      { k: "La paradoja de España", v: "la más rica en plata, más pobre al final" },
+    ],
+    chart: {
+      cap: "Nivel de precios en Europa occidental — un ascenso suave pero implacable durante un siglo (~6×)",
+      peak: "~6× (1500→1650)",
+    },
+    body: [
+      "Para los europeos anteriores al siglo XVI, los precios eran en buena medida 'parecidos incluso después de una generación'. Entonces, tras 1492, la conquista española del Nuevo Mundo lo cambió todo. En 1545 se halló una inmensa montaña de plata en Potosí (en la actual Bolivia) y, junto con las minas de México, decenas de miles de toneladas de plata se vertieron sobre Europa a bordo de las 'flotas del tesoro'.",
+      "El resultado fue una inflación suave pero implacable a lo largo de más de un siglo. Entre 1500 y 1650, los precios generales en Europa occidental subieron unas seis veces — solo en torno al 1–1,5 % anual, bajo según el estándar de hoy, pero un shock para gente de una época en que los precios apenas se movían en toda una vida. Los salarios quedaron por detrás de los precios, así que los ingresos reales de los trabajadores cayeron, mientras que quienes poseían tierra y bienes salieron ganando — la brecha entre los que tenían y los que no se ensanchó.",
+      "La mayor paradoja fue España, que recibió la mayor parte de la plata. Esa plata se drenaba directamente para pagar las interminables guerras de los Habsburgo (la rebelión holandesa y otras) y las importaciones. Al subir los precios, los productos españoles se volvieron demasiado caros y perdieron competitividad (desindustrialización), y Felipe II declaró el impago de la deuda de la corona repetidamente, empezando en 1557. Entretanto, Martín de Azpilcueta, de la Escuela de Salamanca (1556), y Jean Bodin (1568) dejaron registrada la observación de que 'más plata sube los precios' — la primera formulación de la teoría cuantitativa del dinero.",
+    ],
+    mechanism: [
+      "El mecanismo central de la Revolución de los Precios se explica con la teoría cuantitativa del dinero — cuando la cantidad de dinero (plata) se dispara mientras la cantidad de bienes que comprar y vender no crece ni de lejos tan rápido, se produce 'más plata persiguiendo los mismos bienes', así que cada unidad de plata compra menos. Los precios suben. La idea decisiva aquí es que la plata es 'dinero' no por su material brillante, sino por su escasez. Quita la escasez, y la plata se vuelve un metal corriente.",
+      "Los historiadores advierten, no obstante, que la plata por sí sola no lo explica todo. La recuperación de la población y la urbanización tras la peste negra elevaron la demanda; la devaluación de la moneda (recortar el contenido de metal) en algunas regiones también empujó los precios; y algunos señalan que el momento de la subida no coincide del todo con el pico de las importaciones de plata. Así que la 'avalancha de plata' fue el mayor motor de la Revolución de los Precios, pero no su única causa. Aun así, el destino de España dejó otra lección — la plata obtenida con facilidad se fue hacia las guerras y las importaciones en vez de construir industria, pasando directamente a banqueros y proveedores extranjeros como los genoveses y los Fugger. Es un caso temprano del patrón que más tarde se llamaría la 'maldición de los recursos' — los recursos abundantes no son necesariamente una prosperidad duradera.",
+    ],
+    lesson: "La lección de la Revolución de los Precios atraviesa toda la historia del dinero — ni siquiera el dinero duro (plata, oro) está libre de la inflación, porque el valor de una moneda no descansa en su material, sino en su 'escasez respecto a los bienes'. La inflación que Roma causó recortando el contenido de plata y la que España causó vertiendo plata fueron métodos opuestos con el mismo resultado. Y este principio sigue directo hasta el papel moneda, los bancos centrales y el bitcoin — sea cual sea el dinero, si su cantidad crece más rápido que los bienes, su valor cae.",
+    aftermath: [
+      "El legado intelectual es el mayor. La Revolución de los Precios dio a luz la economía monetaria. La Escuela de Salamanca (Azpilcueta, 1556) y Jean Bodin (1568) formularon por primera vez la teoría cuantitativa del dinero — que la cantidad de dinero gobierna los precios —, que se convirtió en el punto de partida de la macroeconomía que más tarde llevarían adelante Hume, Fisher y Friedman. Fue el primer momento en que la humanidad capturó como teoría la relación 'oferta monetaria → precios'.",
+      "El legado geopolítico y estructural también es profundo. A pesar de su enorme plata, España declinó en términos relativos, mientras que las economías comerciales de los holandeses y los ingleses ascendieron en el mismo lapso. Mientras tanto, buena parte de la plata de Potosí fluyó vía Manila hacia China, creando lo que fue de hecho el primer 'sistema monetario global' — ya en el siglo XVI, la plata americana estaba ligada a la seda y la porcelana asiáticas. La lección de que 'los recursos abundantes no garantizan una prosperidad duradera' sigue hasta los Estados petroleros de hoy y la 'maldición de los recursos', y la pregunta de 'a qué anclar el dinero y cuánto emitir' va directa al patrón oro, el shock Nixon y el bitcoin.",
+    ],
+    today: "Cuando los bancos centrales expanden mucho la oferta monetaria (flexibilización cuantitativa), o cuando algún activo que se decía 'escaso' de pronto deja de serlo, el siglo XVI susurra en voz baja — el valor del dinero es, al final, la proporción entre el dinero y los bienes, y ningún material, por precioso que sea, escapa a esa aritmética. La inflación de 2020–2022 funcionó con el mismo principio que hace 500 años.",
+    source: "Edición propia a partir de la historia económica estándar y de obras como 'American Treasure and the Price Revolution in Spain' (1934) de Earl J. Hamilton. La magnitud de la subida de precios (~6×) y las fechas varían según la región y la fuente, y los estudiosos discuten atribuir la Revolución de los Precios solo a las entradas de plata (también contribuyeron la población, la urbanización y la devaluación de la moneda).",
+  },
 };
 
 // ES_COMPARE — angle (perspectiva comparativa) en español, en el orden de COMPARE[id].
@@ -1014,6 +1048,10 @@ export const ES_COMPARE = {
   medici: [
     "Dos nacimientos fundacionales del dinero moderno, con cuatro siglos de diferencia. El jiaozi (s. XI) creó el instrumento — el papel moneda; los Médici (s. XV) crearon la institución — el banco que intermedia entre el ahorro y la inversión. Juntos son las dos mitades de la infraestructura sobre la que se sostiene todo el dinero posterior.",
     "El Banco de los Médici murió de la enfermedad bancaria más antigua — prestar demasiado a deudores poderosos (reyes, duques) que podían no pagar sin consecuencias, sumado a una gobernanza débil. Quinientos años después, 2008 repitió el mismo diagnóstico con hipotecas y bancos 'demasiado grandes para caer'. El fallo no es nuevo; solo cambia de ropaje.",
+  ],
+  "price-revolution": [
+    "Dos inflaciones de metal por métodos opuestos. Roma redujo el contenido de plata de cada moneda; España inundó Europa de plata. Reducir la calidad o multiplicar la cantidad — el resultado fue el mismo: cada moneda compraba menos. La prueba, a 1.300 años de distancia, de que el dinero duro tampoco escapa a la inflación.",
+    "'Demasiado dinero persiguiendo demasiado pocos bienes' — la frase que define 2020–2022 describe exactamente el siglo XVI. La plata de Potosí y la flexibilización cuantitativa de la Fed son la misma aritmética con 500 años de diferencia: cuando el dinero crece más rápido que los bienes, los precios suben, sea plata o dígitos en una pantalla.",
   ],
 };
 
@@ -1138,5 +1176,10 @@ export const ES_REFLECTIONS = {
     "¿Por qué fue necesario un sistema como la letra de cambio para que la banca creciera bajo la prohibición eclesiástica del interés — y qué dice eso sobre cómo las finanzas rodean las restricciones?",
     "Si hubieras sido director de una sucursal lejana de los Médici, ¿qué te habría tentado a conceder un préstamo arriesgado a un rey — y qué control habría podido frenarte?",
     "Hoy, cuando un banco o un fondo concentra su crédito en unos pocos clientes muy poderosos, ¿cómo reconocerías que se está repitiendo el error que hundió a los Médici?",
+  ],
+  "price-revolution": [
+    "Si la plata es valiosa porque es escasa, ¿qué le ocurre a su valor cuando deja de ser escasa — y por qué cuesta tanto verlo mientras sucede lentamente, a lo largo de décadas?",
+    "Si hubieras sido un trabajador en la Europa del siglo XVI con un salario fijo mientras los precios subían año tras año, ¿cómo habrías protegido el valor de lo que ganabas?",
+    "Hoy, ¿qué activos considerados 'escasos' (oro, bitcoin, suelo) podrían ver crecer su oferta o un sustituto — y cómo cambiaría eso su valor?",
   ],
 };
