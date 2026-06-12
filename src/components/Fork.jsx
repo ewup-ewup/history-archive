@@ -5,10 +5,10 @@ import { L } from "../data/i18n";
 import { FONT, T, navBtn } from "../data/theme";
 import Disclaimer from "./Disclaimer.jsx";
 
-export default function Fork({ lang, forkState, choose, reset, setDayOffset }) {
+export default function Fork({ lang, forkState, choose, reroll, reset, setDayOffset }) {
   const fk = L[lang].fork;
   const ax = AXIS_LABEL[lang];
-  const { picks, score, dayOffset, prismCount } = forkState;
+  const { picks, score, dayOffset, prismCount, rerolled } = forkState;
 
   const eventForDay = (off) => EVENTS[((2 + off) % EVENTS.length + EVENTS.length) % EVENTS.length];
   const ev = eventForDay(dayOffset);
@@ -96,6 +96,12 @@ export default function Fork({ lang, forkState, choose, reset, setDayOffset }) {
                 {picked.year} · {picked.text[lang]}
               </div>
               <p style={{ fontSize: 13.5, color: T.textTertiary, margin: 0 }}>{fk.doneNote}</p>
+              {!rerolled[dayOffset] && (
+                <button onClick={reroll}
+                  style={{ marginTop: 16, display: "inline-flex", alignItems: "center", gap: 6, background: "transparent", border: `1px solid ${T.line}`, borderRadius: 10, padding: "9px 16px", color: T.textSecondary, fontSize: 13, fontWeight: 600, fontFamily: FONT, cursor: "pointer" }}>
+                  <RotateCcw size={13} /> {fk.reroll}
+                </button>
+              )}
             </motion.div>
           )}
         </motion.div>

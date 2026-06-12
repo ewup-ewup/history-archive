@@ -85,7 +85,8 @@ export default function App() {
   const [score, setScore] = useState(persisted?.score ?? { R: 0, C: 0, P: 0, A: 0 });
   const [dayOffset, setDayOffset] = useState(persisted?.dayOffset ?? 0);
   const [prismCount, setPrismCount] = useState(persisted?.prismCount ?? 0);
-  const forkState = { picks, score, dayOffset, prismCount };
+  const [rerolled, setRerolled] = useState(persisted?.rerolled ?? {}); // dayOffset별 리롤 1회 소진 여부
+  const forkState = { picks, score, dayOffset, prismCount, rerolled };
   const todayEvent = EVENTS[2]; // 데모: 2000(gold)을 오늘로
   const tt = L[lang];
   const forkPending = !picks[0]; // 오늘(0) 미선택 시 마이에 알림 점
@@ -98,8 +99,19 @@ export default function App() {
     setPicks({ ...picks, [dayOffset]: { ...card, year: ev.year, rarity: ev.rarity } });
     if (ev.rarity === "prism") setPrismCount((p) => p + 1);
   }
+  // 리롤: 그날의 선택을 1회에 한해 되돌려 카드를 다시 펼친다(점수·프리즘 원복).
+  function reroll() {
+    const p = picks[dayOffset];
+    if (!p || rerolled[dayOffset]) return;
+    const ns = { ...score };
+    Object.entries(p.s).forEach(([k, v]) => (ns[k] -= v));
+    setScore(ns);
+    if (p.rarity === "prism") setPrismCount((c) => Math.max(0, c - 1));
+    const np = { ...picks }; delete np[dayOffset]; setPicks(np);
+    setRerolled({ ...rerolled, [dayOffset]: true });
+  }
   function reset() {
-    setPicks({}); setScore({ R: 0, C: 0, P: 0, A: 0 }); setPrismCount(0); setDayOffset(0);
+    setPicks({}); setScore({ R: 0, C: 0, P: 0, A: 0 }); setPrismCount(0); setDayOffset(0); setRerolled({});
     try { window.localStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
   }
   function gotoEra(idx, eventId) { setOpenIdx(idx); setFocusEvent(eventId || null); setView("timeline"); }
@@ -146,10 +158,10 @@ export default function App() {
     try {
       window.localStorage.setItem(
         STORAGE_KEY,
-        JSON.stringify({ picks, score, dayOffset, prismCount, lang })
+        JSON.stringify({ picks, score, dayOffset, prismCount, rerolled, lang })
       );
     } catch { /* ignore quota / private mode */ }
-  }, [picks, score, dayOffset, prismCount, lang]);
+  }, [picks, score, dayOffset, prismCount, rerolled, lang]);
 
   // Pretendard 폰트 런타임 주입
   useEffect(() => {
@@ -249,7 +261,7 @@ export default function App() {
           {view === "detail" && <EventDetail lang={lang} eventId={detailId} setView={setView} gotoEra={gotoEra} gotoDetail={gotoDetail} openMarket={() => setView("market")} />}
           {view === "market" && <MarketDemo lang={lang} setView={setView} gotoEra={gotoEra} gotoDetail={gotoDetail} />}
           {view === "my" && <MyPage lang={lang} forkState={forkState} openFork={() => { setDayOffset(0); setView("fork"); }} />}
-          {view === "fork" && <Fork lang={lang} forkState={forkState} choose={choose} reset={reset} setDayOffset={setDayOffset} />}
+          {view === "fork" && <Fork lang={lang} forkState={forkState} choose={choose} reroll={reroll} reset={reset} setDayOffset={setDayOffset} />}
         </motion.div>
       </AnimatePresence>
 
