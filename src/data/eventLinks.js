@@ -125,4 +125,9 @@ export const EVENT_LINKS = {
     en: ["LTCM", "Long-Term Capital"],
     ja: ["LTCM", "ロングターム・キャピタル"],
   },
+  medici: {
+    ko: ["메디치 은행", "메디치"],
+    en: ["Medici Bank", "the Medici", "Medici"],
+    ja: ["メディチ銀行", "メディチ"],
+  },
 };

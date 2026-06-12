@@ -400,4 +400,21 @@ export const REFLECTIONS = {
       "今日、あるファンドがレバレッジとモデルに頼って高く『安定的な』収益を上げるとき、モデルが示さないテールリスクをどう見積もれるでしょうか?",
     ],
   },
+  medici: {
+    ko: [
+      "교회의 이자 금지 아래에서 은행이 성장하려면 환어음 같은 장치가 왜 필요했을까요? 그리고 그것은 금융이 제약을 우회하는 방식에 대해 무엇을 말해줄까요?",
+      "당신이 메디치의 먼 지점장이었다면, 무엇이 왕에게 위험한 대출을 내주도록 유혹했을까요? 그리고 어떤 통제 장치가 당신을 막을 수 있었을까요?",
+      "오늘 어떤 은행이나 펀드가 신용을 소수의 매우 힘센 고객에게 집중할 때, 메디치를 무너뜨린 그 실수가 반복되고 있음을 어떻게 알아챌 수 있을까요?",
+    ],
+    en: [
+      "Why was a device like the bill of exchange necessary for banking to grow under the Church's ban on interest — and what does that say about how finance works around constraints?",
+      "If you had been the manager of a far-off Medici branch, what would have tempted you to grant a risky loan to a king — and what control could have stopped you?",
+      "Today, when a bank or a fund concentrates its credit in a few very powerful clients, how would you recognize that the mistake that sank the Medici is repeating?",
+    ],
+    ja: [
+      "教会の利子禁止の下で銀行が成長するには、なぜ為替手形のような装置が必要だったのでしょうか?そしてそれは、金融が制約を回避する仕方について何を語るでしょうか?",
+      "あなたがメディチの遠い支店長だったら、何が王への危険な貸付を出すよう誘惑したでしょうか?そしてどんな統制装置があなたを止められたでしょうか?",
+      "今日、ある銀行やファンドが信用を少数の非常に力のある顧客に集中させるとき、メディチを倒したその誤りが繰り返されていることをどう見抜けるでしょうか?",
+    ],
+  },
 };

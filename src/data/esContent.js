@@ -213,6 +213,12 @@ export const ES_EVENTS_META = {
     impact: "LTCM, un fondo de cobertura fundado por premios Nobel, gestionaba más de 100.000 millones de dólares en activos con unos 4.700 millones de capital — y se derrumbó en 1998 de un solo golpe: el impago de Rusia. Mostró por qué 'las mejores mentes + los mejores modelos + un apalancamiento enorme' es la combinación más peligrosa, y que el precio de ignorar ese riesgo fue 2008, diez años después.",
     mind: "Un modelo solo tiene razón hasta que el mundo deja de comportarse como el modelo. Ni el genio ni las matemáticas pudieron con la certeza — no de que 'esta vez es diferente', sino de que 'esto es seguro'.",
   },
+  medici: {
+    title: "El Banco de los Médici — el nacimiento de la banca moderna",
+    year: "siglo XV",
+    impact: "No una burbuja ni un desplome, sino el nacimiento de una institución. El Banco de los Médici, en la Florencia del siglo XV, sistematizó la partida doble, las letras de cambio y una red de sucursales por toda Europa, creando el prototipo del 'banco moderno' que reúne el dinero disperso y lo canaliza hacia la inversión. Ese poder financiero sostuvo el Renacimiento — y prestar a los poderosos acabó por hundir el banco.",
+    mind: "Cuando se asentó un sistema de confianza para guardar y prestar dinero, las finanzas remodelaron incluso el arte y las ciudades. Pero prestar lo máximo a los mayores clientes fue la mayor debilidad.",
+  },
 };
 
 // 사건 상세 본문 스페인어 (EVENT_DETAIL에 주입). 배치로 채워나감.
@@ -880,6 +886,34 @@ export const ES_EVENT_DETAIL = {
     today: "Cuando un fondo o una estrategia presentan rendimientos altos, suaves y de 'bajo riesgo' construidos sobre el apalancamiento y un modelo sofisticado, LTCM plantea la misma pregunta — ¿qué cola ha excluido el modelo, y qué ocurre el día en que todas las posiciones 'no correlacionadas' se mueven en la misma dirección a la vez? Hasta las personas más inteligentes se hicieron esa pregunta demasiado tarde.",
     source: "Edición propia a partir de la historia financiera estándar, When Genius Failed de Roger Lowenstein y los registros de la Fed de Nueva York. Cifras como el ratio de apalancamiento, las pérdidas y la exposición pueden variar según la fuente, la fecha y el criterio contable.",
   },
+  medici: {
+    subtitle: "Florencia, Italia · 1397–1494",
+    stats: [
+      { k: "Duración", v: "~un siglo (1397–1494)" },
+      { k: "Red de sucursales", v: "~8 ciudades europeas" },
+      { k: "Causa de la caída", v: "préstamos fallidos a gobernantes" },
+    ],
+    chart: {
+      cap: "El auge y la caída del Banco de los Médici (1397–1494)",
+      peak: "Apogeo — la era de Cosme (mediados del s. XV)",
+    },
+    body: [
+      "En 1397, Giovanni di Bicci de' Medici fundó un pequeño banco en Florencia. El mayor obstáculo de la época era la religión — la Iglesia católica prohibía prestar con interés (la usura) como pecado. La solución del Banco de los Médici fue la 'letra de cambio'. Al prestar dinero en una ciudad para que se devolviera en otra ciudad y en otra moneda, ocultaba el interés dentro de la diferencia del tipo de cambio. En apariencia no era un 'préstamo' sino un 'cambio de divisa', así que esquivaba la prohibición de la Iglesia.",
+      "Tres cosas hicieron del Banco de los Médici el prototipo del banco moderno. Primero, la contabilidad por partida doble — los Médici no la inventaron (surgió en las ciudades-estado italianas y la codificó Luca Pacioli en 1494), pero la usaron con más rigor que nadie para cuadrar los libros de sucursales lejanas. Segundo, una red de sucursales por toda Europa — en Roma, Venecia, Nápoles, Milán, Ginebra, Brujas, Londres y más, cada una constituida como una sociedad aparte, de modo que la quiebra de una sucursal no arrastrara a la casa matriz: el prototipo de la 'sociedad holding'. La más rentable era la de Roma, que manejaba las finanzas papales. Tercero, Cosme de Médici convirtió la riqueza así reunida en poder político en Florencia y en mecenazgo del arte renacentista.",
+      "Pero al apogeo le siguió la decadencia. Para la época de Lorenzo 'el Magnífico', el banco había prestado sumas enormes a monarcas como el rey Eduardo IV de Inglaterra y el duque Carlos de Borgoña, y sufrió grandes pérdidas cuando no devolvieron. A esto se sumó la gestión laxa de directores de sucursal incompetentes o deshonestos, como Tommaso Portinari en Brujas. El propio Lorenzo estaba absorto en la política y el mecenazgo más que en dirigir el banco. En 1494, los Médici fueron expulsados de Florencia y el banco quedó prácticamente liquidado. No estalló ninguna burbuja — el capital simplemente se desmoronó, despacio, por los préstamos fallidos y la gobernanza laxa.",
+    ],
+    mechanism: [
+      "El primer mecanismo del Banco de los Médici fue el 'diseño dentro de una restricción'. Sobre la prohibición eclesiástica del interés (la usura), el banco construyó dispositivos elaborados para cobrar interés de forma legal — la letra de cambio escondía el interés en el diferencial cambiario, y la recompensa al depósito llamada 'discrezione' tomaba la forma de un 'regalo' que el banco daba a su discreción, no de un interés declarado. La partida doble permitía a las sucursales lejanas seguir con precisión 'quién debía cuánto a quién', convirtiéndose en la infraestructura contable que sostenía la confianza a través de la distancia y el tiempo. Reunir depósitos dispersos, prestarlos a deudores lejanos y controlar todo el proceso mediante los libros — la función esencial del banco moderno se completó aquí.",
+      "El segundo mecanismo es el que destruyó el banco — y fue el prototipo de las quiebras bancarias que se repetirían durante los siguientes 500 años. El Banco de los Médici prestó más dinero a sus clientes más grandes y poderosos (monarcas, papas, duques) — precisamente los deudores a los que casi no había forma legal de obligar a devolver. Grandes préstamos sin garantía se volvieron incobrables en impagos soberanos; los directores de sucursal, lejos de la casa matriz, ampliaron préstamos arriesgados sin suficiente supervisión; y el dueño, Lorenzo, se centró en la política antes que en el banco. Esta combinación — 'crédito concentrado + gobernanza débil + la fusión de finanzas y poder' — es el camino que casi todo colapso bancario posterior, hasta la crisis de 2008, ha vuelto a recorrer.",
+    ],
+    lesson: "El nacimiento del Banco de los Médici revela la función más profunda del dinero — intermediar la confianza a través del tiempo y la distancia, convertir el ahorro ocioso en inversión. Ese poder sostuvo la civilización que llamamos Renacimiento. Pero su caída deja una lección que se repite para siempre — un banco no muere por 'prestar demasiado poco', sino por 'prestar demasiado a las personas equivocadas (los poderosos a quienes no se puede rechazar)' y por 'un dueño que deja de cuidar el negocio'. Quinientos años antes de 2008, el patrón ya estaba completo.",
+    aftermath: [
+      "El legado institucional es inmenso. El modelo que los Médici perfeccionaron — la partida doble, la banca de sucursales, las letras de cambio, el mercader-banquero — se extendió por toda Europa y se convirtió en el estándar del banco moderno. Cuando Luca Pacioli codificó la partida doble en un libro en 1494, el método se volvió una tecnología universal, y fue el punto de partida de una línea de desarrollo financiero que pasa por la familia Fugger en Alemania, los bancos holandeses e ingleses, y el Banco de Inglaterra en 1694. Las raíces de la contabilidad, el crédito y las sociedades que usamos hoy se remontan aquí.",
+      "El legado político y cultural es aún más dramático. Los Médici son el caso más exitoso de la historia de convertir capital financiero en capital político y cultural — gobernantes de facto de Florencia, que dieron dos papas (León X y Clemente VII) y dos reinas de Francia, y mecenas de Brunelleschi, Botticelli y Miguel Ángel. El Renacimiento fue, en parte, obra de los beneficios bancarios. Pero el colapso del banco y la expulsión de 1494 (la era de Savonarola) son la mitad oscura de la historia — las finanzas y el poder se fundieron en uno, y cayeron juntos.",
+    ],
+    today: "Cada vez que depositamos dinero en un banco, pedimos un préstamo o leemos un balance, usamos una maquinaria que los Médici ayudaron a estandarizar. Y ya sean las hipotecas fallidas de 2008 o las apuestas equivocadas de un fondo de cobertura, toda quiebra bancaria moderna repite la última lección de los Médici — el peligro nunca estuvo en 'prestar' en sí, sino en prestar demasiado a quienes son demasiado poderosos para recibir un no.",
+    source: "Edición propia a partir de la historia económica y bancaria estándar (incluida 'The Rise and Decline of the Medici Bank' de Raymond de Roover). La partida doble y las letras de cambio no fueron invenciones de los Médici, sino técnicas de su época que ellos sistematizaron y difundieron. Fechas, nombres y cifras pueden variar según la fuente.",
+  },
 };
 
 // ES_COMPARE — angle (perspectiva comparativa) en español, en el orden de COMPARE[id].
@@ -976,6 +1010,10 @@ export const ES_COMPARE = {
   ltcm: [
     "LTCM fue el ensayo general de 2008 que nadie escuchó. Apalancamiento extremo, correlaciones que saltan a 1, una entidad 'demasiado interconectada para caer' y un rescate orquestado por la Fed — todo estaba ya en 1998, a menor escala. El mercado tardó exactamente diez años en repetirlo, mucho más grande, con Lehman y Bear Stearns.",
     "Dos casos en que una estrategia cuantitativa elegante funcionó de maravilla hasta que un evento de estrés rompió sus supuestos a la vez. El seguro de cartera (1987) y el arbitraje de convergencia (1998) asumían liquidez continua e independencia entre los mercados; cuando esos supuestos cayeron, el propio modelo amplificó el desplome en lugar de amortiguarlo.",
+  ],
+  medici: [
+    "Dos nacimientos fundacionales del dinero moderno, con cuatro siglos de diferencia. El jiaozi (s. XI) creó el instrumento — el papel moneda; los Médici (s. XV) crearon la institución — el banco que intermedia entre el ahorro y la inversión. Juntos son las dos mitades de la infraestructura sobre la que se sostiene todo el dinero posterior.",
+    "El Banco de los Médici murió de la enfermedad bancaria más antigua — prestar demasiado a deudores poderosos (reyes, duques) que podían no pagar sin consecuencias, sumado a una gobernanza débil. Quinientos años después, 2008 repitió el mismo diagnóstico con hipotecas y bancos 'demasiado grandes para caer'. El fallo no es nuevo; solo cambia de ropaje.",
   ],
 };
 
@@ -1095,5 +1133,10 @@ export const ES_REFLECTIONS = {
     "¿Por qué una estrategia que asume que 'los mercados se mueven de forma independiente' funciona en tiempos de calma pero se vuelve letal cuando, en una crisis, todas las correlaciones saltan a 1?",
     "Si hubieras sido inversor de LTCM viendo tres años de rendimientos cercanos al 40 %, ¿qué te habría hecho dudar — y por qué es tan difícil cuestionar a 'los genios' cuando ganan?",
     "Hoy, cuando un fondo presenta rendimientos altos y 'estables' apoyados en apalancamiento y un modelo, ¿cómo evaluarías el riesgo de cola que el modelo no muestra?",
+  ],
+  medici: [
+    "¿Por qué fue necesario un sistema como la letra de cambio para que la banca creciera bajo la prohibición eclesiástica del interés — y qué dice eso sobre cómo las finanzas rodean las restricciones?",
+    "Si hubieras sido director de una sucursal lejana de los Médici, ¿qué te habría tentado a conceder un préstamo arriesgado a un rey — y qué control habría podido frenarte?",
+    "Hoy, cuando un banco o un fondo concentra su crédito en unos pocos clientes muy poderosos, ¿cómo reconocerías que se está repitiendo el error que hundió a los Médici?",
   ],
 };
