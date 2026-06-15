@@ -468,4 +468,21 @@ export const REFLECTIONS = {
       "今日、ある国や地域が『自分の金を自ら刷れない』状態(通貨同盟・固定為替・ドル化)にあるとき、危機が来たとき何が彼らを最も脆弱にするでしょうか?",
     ],
   },
+  "svb-2023": {
+    ko: [
+      "'가장 안전한 자산'(국채)만 들고 있던 은행이 어떻게 무너질 수 있었을까요? 그리고 그것은 '무엇에 대해 안전한가'를 묻지 않은 채 무언가를 '안전하다'고 부르는 것에 대해 무엇을 말해줄까요?",
+      "2023년 3월 당신 회사의 돈이 SVB에 있었고 단체 대화방에서 모두가 인출하는 걸 봤다면, 당신은 어떻게 했을까요? 그리고 각자의 그 합리적인 반응이 왜 모두의 은행을 무너뜨릴까요?",
+      "오늘 다음 '만기 불일치' — 안전해 보이지만 돈이 비싸지면 값을 잃는 곳 — 는 어디에 숨어 있을까요? 그리고 그것을 미리 알아보기 어려운 이유는 무엇일까요?",
+    ],
+    en: [
+      "How could a bank that held only 'the safest asset' (Treasuries) collapse — and what does that say about calling something 'safe' without asking 'safe against what'?",
+      "If your company's money had been in SVB in March 2023 and you saw in a group chat that everyone was withdrawing, what would you have done — and why does that same rational reaction by each person sink the bank of all?",
+      "Today, where might the next 'duration mismatch' be hiding — a place that looks safe but loses value when money gets expensive — and why is it so hard to see in advance?",
+    ],
+    ja: [
+      "『最も安全な資産』(国債)だけを持っていた銀行が、どうして崩れえたのでしょうか?そしてそれは、『何に対して安全か』を問わずに何かを『安全だ』と呼ぶことについて何を語るでしょうか?",
+      "2023年3月、あなたの会社の金がSVBにあり、グループチャットで皆が引き出すのを見たら、あなたはどうしたでしょうか?そして各人のその合理的な反応が、なぜ皆の銀行を沈めるのでしょうか?",
+      "今日、次の『満期のミスマッチ』 — 安全に見えるが金が高くなると値を失う場所 — はどこに隠れているでしょうか?そしてそれを前もって見抜くのが難しい理由は何でしょうか?",
+    ],
+  },
 };

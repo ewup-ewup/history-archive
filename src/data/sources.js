@@ -98,4 +98,8 @@ export const SOURCES = {
     { label: "Wikipedia: European debt crisis", url: "https://en.wikipedia.org/wiki/European_debt_crisis" },
     { label: "ECB — Draghi 'whatever it takes' speech (2012)", url: "https://www.ecb.europa.eu/press/key/date/2012/html/sp120726.en.html" },
   ],
+  "svb-2023": [
+    { label: "Wikipedia: Collapse of Silicon Valley Bank", url: "https://en.wikipedia.org/wiki/Collapse_of_Silicon_Valley_Bank" },
+    { label: "Wikipedia: Acquisition of Credit Suisse by UBS", url: "https://en.wikipedia.org/wiki/Acquisition_of_Credit_Suisse_by_UBS" },
+  ],
 };

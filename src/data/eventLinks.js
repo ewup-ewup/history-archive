@@ -145,4 +145,9 @@ export const EVENT_LINKS = {
     en: ["eurozone debt crisis", "European debt crisis", "Greek crisis"],
     ja: ["ユーロ債務危機", "ユーロ圏危機", "ギリシャ危機"],
   },
+  "svb-2023": {
+    ko: ["실리콘밸리은행", "크레디트스위스", "디지털 뱅크런", "SVB"],
+    en: ["Silicon Valley Bank", "Credit Suisse", "SVB"],
+    ja: ["シリコンバレー銀行", "クレディ・スイス", "SVB"],
+  },
 };

@@ -237,6 +237,12 @@ export const ES_EVENTS_META = {
     impact: "Cuando en 2009 salió a la luz el déficit oculto de Grecia, toda la eurozona se tambaleó. Una sola moneda (el euro) pero diecinueve presupuestos nacionales separados — había estallado el defecto de 'una unión monetaria sin unión fiscal'. Atrapada en un sistema donde un país en apuros no podía ni imprimir ni devaluar su propio dinero, hizo falta la promesa de Mario Draghi en 2012 de hacer 'lo que sea necesario' (whatever it takes) para sostener el euro por los pelos.",
     mind: "Compartían una moneda, pero no un destino. Una unión a medio construir — que ata la moneda sin atar los presupuestos — hirió más al eslabón más débil cuando llegó la crisis.",
   },
+  "svb-2023": {
+    title: "SVB y Credit Suisse — la corrida bancaria digital",
+    year: "2023",
+    impact: "En marzo de 2023, el Silicon Valley Bank (SVB), el decimosexto banco de EE. UU. y el banco de referencia de las startups tecnológicas, se hundió en un solo día. La causa no fueron préstamos malos, sino las pérdidas de valor de los bonos del Estado 'seguros' que tenía, y las retiradas no llegaron en colas, sino a través de apps y chats de grupo — unos 42.000 millones de dólares huyendo en un día, la corrida bancaria más rápida de la historia. Días después, incluso el Credit Suisse, de 167 años, perdió la confianza y fue absorbido por UBS. Fue una corrida bancaria reescrita a la velocidad del siglo XXI.",
+    mind: "Las crisis siempre empiezan donde creíamos que era 'más seguro'. Y ahora la confianza se derrumba a través de una pantalla en vez de una cola, en horas en vez de días.",
+  },
 };
 
 // 사건 상세 본문 스페인어 (EVENT_DETAIL에 주입). 배치로 채워나감.
@@ -1016,6 +1022,34 @@ export const ES_EVENT_DETAIL = {
     today: "Cada vez que un país no puede imprimir ni devaluar para salir de una crisis de deuda — dentro del euro, bajo un tipo de cambio fijo, o siempre que los mercados dudan de si un banco central actuará de verdad como respaldo — 2010–2012 es el punto de referencia. Y cada vez que las solas palabras de un banquero central mueven los mercados, pisan el terreno que Draghi despejó con tres palabras: 'whatever it takes'.",
     source: "Edición propia a partir de la historia económica y financiera estándar, datos del BCE y de Eurostat, y el discurso de Draghi en Londres del 26 de julio de 2012 (citado). Cifras como la caída del PIB, la quita y las fechas varían algo según la fuente, y las estadísticas del déficit griego se revisaron al alza varias veces.",
   },
+  "svb-2023": {
+    subtitle: "EE. UU. y Suiza · mar. 2023",
+    stats: [
+      { k: "Retiradas en un día", v: "~42.000 mill. USD (SVB, la más rápida de la historia)" },
+      { k: "La causa real", v: "subida de tipos → pérdidas en bonos" },
+      { k: "Credit Suisse", v: "167 años → comprado por UBS (19 mar.)" },
+    ],
+    chart: {
+      cap: "Depósitos y confianza de SVB — parecían sólidos y se convirtieron en un precipicio en un solo día",
+      peak: "10 mar. 2023 — colapso en un día",
+    },
+    body: [
+      "En marzo de 2023, el Silicon Valley Bank (SVB) — el decimosexto banco de EE. UU. y el banco principal de las startups tecnológicas — se hundió. La causa estaba, sorprendentemente, en algo 'seguro'. En 2020–2021, el SVB había enterrado la avalancha de depósitos de las startups en bonos del Tesoro de EE. UU. a largo plazo y en títulos respaldados por hipotecas (MBS). Pero cuando la Fed subió los tipos en 2022–2023 al ritmo más rápido desde 1981, el valor de mercado de esos bonos 'más seguros' cayó (cuando los tipos suben, el precio de los bonos baja). Enormes pérdidas latentes se acumularon en la cartera de bonos del SVB — no los préstamos temerarios de 2008, sino un 'desajuste de duración': bonos a largo plazo financiados con depósitos a la vista.",
+      "El 8 de marzo, cuando el SVB anunció una pérdida de unos 1.800 millones de dólares por vender bonos y un plan para ampliar capital, se encendió la señal de alarma. Los fondos de capital riesgo (Founders Fund, de Peter Thiel, y otros) dijeron a sus startups que sacaran su dinero, y las retiradas no llegaron en colas de ventanilla, sino a través de apps y chats de grupo. Unos 42.000 millones de dólares intentaron salir en un solo día (9 de marzo) — la corrida bancaria más rápida de la historia. El SVB no pudo afrontarla, y el 10 de marzo el FDIC cerró el banco (la mayor quiebra bancaria de EE. UU. desde 2008). Como cerca del 94 % de los depósitos no estaban asegurados (por encima del límite de 250.000 dólares), las autoridades invocaron una 'excepción de riesgo sistémico' el 12 de marzo, garantizaron todos los depósitos en su totalidad, y la Fed creó el BTFP, que prestaba contra los bonos a su valor nominal. El Signature Bank cayó junto a él, y First Republic fue entregado más tarde a JPMorgan.",
+      "El miedo cruzó el Atlántico. Días después, el Credit Suisse, banco de importancia sistémica mundial con 167 años de historia, se tambaleó. Ya debilitado por años de escándalos (Archegos, Greensill y otros), perdió la confianza cuando su mayor accionista, el Saudi National Bank, dijo que no aportaría más capital. El 19 de marzo, las autoridades suizas dispusieron que UBS adquiriera el Credit Suisse por unos 3.000 millones de francos suizos, con el banco central suizo aportando liquidez. Lo que causó controversia — unos 16.000 millones de francos en bonos AT1 (CoCos) se amortizaron a cero mientras los accionistas recuperaron algo. Al invertir el orden habitual de quién asume las pérdidas, la medida sacudió el mercado mundial de AT1.",
+    ],
+    mechanism: [
+      "El mecanismo del SVB tuvo dos ejes — el 'riesgo de tipos de interés' y la 'velocidad'. Primero, la causa más aburrida fue la más letal. El SVB no apostó por préstamos arriesgados; tenía el activo más seguro (bonos del Tesoro de EE. UU.). Pero el precio de los bonos baja cuando suben los tipos, y cuando la Fed subió los tipos más rápido que en cualquier momento desde 1981 para domar la inflación de la era COVID, aparecieron enormes pérdidas latentes en los bonos que pensaba mantener hasta el vencimiento — un desajuste de duración, bonos a largo plazo sostenidos por depósitos que podían marcharse en cualquier momento. Segundo, la velocidad fue el nuevo peligro. Una corrida en 1907 o en los años 30 significaba colas formándose en una ventanilla durante días, dejando tiempo para reaccionar. En 2023, los depositantes movieron miles de millones a través de apps en horas, azuzados a la vez por los chats de grupo de los fondos de capital riesgo y por Twitter. La propia velocidad se convirtió en un riesgo sistémico — el manual regulatorio suponía corridas más lentas.",
+      "El segundo mecanismo fue una repetición de 'respaldo y riesgo moral'. Como cerca del 94 % de los depósitos del SVB no estaban asegurados, aplicar las reglas con rigor habría congelado las nóminas de las startups y propagado el pánico. Así que las autoridades hicieron lo que habían enseñado 1907 y 2008 — garantizarlo todo (todos los depósitos) y prestar con generosidad (el BTFP). La corrida se detuvo, pero revivió el debate más antiguo: si hasta los depositantes no asegurados son rescatados, ¿para qué sirve el límite de 250.000 dólares, y la expectativa implícita de que 'al final todo está garantizado' alimenta el próximo riesgo? Mientras tanto, la amortización total de los AT1 del Credit Suisse mostró el filo opuesto — cuando un respaldo reordena de golpe quién asume las pérdidas, eso mismo puede sacudir otros mercados (los bonos AT1 / CoCo).",
+    ],
+    lesson: "La lección más profunda del SVB es que 'la próxima crisis rara vez se parece a la anterior'. 2008 fue préstamos temerarios; 2023 fue lo contrario — un banco hundido por tener los bonos del Tesoro más seguros, roto por un desajuste de duración y asaltado a velocidad digital. La cura de una crisis (subidas de tipos rápidas para deshacer la inflación de la era COVID) sembró la siguiente — el mismo patrón que advirtió el ciclo de la COVID. Y la imagen de una corrida bancaria como 'una cola en una ventanilla' ya es obsoleta: la confianza se va por una pantalla, en horas. Si no actualizamos nuestro modelo mental de 'una corrida', volveremos a ser sorprendidos.",
+    aftermath: [
+      "De inmediato, la garantía de todos los depósitos y el BTFP de la Fed detuvieron el contagio directo, y First Republic fue la última gran víctima (vendido a JPMorgan en mayo de 2023). Varios debates regulatorios se reabrieron — (1) cómo tratar los límites del seguro de depósitos y los depósitos no asegurados, (2) la supervisión del riesgo de tipos de interés (el SVB había aprovechado una relajación de 2018 que liberó a los bancos medianos de las reglas más estrictas), y (3) si las reglas de liquidez deben suponer 'horas', no 'días', para igualar la velocidad de una corrida digital. El propio BTFP — prestar contra bonos bajo el agua a valor nominal — fue una herramienta nueva, luego retirada gradualmente.",
+      "En lo estructural, 2023 confirmó que los arreglos posteriores a 2008 (diseñados para crisis de crédito y corridas lentas) no cubrían del todo el riesgo de tipos de interés ni las corridas a velocidad de redes sociales. La quiebra del Credit Suisse acabó con una institución de 167 años y concentró la banca suiza en un solo gigante (UBS), planteando una nueva pregunta de 'demasiado grande para caer' para Suiza. En un plano más amplio, 2023 se sitúa dentro del arco mayor que abrió el ciclo de la COVID: la factura del endurecimiento más rápido desde 1981 venció en el sistema bancario, y la pregunta de 'qué desajuste de duración oculto se rompe a continuación cuando el dinero se encarece' sigue abierta.",
+    ],
+    today: "Cada vez que los tipos se mueven rápido, los activos 'seguros' de un banco pierden valor en silencio, o un rumor se propaga por una app, 2023 recuerda que una corrida bancaria moderna se mide en horas y que el rincón que parece más seguro suele ser donde empieza la próxima grieta. Cuando veas 'totalmente asegurado' o 'bajo riesgo', 2023 plantea la pregunta callada que los depositantes del SVB aprendieron de la noche a la mañana — ¿seguro contra qué, exactamente, y con qué rapidez podría cambiar eso?",
+    source: "Edición propia a partir de la información financiera estándar y de declaraciones del FDIC, la Reserva Federal y las autoridades suizas (FINMA, SNB) de 2023. Cifras como la retirada en un día (~42.000 mill. USD), la proporción no asegurada (~94 %) y el tamaño de los AT1 (~16.000 mill. CHF) varían algo según la fuente y la fecha del informe.",
+  },
 };
 
 // ES_COMPARE — angle (perspectiva comparativa) en español, en el orden de COMPARE[id].
@@ -1128,6 +1162,10 @@ export const ES_COMPARE = {
   "euro-debt": [
     "El 1997 de Europa — una crisis de deuda soberana que empezó en el eslabón más débil (Grecia), se propagó por contagio y fue recibida con rescates condicionados a la austeridad por la Troika (UE, BCE, FMI). Pero donde Corea en 1997 pudo devaluar el won para escapar, Grecia, dentro del euro, tenía hasta esa salida cerrada — la misma crisis, por una puerta más estrecha.",
     "2008 fue la chispa, y el 'whatever it takes' de Draghi fue el 'Fed put' de Europa. Igual que el respaldo rápido de la Fed salvó el sistema en 2008, la eurozona detuvo su crisis en 2012 cuando el BCE asumió por fin el papel de prestamista de última instancia. La lección de 1907 y 1987 — que la promesa creíble de un banco central puede voltear los mercados solo con palabras — se repitió a la escala de una unión monetaria.",
+  ],
+  "svb-2023": [
+    "El ciclo de la COVID escribió la causa de 2023. Las subidas de tipos más rápidas desde 1981 — el desmontaje del estímulo de 2020–2021 — hicieron caer el valor de los bonos 'seguros' de los bancos. La respuesta a una crisis volvió a sembrar la siguiente: la propia COVID-2020 ya señaló al SVB como la primera señal de ese efecto secundario. La medicina de ayer fue la enfermedad de hoy.",
+    "La evolución de la corrida bancaria a lo largo de un siglo. En 1907, una corrida eran personas haciendo cola durante días, y nació la Fed para frenarla. En 2023, fue dinero huyendo por una app en horas, y la Fed (que ya existía) tuvo que respaldarla garantizando todos los depósitos. El mismo pánico — confianza que se desvanece —, pero de la cola a la app, de días a horas.",
   ],
 };
 
@@ -1267,5 +1305,10 @@ export const ES_REFLECTIONS = {
     "¿Por qué un miembro del euro no podía usar las salidas habituales de una crisis de deuda (devaluar, que el banco central imprima dinero), y por qué eso convirtió a la pequeña Grecia en una amenaza para todo el euro?",
     "Si hubieras sido el presidente del BCE en 2012, ¿cómo habrías equilibrado decir 'lo que sea necesario' con comprar de verdad bonos sin límite? ¿Por qué es también peligroso que las solas palabras puedan detener un mercado?",
     "Hoy, cuando un país o región no puede 'imprimir su propio dinero' (una unión monetaria, un tipo de cambio fijo rígido, la dolarización), ¿qué lo haría más vulnerable cuando golpea una crisis?",
+  ],
+  "svb-2023": [
+    "¿Por qué un banco que solo tenía 'el activo más seguro' (bonos del Tesoro) pudo hundirse — y qué dice eso sobre la idea de que algo es 'seguro' sin preguntar 'seguro contra qué'?",
+    "Si en marzo de 2023 hubieras tenido el dinero de tu empresa en el SVB y vieras en un chat de grupo que todos retiran, ¿qué habrías hecho — y por qué esa misma reacción racional de cada uno hunde el banco de todos?",
+    "Hoy, ¿dónde podría esconderse el próximo 'desajuste de duración' — un sitio que parece seguro pero pierde valor cuando el dinero se encarece — y por qué es tan difícil verlo de antemano?",
   ],
 };
