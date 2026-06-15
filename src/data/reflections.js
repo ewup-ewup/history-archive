@@ -451,4 +451,21 @@ export const REFLECTIONS = {
       "今日、1秒で売れる株式やトークンを買うとき、その価格のどれだけが事業の本当の価値で、どれだけが『次の人が払う値段』でしょうか?",
     ],
   },
+  "euro-debt": {
+    ko: [
+      "한 나라가 빚의 위기에 빠졌을 때 보통 쓰는 탈출구(평가절하·중앙은행 발권)를 유로 가입국은 왜 쓸 수 없었고, 그것이 왜 작은 그리스를 유로 전체의 위협으로 키웠을까요?",
+      "당신이 2012년 ECB 총재였다면, '무엇이든 하겠다'고 말하는 것과 실제로 무한정 국채를 사는 것 사이에서 어떻게 균형을 잡았을까요? 말만으로 시장을 멈출 수 있다는 게 왜 위험하기도 할까요?",
+      "오늘 어떤 나라나 지역이 '자기 돈을 스스로 찍을 수 없는' 상태(통화동맹·고정환율·달러화)에 있다면, 위기가 왔을 때 무엇이 그들을 가장 취약하게 만들까요?",
+    ],
+    en: [
+      "Why couldn't a euro member use the usual exits from a debt crisis (devaluation, central-bank money printing), and why did that turn tiny Greece into a threat to the whole euro?",
+      "If you had been the ECB president in 2012, how would you have balanced saying 'whatever it takes' against actually buying unlimited bonds? Why is it also dangerous that words alone can stop a market?",
+      "Today, when a country or region cannot 'print its own money' (a currency union, a hard peg, dollarization), what would make it most vulnerable when a crisis hits?",
+    ],
+    ja: [
+      "ある国が債務危機に陥ったとき普通使う出口(平価切り下げ・中央銀行の発券)を、ユーロ加盟国はなぜ使えず、それがなぜ小さなギリシャをユーロ全体の脅威にまで育てたのでしょうか?",
+      "あなたが2012年のECB総裁だったら、『何でもする』と言うことと実際に無制限に国債を買うこととの間でどうバランスを取ったでしょうか?言葉だけで市場を止められることが、なぜ危険でもあるのでしょうか?",
+      "今日、ある国や地域が『自分の金を自ら刷れない』状態(通貨同盟・固定為替・ドル化)にあるとき、危機が来たとき何が彼らを最も脆弱にするでしょうか?",
+    ],
+  },
 };

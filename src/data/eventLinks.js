@@ -140,4 +140,9 @@ export const EVENT_LINKS = {
     en: ["Dutch East India Company", "Amsterdam Exchange", "VOC"],
     ja: ["オランダ東インド会社", "アムステルダム取引所", "VOC"],
   },
+  "euro-debt": {
+    ko: ["유럽 재정위기", "유로존 위기", "그리스 위기"],
+    en: ["eurozone debt crisis", "European debt crisis", "Greek crisis"],
+    ja: ["ユーロ債務危機", "ユーロ圏危機", "ギリシャ危機"],
+  },
 };

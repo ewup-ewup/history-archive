@@ -231,6 +231,12 @@ export const ES_EVENTS_META = {
     impact: "En 1602, la Compañía Neerlandesa de las Indias Orientales (VOC) emitió 'acciones' que cualquiera podía comprar y abrió la Bolsa de Ámsterdam, donde esas acciones podían negociarse en cualquier momento. Reunir el pequeño dinero disperso para invertir en una empresa enorme y poder salir vendiendo tu participación cuando quisieras — el motor del capitalismo moderno, la 'liquidez' y la 'separación entre propiedad y gestión', nació aquí. Y fue también el 'escenario' en el que se representarían todas las especulaciones y burbujas posteriores, de los tulipanes a los Mares del Sur.",
     mind: "En el momento en que pudiste vender tu participación en cualquier instante, el precio empezó a ser una historia no sobre 'el valor de este negocio', sino sobre 'cuánto pagará la próxima persona'.",
   },
+  "euro-debt": {
+    title: "La crisis de la deuda de la eurozona — una moneda, diecinueve naciones",
+    year: "2010–2012",
+    impact: "Cuando en 2009 salió a la luz el déficit oculto de Grecia, toda la eurozona se tambaleó. Una sola moneda (el euro) pero diecinueve presupuestos nacionales separados — había estallado el defecto de 'una unión monetaria sin unión fiscal'. Atrapada en un sistema donde un país en apuros no podía ni imprimir ni devaluar su propio dinero, hizo falta la promesa de Mario Draghi en 2012 de hacer 'lo que sea necesario' (whatever it takes) para sostener el euro por los pelos.",
+    mind: "Compartían una moneda, pero no un destino. Una unión a medio construir — que ata la moneda sin atar los presupuestos — hirió más al eslabón más débil cuando llegó la crisis.",
+  },
 };
 
 // 사건 상세 본문 스페인어 (EVENT_DETAIL에 주입). 배치로 채워나감.
@@ -982,6 +988,34 @@ export const ES_EVENT_DETAIL = {
     today: "Cada vez que compras una acción, un ETF o un token en una bolsa, estás usando la máquina que la VOC encendió en 1602 — la libertad de poseer una porción de una empresa y vendérsela a la próxima persona en cualquier momento. Esa libertad construyó la economía moderna. También significa que, cuatro siglos después, el precio que ves sigue siendo, en parte, una historia sobre quién lo comprará a continuación.",
     source: "Edición propia a partir de la historia económica y financiera estándar (la VOC y la Bolsa de Ámsterdam, 'Confusión de confusiones' de de la Vega de 1688, el episodio de venta en corto de le Maire, etc.). Cifras como el capital, los dividendos y las fechas varían según la fuente, y 'la compañía más valiosa de la historia' es una estimación ajustada por inflación que se debate.",
   },
+  "euro-debt": {
+    subtitle: "Eurozona · 2010–2015",
+    stats: [
+      { k: "Caída del PIB griego", v: "~-25 % (del pico al mínimo)" },
+      { k: "Quita a bonistas privados", v: "~53 % (2012, la mayor de la historia)" },
+      { k: "Punto de inflexión", v: "Draghi 'whatever it takes' (jul. 2012)" },
+    ],
+    chart: {
+      cap: "Rendimiento del bono griego a 10 años — se disparó en la crisis y se calmó con una sola frase de Draghi",
+      peak: "Pico de 2012 (~37 %)",
+    },
+    body: [
+      "En octubre de 2009, el recién elegido gobierno griego reveló un hecho impactante — el déficit presupuestario no era el 6 % declarado, sino cerca del 12,7 % del PIB (luego revisado a alrededor del 15 %). Estaba muy por encima del límite del 3 % de la UE, y salieron a la luz años de manipulación estadística (parte de ella ocultando deuda mediante swaps de Goldman Sachs). La deuda pública griega superaba el 130 % del PIB, los rendimientos de los bonos se dispararon y el país ya no pudo financiarse en el mercado.",
+      "La raíz del problema era el propio diseño del euro. El euro unió la moneda en una sola (el BCE, una moneda única) pero dejó los presupuestos a diecinueve naciones separadas — una unión a medio construir, 'con unión monetaria pero sin unión fiscal'. Grecia, en apuros, no tenía dracma que devaluar ni un banco central nacional con el que imprimir dinero. El miedo se extendió a los 'PIIGS' (Portugal, Irlanda, Italia, Grecia, España), y los rescates de la Troika (Comisión Europea, BCE, FMI) llegaron condicionados a una dura austeridad. El PIB griego cayó cerca de un 25 % y el desempleo alcanzó alrededor del 27 % (más del 50 % entre los jóvenes); en 2012, los bonistas privados aceptaron una quita de en torno al 53 % — la mayor reestructuración de deuda soberana de la historia.",
+      "El punto de inflexión llegó el 26 de julio de 2012. El presidente del BCE, Mario Draghi, dijo en Londres — 'Dentro de nuestro mandato, el BCE está dispuesto a hacer lo que sea necesario para preservar el euro. Y créanme, será suficiente.' Cuando le siguió el OMT (un programa de compra ilimitada de bonos), los rendimientos se desplomaron y la amenaza de una ruptura del euro retrocedió. El BCE se había convertido por fin en el 'prestamista de última instancia' que le había faltado. En 2015, Grecia llegó al borde — el referéndum del gobierno de la izquierda radical Syriza (OXI, 'No') y el filo de un Grexit — pero aceptó un tercer rescate y se quedó en el euro.",
+    ],
+    mechanism: [
+      "El mecanismo central de la crisis del euro fueron 'las válvulas de escape que la unión monetaria quitó'. Normalmente, cuando un país cae en una crisis de deuda tiene tres salidas clásicas — (1) devaluar su moneda para recuperar competitividad, (2) que su banco central compre sus bonos como prestamista de última instancia, o (3) impagar y reestructurar. El euro cerró la (1) y la (2). Grecia, que usaba el euro, no podía devaluar sola (el tipo de cambio era común a los 19, fijado por el BCE), y el BCE al principio se negó a sostener los bonos de un solo país (sin financiación monetaria de los déficits). Las únicas salidas que quedaban eran la austeridad ('devaluación interna' — recortar salarios y precios para recuperar competitividad, lo que solo profundizó la recesión) y los rescates condicionados. Por eso una Grecia que valía solo en torno al 2 % del PIB de la eurozona pudo amenazar la supervivencia de toda la moneda — la arquitectura no tenía interruptor.",
+      "Luego un 'bucle fatal entre soberano y banca' amplificó la crisis. Como los bancos poseían grandes cantidades de bonos de su propio gobierno, la caída del precio de los bonos sacudía a los bancos; rescatar a los bancos aumentaba la deuda pública, lo que volvía a empujar a la baja el precio de los bonos — una espiral que se autoalimentaba y que golpeó con especial dureza a Irlanda y España. Lo que rompió el bucle fue que el BCE señalara que por fin sería el respaldo. El 'whatever it takes' de Draghi y el OMT crearon el prestamista de última instancia que el euro nunca había tenido, hundiendo los rendimientos sin que el BCE tuviera que comprar mucho en realidad. La promesa creíble de un banco central volteó el mercado solo con palabras — la lección de Morgan en 1907 y de Greenspan en 1987, repetida a la escala de una unión monetaria.",
+    ],
+    lesson: "La lección más clara de la crisis del euro es que 'el dinero es una institución política, no solo económica'. Se puede compartir una moneda, pero si no se comparten un presupuesto, un tesoro y un prestamista de última instancia, la unión no tiene amortiguador — y el miembro más débil paga el precio. También reafirmó la lección más antigua de la lucha contra las crisis: la voluntad creíble de un banco central de ser el respaldo puede frenar un pánico casi solo con palabras. Pero a la pregunta más profunda — si una unión monetaria puede sobrevivir sin una unión fiscal y política — el euro no respondió 'sí', sino 'a duras penas, por ahora'.",
+    aftermath: [
+      "En lo institucional, la crisis obligó a la eurozona a construir las piezas que había dejado fuera: el fondo de rescate permanente MEDE (Mecanismo Europeo de Estabilidad, 2012), la Unión Bancaria (supervisión única del BCE, 2014), el Pacto Fiscal (reglas presupuestarias más estrictas), y el OMT y la posterior flexibilización cuantitativa que convirtieron al BCE en un respaldo de verdad. El euro sobrevivió e incluso ganó miembros, pero su arquitectura sigue incompleta (sin garantía común de depósitos, sin tesoro compartido, sin eurobonos). Significativamente, solo la respuesta a la COVID en 2020 produjo por fin un primer paso hacia una capacidad fiscal conjunta (el fondo de recuperación NextGenerationEU, de 750.000 millones de euros) — un tabú roto únicamente cuando llegó una crisis mayor.",
+      "En lo social y lo político, Grecia sufrió una 'década perdida' — el PIB se redujo en torno a una cuarta parte y una generación se dispersó en el desempleo juvenil y la emigración. La reacción contra la austeridad alimentó movimientos populistas y antieuropeos por toda Europa (Syriza en Grecia y otros), y la crisis se convirtió en el modelo del debate sobre 'austeridad frente a estímulo' y sobre hasta dónde llega la soberanía nacional dentro de una unión. Qué une a personas que comparten una moneda pero no un gobierno — esa pregunta sigue abierta y vuelve cada vez que la eurozona se tensiona.",
+    ],
+    today: "Cada vez que un país no puede imprimir ni devaluar para salir de una crisis de deuda — dentro del euro, bajo un tipo de cambio fijo, o siempre que los mercados dudan de si un banco central actuará de verdad como respaldo — 2010–2012 es el punto de referencia. Y cada vez que las solas palabras de un banquero central mueven los mercados, pisan el terreno que Draghi despejó con tres palabras: 'whatever it takes'.",
+    source: "Edición propia a partir de la historia económica y financiera estándar, datos del BCE y de Eurostat, y el discurso de Draghi en Londres del 26 de julio de 2012 (citado). Cifras como la caída del PIB, la quita y las fechas varían algo según la fuente, y las estadísticas del déficit griego se revisaron al alza varias veces.",
+  },
 };
 
 // ES_COMPARE — angle (perspectiva comparativa) en español, en el orden de COMPARE[id].
@@ -1090,6 +1124,10 @@ export const ES_COMPARE = {
   voc: [
     "La VOC inventó el molde — la sociedad por acciones con participaciones que cualquiera podía comprar y vender. Poco más de un siglo después, la Compañía de los Mares del Sur tomó ese mismo molde y lo convirtió en una de las burbujas más famosas de la historia. Escenario y obra: la VOC construyó el teatro del mercado; 1720 fue una de sus primeras tragedias.",
     "Las dos caras de la libertad de negociar, nacidas en la misma cultura neerlandesa. La VOC creó el mercado que formaba capital de manera eficiente; la tulipomanía (1637), apenas una generación después y en esa misma cultura, mostró cómo ese mercado podía convertir el precio en pura expectativa sobre el próximo comprador. La máquina de formar capital y la de inflar burbujas eran la misma.",
+  ],
+  "euro-debt": [
+    "El 1997 de Europa — una crisis de deuda soberana que empezó en el eslabón más débil (Grecia), se propagó por contagio y fue recibida con rescates condicionados a la austeridad por la Troika (UE, BCE, FMI). Pero donde Corea en 1997 pudo devaluar el won para escapar, Grecia, dentro del euro, tenía hasta esa salida cerrada — la misma crisis, por una puerta más estrecha.",
+    "2008 fue la chispa, y el 'whatever it takes' de Draghi fue el 'Fed put' de Europa. Igual que el respaldo rápido de la Fed salvó el sistema en 2008, la eurozona detuvo su crisis en 2012 cuando el BCE asumió por fin el papel de prestamista de última instancia. La lección de 1907 y 1987 — que la promesa creíble de un banco central puede voltear los mercados solo con palabras — se repitió a la escala de una unión monetaria.",
   ],
 };
 
@@ -1224,5 +1262,10 @@ export const ES_REFLECTIONS = {
     "¿Por qué poder vender tu participación en cualquier momento (la liquidez) hace que un mercado sea a la vez más eficiente y más propenso a las burbujas?",
     "Si hubieras sido uno de los 1.800 ciudadanos corrientes que invirtieron en la VOC en 1602 sin poder recuperar tu capital, ¿qué te habría dado la confianza para poner tu dinero — y para venderlo después?",
     "Hoy, cuando compras una acción o un token que puedes vender en un segundo, ¿qué parte de su precio refleja el valor real del negocio y qué parte es 'lo que pagará el próximo comprador'?",
+  ],
+  "euro-debt": [
+    "¿Por qué un miembro del euro no podía usar las salidas habituales de una crisis de deuda (devaluar, que el banco central imprima dinero), y por qué eso convirtió a la pequeña Grecia en una amenaza para todo el euro?",
+    "Si hubieras sido el presidente del BCE en 2012, ¿cómo habrías equilibrado decir 'lo que sea necesario' con comprar de verdad bonos sin límite? ¿Por qué es también peligroso que las solas palabras puedan detener un mercado?",
+    "Hoy, cuando un país o región no puede 'imprimir su propio dinero' (una unión monetaria, un tipo de cambio fijo rígido, la dolarización), ¿qué lo haría más vulnerable cuando golpea una crisis?",
   ],
 };
