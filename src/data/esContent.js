@@ -225,6 +225,12 @@ export const ES_EVENTS_META = {
     impact: "Cuando la enorme plata extraída en el Nuevo Mundo (sobre todo en Potosí) se vertió sobre Europa, los precios subieron unas seis veces a lo largo de más de un siglo. Fue el momento en que se rompió la creencia de que 'el metal precioso es seguro' — la primera experiencia a gran escala de la humanidad de que el oro o la plata también pierden valor cuando su cantidad se dispara. Y España, que recibió la mayor parte de la plata, fue la primera en declinar, mientras esa plata se drenaba hacia las guerras y las importaciones.",
     mind: "Aunque lo que tengas en la mano sea plata de verdad, cuando las manos de todos rebosan de plata, lo que esa plata puede comprar se encoge. El valor de una moneda no estaba en su material, sino en su escasez.",
   },
+  voc: {
+    title: "La VOC y la Bolsa de Ámsterdam — el nacimiento del mercado de valores",
+    year: "1602",
+    impact: "En 1602, la Compañía Neerlandesa de las Indias Orientales (VOC) emitió 'acciones' que cualquiera podía comprar y abrió la Bolsa de Ámsterdam, donde esas acciones podían negociarse en cualquier momento. Reunir el pequeño dinero disperso para invertir en una empresa enorme y poder salir vendiendo tu participación cuando quisieras — el motor del capitalismo moderno, la 'liquidez' y la 'separación entre propiedad y gestión', nació aquí. Y fue también el 'escenario' en el que se representarían todas las especulaciones y burbujas posteriores, de los tulipanes a los Mares del Sur.",
+    mind: "En el momento en que pudiste vender tu participación en cualquier instante, el precio empezó a ser una historia no sobre 'el valor de este negocio', sino sobre 'cuánto pagará la próxima persona'.",
+  },
 };
 
 // 사건 상세 본문 스페인어 (EVENT_DETAIL에 주입). 배치로 채워나감.
@@ -948,6 +954,34 @@ export const ES_EVENT_DETAIL = {
     today: "Cuando los bancos centrales expanden mucho la oferta monetaria (flexibilización cuantitativa), o cuando algún activo que se decía 'escaso' de pronto deja de serlo, el siglo XVI susurra en voz baja — el valor del dinero es, al final, la proporción entre el dinero y los bienes, y ningún material, por precioso que sea, escapa a esa aritmética. La inflación de 2020–2022 funcionó con el mismo principio que hace 500 años.",
     source: "Edición propia a partir de la historia económica estándar y de obras como 'American Treasure and the Price Revolution in Spain' (1934) de Earl J. Hamilton. La magnitud de la subida de precios (~6×) y las fechas varían según la región y la fuente, y los estudiosos discuten atribuir la Revolución de los Precios solo a las entradas de plata (también contribuyeron la población, la urbanización y la devaluación de la moneda).",
   },
+  voc: {
+    subtitle: "República Neerlandesa · 1602",
+    stats: [
+      { k: "Fundación", v: "1602 (~6,4 mill. de florines de capital permanente)" },
+      { k: "Primicia mundial", v: "acciones de cotización pública y bolsa" },
+      { k: "Duración", v: "~200 años (1602–1799)" },
+    ],
+    chart: {
+      cap: "Los ~200 años de la VOC — la primera sociedad por acciones que asciende, alcanza su cima y se apaga",
+      peak: "Apogeo (mediados del s. XVII)",
+    },
+    body: [
+      "En 1602, la República Neerlandesa fusionó varias compañías que competían por el comercio con Asia en la Compañía Neerlandesa de las Indias Orientales (VOC). El gobierno le concedió un monopolio de 21 años sobre el comercio asiático junto con poderes cuasi-estatales — declarar la guerra, firmar tratados, fundar colonias y acuñar moneda. Pero lo más revolucionario fue cómo reunió el dinero — la VOC juntó unos 6,4 millones de florines de 'capital permanente' de cerca de 1.800 ciudadanos corrientes, y ese dinero no se devolvía ni siquiera cuando terminaba un viaje.",
+      "De ahí vino el invento decisivo. Como la compañía no devolvía el capital, un inversor que necesitaba dinero tenía que vender su 'acción' a otra persona. Para ese intercambio surgió la Bolsa de Ámsterdam (su edificio se terminó en 1611), y por primera vez en la historia cualquiera podía comprar y vender a diario la propiedad de una empresa gigante — había nacido la 'liquidez'. La inversión ya no era 'algo bloqueado hasta que terminara el viaje', sino 'algo que podías vender para salir en cualquier momento'.",
+      "El mercado de Ámsterdam se volvió sofisticado a una velocidad asombrosa. En 1609, Isaac le Maire organizó un 'sindicato bajista' para hundir el precio de la acción de la VOC (el primer episodio de venta en corto de la historia → la primera regulación de las ventas en corto del mundo, en 1610); aparecieron los futuros y las opciones; y en 1688 Joseph de la Vega dejó 'Confusión de confusiones', el primer libro sobre psicología de los mercados. Dentro de la misma cultura de mercado neerlandesa floreció también la tulipomanía de 1637. La VOC pagó altos dividendos, de en torno al 18 % de media, y se convirtió en una de las compañías más valiosas de la historia — pero ese mercado de 'comprar y vender libremente' también convirtió el precio en un juego sobre 'cuánto pagará la próxima persona'.",
+    ],
+    mechanism: [
+      "El invento central de la VOC fue 'capital permanente + acciones negociables = liquidez + separación entre propiedad y control'. Las empresas comerciales anteriores se liquidaban tras cada viaje, devolviendo el capital y el beneficio a los inversores — así que no podían planificar a largo plazo. La VOC no devolvía el capital; en cambio, quien quería salir tenía que 'vender su acción en el mercado'. Este único cambio significó que (1) la compañía podía planificar durante décadas y crecer enormemente, (2) el riesgo se repartía entre muchos pequeños inversores, y (3) los 'accionistas' pasivos quedaban separados de los 'directores' (los Heeren XVII) que de verdad la dirigían. Este es el ADN de toda sociedad anónima y de todo mercado de valores modernos.",
+      "Pero el mismo invento era de doble filo. Una vez que la propiedad puede comprarse y venderse libremente, el precio de una acción refleja no solo 'el valor del negocio', sino también 'cuánto pagará la próxima persona'. Esto abrió la puerta a los auges impulsados por la liquidez, a la venta en corto, a la manipulación de precios y a las burbujas. Que el mercado de Ámsterdam engendrara tan rápido las ventas en corto, las opciones y los sindicatos, y que la tulipomanía (1637) estallara en la misma cultura, no fue casualidad — la 'formación eficiente de capital' y la 'especulación' nacieron como un solo cuerpo desde el principio. Las burbujas de los Mares del Sur y del Misisipi de 1720 se construyeron, al final, sobre el molde de la sociedad por acciones que creó la VOC.",
+    ],
+    lesson: "El mercado de valores es uno de los inventos más poderosos de la historia — convirtió el ahorro disperso en el capital que construyó el comercio mundial y permitió que personas corrientes fueran dueñas de grandes empresas. Pero esa misma liquidez que hace eficiente a un mercado también lo convierte en un escenario para historias sobre 'la próxima persona'. Todas las burbujas de este archivo — tulipanes, Mares del Sur, puntocom, cripto — se representaron sobre el escenario que construyó la VOC. El mercado no es ni bueno ni malo; solo amplifica lo que le traemos.",
+    aftermath: [
+      "El legado institucional es incalculable. El modelo de la VOC y de Ámsterdam — la sociedad por acciones más una bolsa secundaria — pronto se convirtió en el molde de la Compañía Inglesa de las Indias Orientales, de la Compañía de los Mares del Sur y, en última instancia, de toda corporación y bolsa modernas (Londres, Nueva York). Las técnicas nacidas en Ámsterdam — acciones negociables, dividendos, venta en corto, opciones, creación de mercado — son la base de los mercados de capital globales de hoy. La primera regulación de valores del mundo (la prohibición de 1610 de la venta en corto al descubierto) también se originó aquí.",
+      "La propia VOC declinó por la corrupción, la guerra (la Cuarta Guerra Anglo-Neerlandesa) y la competencia, y fue disuelta y absorbida, con sus deudas, por el gobierno neerlandés en 1799. Pero la 'institución' que la VOC fue pionera en crear sobrevivió a la compañía durante siglos. Y el mercado neerlandés que la VOC creó albergó la primera burbuja famosa de la historia (los tulipanes, 1637) en el plazo de una sola generación — un recordatorio de que la máquina para construir capital y la máquina para inflar burbujas fueron, desde el principio, la misma máquina.",
+    ],
+    today: "Cada vez que compras una acción, un ETF o un token en una bolsa, estás usando la máquina que la VOC encendió en 1602 — la libertad de poseer una porción de una empresa y vendérsela a la próxima persona en cualquier momento. Esa libertad construyó la economía moderna. También significa que, cuatro siglos después, el precio que ves sigue siendo, en parte, una historia sobre quién lo comprará a continuación.",
+    source: "Edición propia a partir de la historia económica y financiera estándar (la VOC y la Bolsa de Ámsterdam, 'Confusión de confusiones' de de la Vega de 1688, el episodio de venta en corto de le Maire, etc.). Cifras como el capital, los dividendos y las fechas varían según la fuente, y 'la compañía más valiosa de la historia' es una estimación ajustada por inflación que se debate.",
+  },
 };
 
 // ES_COMPARE — angle (perspectiva comparativa) en español, en el orden de COMPARE[id].
@@ -1052,6 +1086,10 @@ export const ES_COMPARE = {
   "price-revolution": [
     "Dos inflaciones de metal por métodos opuestos. Roma redujo el contenido de plata de cada moneda; España inundó Europa de plata. Reducir la calidad o multiplicar la cantidad — el resultado fue el mismo: cada moneda compraba menos. La prueba, a 1.300 años de distancia, de que el dinero duro tampoco escapa a la inflación.",
     "'Demasiado dinero persiguiendo demasiado pocos bienes' — la frase que define 2020–2022 describe exactamente el siglo XVI. La plata de Potosí y la flexibilización cuantitativa de la Fed son la misma aritmética con 500 años de diferencia: cuando el dinero crece más rápido que los bienes, los precios suben, sea plata o dígitos en una pantalla.",
+  ],
+  voc: [
+    "La VOC inventó el molde — la sociedad por acciones con participaciones que cualquiera podía comprar y vender. Poco más de un siglo después, la Compañía de los Mares del Sur tomó ese mismo molde y lo convirtió en una de las burbujas más famosas de la historia. Escenario y obra: la VOC construyó el teatro del mercado; 1720 fue una de sus primeras tragedias.",
+    "Las dos caras de la libertad de negociar, nacidas en la misma cultura neerlandesa. La VOC creó el mercado que formaba capital de manera eficiente; la tulipomanía (1637), apenas una generación después y en esa misma cultura, mostró cómo ese mercado podía convertir el precio en pura expectativa sobre el próximo comprador. La máquina de formar capital y la de inflar burbujas eran la misma.",
   ],
 };
 
@@ -1181,5 +1219,10 @@ export const ES_REFLECTIONS = {
     "Si la plata es valiosa porque es escasa, ¿qué le ocurre a su valor cuando deja de ser escasa — y por qué cuesta tanto verlo mientras sucede lentamente, a lo largo de décadas?",
     "Si hubieras sido un trabajador en la Europa del siglo XVI con un salario fijo mientras los precios subían año tras año, ¿cómo habrías protegido el valor de lo que ganabas?",
     "Hoy, ¿qué activos considerados 'escasos' (oro, bitcoin, suelo) podrían ver crecer su oferta o un sustituto — y cómo cambiaría eso su valor?",
+  ],
+  voc: [
+    "¿Por qué poder vender tu participación en cualquier momento (la liquidez) hace que un mercado sea a la vez más eficiente y más propenso a las burbujas?",
+    "Si hubieras sido uno de los 1.800 ciudadanos corrientes que invirtieron en la VOC en 1602 sin poder recuperar tu capital, ¿qué te habría dado la confianza para poner tu dinero — y para venderlo después?",
+    "Hoy, cuando compras una acción o un token que puedes vender en un segundo, ¿qué parte de su precio refleja el valor real del negocio y qué parte es 'lo que pagará el próximo comprador'?",
   ],
 };

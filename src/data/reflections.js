@@ -434,4 +434,21 @@ export const REFLECTIONS = {
       "今日『希少だ』とされる資産(金・ビットコイン・土地)のうち、供給や代替が増えうるものは何で、そうなればその価値はどう変わるでしょうか?",
     ],
   },
+  voc: {
+    ko: [
+      "지분을 언제든 팔 수 있다는 것(유동성)이 어떻게 시장을 더 효율적으로 만들면서 동시에 거품에 더 취약하게 만들까요?",
+      "당신이 1602년 자본을 돌려받을 수 없는 VOC에 투자한 1,800명의 평범한 시민 중 한 명이었다면, 무엇이 당신에게 돈을 넣을 — 그리고 나중에 팔 — 확신을 줬을까요?",
+      "오늘 1초 만에 팔 수 있는 주식이나 토큰을 살 때, 그 가격의 얼마가 사업의 진짜 가치이고 얼마가 '다음 사람이 낼 값'일까요?",
+    ],
+    en: [
+      "Why does being able to sell your stake at any time (liquidity) make a market both more efficient and more prone to bubbles?",
+      "If you had been one of the 1,800 ordinary citizens who invested in the VOC in 1602 without being able to get your capital back, what would have given you the confidence to put your money in — and to sell it later?",
+      "Today, when you buy a stock or token you can sell in a second, how much of its price reflects the real value of the business, and how much is 'what the next buyer will pay'?",
+    ],
+    ja: [
+      "持ち分をいつでも売れること(流動性)が、なぜ市場をより効率的にすると同時にバブルに弱くするのでしょうか?",
+      "あなたが1602年、資本を返してもらえないVOCに投資した1,800人の一般市民の一人だったら、何があなたに金を入れる — そして後で売る — 確信を与えたでしょうか?",
+      "今日、1秒で売れる株式やトークンを買うとき、その価格のどれだけが事業の本当の価値で、どれだけが『次の人が払う値段』でしょうか?",
+    ],
+  },
 };

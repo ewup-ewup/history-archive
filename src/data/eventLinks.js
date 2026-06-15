@@ -135,4 +135,9 @@ export const EVENT_LINKS = {
     en: ["Price Revolution", "New World silver", "Potosí"],
     ja: ["価格革命", "ポトシ"],
   },
+  voc: {
+    ko: ["동인도회사", "암스테르담 거래소", "VOC"],
+    en: ["Dutch East India Company", "Amsterdam Exchange", "VOC"],
+    ja: ["オランダ東インド会社", "アムステルダム取引所", "VOC"],
+  },
 };
