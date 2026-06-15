@@ -6,6 +6,7 @@ import { FONT, T } from "../data/theme";
 import { ERAS, ERA_EVENTS, ERA_ICON, EVENT_DETAIL } from "../data/timeline";
 import { COMPARE } from "../data/compare";
 import { REFLECTIONS } from "../data/reflections";
+import { SOURCES } from "../data/sources";
 import { buildLinkIndex, linkifyText } from "./linkify.jsx";
 import Disclaimer from "./Disclaimer.jsx";
 import EventChart from "./EventChart.jsx";
@@ -282,6 +283,19 @@ export default function EventDetail({ lang, eventId, setView, gotoEra, gotoDetai
       {detail && (
         <p style={{ marginTop: 22, fontSize: 12, color: T.textTertiary, lineHeight: 1.7, borderTop: `1px solid ${T.line}`, paddingTop: 16 }}>
           <b style={{ color: T.textSecondary }}>{tl.source}</b> · {detail.source[lang]}
+        </p>
+      )}
+
+      {/* 참고 자료 — 검증된 외부 출처 링크 */}
+      {detail && SOURCES[eventId]?.length > 0 && (
+        <p style={{ marginTop: 8, fontSize: 12, color: T.textTertiary, lineHeight: 1.9 }}>
+          <b style={{ color: T.textSecondary }}>{tl.refsTitle}</b> ·{" "}
+          {SOURCES[eventId].map((r, i) => (
+            <span key={i}>
+              {i > 0 && <span style={{ opacity: 0.45 }}> · </span>}
+              <a href={r.url} target="_blank" rel="noopener noreferrer" style={{ color: T.primary, textDecoration: "none" }}>{r.label} ↗</a>
+            </span>
+          ))}
         </p>
       )}
 
