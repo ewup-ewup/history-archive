@@ -37,20 +37,28 @@ async function callClaude(system, user, maxTokens = 1200) {
     .trim();
 }
 
-// 본문 요약 → { tldr, bullets[], takeaway } JSON
+// 본문 요약 → { tldr, bullets[], takeaway, explainer[], glossary[] } JSON
 export async function summarizePost({ title, text }) {
   const clipped = text.slice(0, 24000); // 과금/컨텍스트 안전 상한
   const system =
-    "너는 한국 경제·투자 블로그 글을 독자가 30초 만에 파악하도록 요약하는 애널리스트다. " +
-    "과장 없이 핵심만, 사실 위주로 정리한다. 투자 권유는 하지 않는다. " +
-    "반드시 아래 JSON 스키마로만 답한다.\n" +
+    "너는 한국 경제·투자 블로그 글을 독자가 쉽게 이해하도록 정리하는 친절한 해설가다. " +
+    "과장 없이 사실 위주로 정리하되, 절대 투자 권유는 하지 않는다. " +
+    "두 가지 층으로 답한다. (1) 빠른 요약(tldr·bullets·takeaway)은 간결하게. " +
+    "(2) explainer 는 '초등학생도 이해할 만큼' 쉬운 말로 풀어 쓴다 — 어려운 경제/투자 " +
+    "용어는 쓰지 말거나 바로 옆에서 풀어주고, 생활 속 비유를 활용하며, 3~6개의 짧은 " +
+    "문단으로 이야기하듯 설명한다. glossary 에는 글에 나온 어려운 단어를 아이도 알 수 있게 " +
+    "한 줄로 풀이한다(없으면 빈 배열). 반드시 아래 JSON 스키마로만 답한다.\n" +
     '{"tldr": "한 문장 핵심 요약", "bullets": ["핵심 포인트 3~6개"], ' +
-    '"takeaway": "글쓴이의 결론/시사점 한두 문장"}';
+    '"takeaway": "글쓴이의 결론/시사점 한두 문장", ' +
+    '"explainer": ["쉬운 설명 문단 3~6개"], ' +
+    '"glossary": [{"term": "어려운 단어", "desc": "쉬운 한 줄 풀이"}]}';
   const user = `제목: ${title}\n\n본문:\n${clipped}`;
-  return parseJson(await callClaude(system, user, 1200), {
+  return parseJson(await callClaude(system, user, 2400), {
     tldr: firstSentence(text),
     bullets: [],
     takeaway: "",
+    explainer: [],
+    glossary: [],
   });
 }
 
