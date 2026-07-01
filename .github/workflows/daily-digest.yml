@@ -1,0 +1,54 @@
+name: 네이버 블로그 일일 요약
+
+# 매일 아침 07:00 KST(22:00 UTC) 실행 + 수동 실행 지원.
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "저장/전송 없이 미리보기만"
+        type: boolean
+        default: false
+
+concurrency:
+  group: daily-digest
+  cancel-in-progress: false
+
+permissions:
+  contents: write # 생성된 다이제스트 HTML·state.json 커밋용
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 다이제스트 생성 및 전송
+        env:
+          BLOG_ID: ${{ vars.BLOG_ID || 'ranto28' }}
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+          MAX_POSTS: ${{ vars.MAX_POSTS || '5' }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+          KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
+        run: node scraper/run.js
+
+      - name: 변경분 커밋 & 푸시
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/digest scraper/state.json
+          if git diff --cached --quiet; then
+            echo "변경 사항 없음 — 커밋 생략"
+          else
+            git commit -m "chore(digest): ${BLOG_ID:-ranto28} 일일 요약 자동 생성"
+            git push
+          fi

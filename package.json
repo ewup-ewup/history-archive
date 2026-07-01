@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "build-og": "node scripts/build-og.js",
     "build-icons": "node scripts/build-icons.js",
-    "build-og-events": "node scripts/build-og-events.js"
+    "build-og-events": "node scripts/build-og-events.js",
+    "digest": "node scraper/run.js",
+    "digest:dry": "DRY_RUN=1 SKIP_KAKAO=1 node scraper/run.js"
   },
   "dependencies": {
     "framer-motion": "^11.3.0",
